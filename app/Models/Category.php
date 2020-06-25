@@ -32,4 +32,14 @@ class Category extends Model
     		return "suspended";
     	}
     }
+
+    public static function fetchBySlug($slug){
+
+        return self::where('slug',$slug)->first();
+    }
+
+    public function articles(){
+
+        return $this->hasMany('\App\Models\Article','idcat','id');
+    }
 }

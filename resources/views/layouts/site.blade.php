@@ -21,10 +21,11 @@
         <link rel="stylesheet" type="text/css" href="{{@asset('assets/template/css/theme.css')}}"/>
         <link rel="stylesheet" type="text/css" href="{{@asset('assets/template/css/responsive.css')}}"/>
         <link rel="stylesheet" type="text/css" href="{{@asset('css/app.css')}}" />
+        
 
 
         <!-- Favicon Icon -->
-        <link rel="icon"  type="image/png" href="{{@asset('assets/template/images/favicon.png')}}">
+        <link rel="icon"  type="image/png" href="https://cd1.rap2france.com/public/templates/default/assets/images/icone/57.jpg">
         <!-- Favicon Icon -->
     </head>
     <body class="bg-black" >
@@ -39,6 +40,7 @@
         <!-- Preloading -->
         @include('components.header')
         @yield('main-section')
+        @include('components.footer')
 
         <!-- Bact To Top -->
         <a href="#" id="backtotop"><i class="twi-angle-double-up2"></i></a>
@@ -60,6 +62,7 @@
         <script src="{{@asset('assets/template/js/owl.carousel.min.js')}}"></script>
         <script src="{{@asset('assets/template/js/theme.js')}}"></script>
         <script src="{{@asset('js/app.js')}}"></script>
+         <script>(function(){var r,d=document,gt=d.getElementById,cr=d.createElement,tg=d.getElementsByTagName,id="aidaform-embed";if(!gt.call(d,id)){r=cr.call(d,"script");r.id=id;r.src="https://embed.aidaform.com/embed.js";(d.head || tg.call(d,"head")[0]).appendChild(r);}})()</script>
 
 
     </body>

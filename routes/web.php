@@ -19,3 +19,15 @@ Route::group(['prefix' => 'news' , 'namespace'=> 'News'],function(){
 	Route::get('/{tag}','ShowController@show')->name('news.show');
 
 });
+
+Route::group(['prefix' => 'editors', 'namespace' => 'Editors'],function(){
+
+
+	Route::get('/{slug}','ShowController@show')->name('editors.show');
+});
+
+Route::group(['prefix' => 'categories','namespace' => 'Categories'],function(){
+
+	Route::get('/{slug}','ShowController@show')->name('categories.show');
+
+});

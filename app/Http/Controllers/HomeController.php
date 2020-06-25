@@ -7,6 +7,7 @@ use App\Models\Category;
 use App\Models\Article;
 use DB;
 use App\Models\Hashtag;
+use App\Models\FeaturedArticle;
 
 class HomeController extends Controller
 {
@@ -19,10 +20,18 @@ class HomeController extends Controller
                      ->orderBy('repetition', 'desc')
                      ->get();
 
+
+         $featuredPosts = FeaturedArticle::featuredPosts()->get()->filter(function($item,$index){
+
+               return  $item->article->status == 1;
+         });
+
+
     	return view('pages.home',[
 
     		'categories' => Category::all(),
-    		'articles' => Article::active()->orderBy('created_at','DESC')->get(),
+    		'articles' => Article::published()->orderBy('created_at','DESC')->get(),
+            'featuredArticles' =>$featuredPosts,
     		'tags' => Hashtag::all(),
     		'popular_hashtags'=>$popular_hashtags
     	]);

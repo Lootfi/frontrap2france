@@ -4,9 +4,13 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Carbon\Carbon;
+use Laravel\Scout\Searchable;
 
 class Article extends Model
 {
+        use Searchable;
+
+        
     /**
      * The table associated with the model.
      *
@@ -25,7 +29,7 @@ class Article extends Model
      *
      * @var array
      */
-    protected $appends = ['Creator','Category','ContenuFormat','Hashtags','Artists','Avatar','DateActu'];
+    protected $appends = ['Creator','Category','ContenuFormat','Hashtags','Artists','Avatar','DateActu','IsFeatured'];
 
      /**
      * The attributes that should be hidden for arrays.
@@ -52,9 +56,22 @@ class Article extends Model
         return $this->artists()->orderBy('rank')->get();
     }
 
-    public static function active(){
+    public function getIsFeaturedAttribute(){
 
-        return self::where('status',1);
+        if($featured = \App\Models\FeaturedArticle::where('article_id',$this->id)->first()){
+
+            return ['date_start' => $featured->date_start, 'date_end' => $featured->date_end];
+
+        }else{
+
+            return null;
+
+        }
+    }
+
+    public static function published(){
+
+        return self::where('status',2);
     }
 
 

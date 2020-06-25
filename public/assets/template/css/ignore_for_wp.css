@@ -19,7 +19,7 @@ License URI:
 .feature_section_1{
     position: relative;
     background: url(../images/bg/2.jpg) no-repeat fixed center center / cover;
-    padding: 100px 0;
+    padding: 100px;
 }
 .bg_white{
     background: #fff;

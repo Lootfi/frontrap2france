@@ -24,288 +24,47 @@
                                                     <div class="magro_tab_1">
                                                         <ul class="mtab_1 menu_tab nav nav-tabs" id="menu_post_tab">
 
-                    @foreach($categories->take(5) as $category)
-                            @if ($category == reset($categories ))
-                                        <li><a class="active" href="{{$category->slug}}" data-toggle="tab">{{$category->nom}}</a></li>
-                             @endif
-                                        <li><a  href="{{$category->slug}}" data-toggle="tab">{{$category->nom}}</a></li>
+                    @foreach($categories->take(5) as $key => $category)
+                            @if ($key == 0)
+                            <li><a class="active" href="#{{$category->slug}}" data-toggle="tab">{{$category->nom}}</a></li>
+                             @else
+                            <li><a  href="#{{$category->slug}}" data-toggle="tab">{{$category->nom}}</a></li>
+                            @endif
 
-                                                            @endforeach
+                    @endforeach
                                                             
                                                         </ul>
-                                                        <div class="tab-content">
-                                                            <div class="tab-pane fade show in active" id="twt_1" role="tabpanel">
-                                                                <div class="row">
-                                                                    <div class="col-lg-6 col-md-6">
-                                                                        <div class="tw1_list clearfix">
-                                                                            <div class="tw1l_thumb">
-                                                                                <img src="images/home1/top_week/2.jpg" alt="">
-                                                                                <div class="tw1l_cats">
-                                                                                    <a href="#" class="cats reds">Tech</a>
+            <div class="tab-content">
+              @foreach($categories->take(5) as $key => $category)
+              @if($key == 0) 
+                <div class="tab-pane show in active fade " id="{{$category->slug}}" role="tabpanel">
+              @else
+                <div class="tab-pane fade " id="{{$category->slug}}" role="tabpanel">
+              @endif
+                <div class="row">
+                  @foreach($category->articles->take(4) as $article)
+                 <div class="col-lg-6 col-md-6">
+                    <div class="tw1_list clearfix">
+                            <div class="tw1l_thumb">
+                                   <img src="http://rapvue.test{{$article->Avatar}}" alt="">
+                                        <div class="tw1l_cats">
+                                        <a href="{{Route('categories.show',$article->Category->slug)}}" class="cats reds">{{$article->Category->nom}}</a>
                                                                                 </div>
                                                                             </div>
-                                                                            <div class="tw1_l_content">
-                                                                                <h3><a href="#">Apollo Astronauts Hared Deep Radiation</a></h3>
-                                                                                <div class="comon_meta clearfix">
-                                                                                    <span class="cm_author"><i class="twi-user"></i>By<a href="#">Jawn Staff</a></span>
-                                                                                    <span class="cm_date"><a href="#">Nov 10, 2019</a></span>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="tw1_list clearfix">
-                                                                            <div class="tw1l_thumb">
-                                                                                <img src="images/home1/top_week/6.jpg" alt="">
-                                                                                <div class="tw1l_cats">
-                                                                                    <a href="#" class="cats blues">Sports</a>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="tw1_l_content">
-                                                                                <h3><a href="#">Discovering Sydney’s See Attractions line</a></h3>
-                                                                                <div class="comon_meta clearfix">
-                                                                                    <span class="cm_author"><i class="twi-user"></i>By<a href="#">Jawn Staff</a></span>
-                                                                                    <span class="cm_date"><a href="#">Nov 10, 2019</a></span>
+                                <div class="tw1_l_content">
+                                        <h3><a href="{{Route('news.show',$article->tag)}}">{{$article->titre}}</a></h3>
+                                    <div class="comon_meta clearfix">
+                                <span class="cm_author"><i class="twi-user"></i>By<a href="{{Route('editors.show',$article->Creator->slug)}}">{{$article->Creator->Full_Name}}</a></span>
+                            <span class="cm_date"><a href="#">{{$article->DateActu}}</a></span>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
-                                                                    </div>
-                                                                    <div class="col-lg-6 col-md-6 noPaddingRight">
-                                                                        <div class="tw1_list clearfix">
-                                                                            <div class="tw1l_thumb">
-                                                                                <img src="images/home1/top_week/3.jpg" alt="">
-                                                                                <div class="tw1l_cats">
-                                                                                    <a href="#" class="cats live reds">Live</a>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="tw1_l_content">
-                                                                                <h3><a href="#">Added Two New Vegan Flavors To Its Dairy</a></h3>
-                                                                                <div class="comon_meta clearfix">
-                                                                                    <span class="cm_author"><i class="twi-user"></i>By<a href="#">Jawn Staff</a></span>
-                                                                                    <span class="cm_date"><a href="#">Nov 10, 2019</a></span>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="tw1_list clearfix">
-                                                                            <div class="tw1l_thumb">
-                                                                                <img src="images/home1/top_week/4.jpg" alt="">
-                                                                                <div class="tw1l_cats">
-                                                                                    <a href="#" class="cats blues">Sports</a>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="tw1_l_content">
-                                                                                <h3><a href="#">Apollo Astronauts Hared Deep Radiation</a></h3>
-                                                                                <div class="comon_meta clearfix">
-                                                                                    <span class="cm_author"><i class="twi-user"></i>By<a href="#">Jawn Staff</a></span>
-                                                                                    <span class="cm_date"><a href="#">Nov 10, 2019</a></span>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="tab-pane fade" id="twt_2" role="tabpanel">
-                                                                <div class="row">
-                                                                    <div class="col-lg-6 col-md-6">
-                                                                        <div class="tw1_list clearfix">
-                                                                            <div class="tw1l_thumb">
-                                                                                <img src="images/home1/top_week/3.jpg" alt="">
-                                                                                <div class="tw1l_cats">
-                                                                                    <a href="#" class="cats live reds">Live</a>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="tw1_l_content">
-                                                                                <h3><a href="#">Added Two New Vegan Flavors To Its Dairy</a></h3>
-                                                                                <div class="comon_meta clearfix">
-                                                                                    <span class="cm_author"><i class="twi-user"></i>By<a href="#">Jawn Staff</a></span>
-                                                                                    <span class="cm_date"><a href="#">Nov 10, 2019</a></span>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="tw1_list clearfix">
-                                                                            <div class="tw1l_thumb">
-                                                                                <img src="images/home1/top_week/4.jpg" alt="">
-                                                                                <div class="tw1l_cats">
-                                                                                    <a href="#" class="cats blues">Sports</a>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="tw1_l_content">
-                                                                                <h3><a href="#">Apollo Astronauts Hared Deep Radiation</a></h3>
-                                                                                <div class="comon_meta clearfix">
-                                                                                    <span class="cm_author"><i class="twi-user"></i>By<a href="#">Jawn Staff</a></span>
-                                                                                    <span class="cm_date"><a href="#">Nov 10, 2019</a></span>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-lg-6 col-md-6 noPaddingRight">
-                                                                        <div class="tw1_list clearfix">
-                                                                            <div class="tw1l_thumb">
-                                                                                <img src="images/home1/top_week/2.jpg" alt="">
-                                                                                <div class="tw1l_cats">
-                                                                                    <a href="#" class="cats reds">Tech</a>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="tw1_l_content">
-                                                                                <h3><a href="#">Apollo Astronauts Hared Deep Radiation</a></h3>
-                                                                                <div class="comon_meta clearfix">
-                                                                                    <span class="cm_author"><i class="twi-user"></i>By<a href="#">Jawn Staff</a></span>
-                                                                                    <span class="cm_date"><a href="#">Nov 10, 2019</a></span>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="tw1_list clearfix">
-                                                                            <div class="tw1l_thumb">
-                                                                                <img src="images/home1/top_week/6.jpg" alt="">
-                                                                                <div class="tw1l_cats">
-                                                                                    <a href="#" class="cats blues">Sports</a>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="tw1_l_content">
-                                                                                <h3><a href="#">Discovering Sydney’s See Attractions line</a></h3>
-                                                                                <div class="comon_meta clearfix">
-                                                                                    <span class="cm_author"><i class="twi-user"></i>By<a href="#">Jawn Staff</a></span>
-                                                                                    <span class="cm_date"><a href="#">Nov 10, 2019</a></span>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="tab-pane fade" id="twt_3" role="tabpanel">
-                                                                <div class="row">
-                                                                    <div class="col-lg-6 col-md-6">
-                                                                        <div class="tw1_list clearfix">
-                                                                            <div class="tw1l_thumb">
-                                                                                <img src="images/home1/top_week/2.jpg" alt="">
-                                                                                <div class="tw1l_cats">
-                                                                                    <a href="#" class="cats reds">Tech</a>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="tw1_l_content">
-                                                                                <h3><a href="#">Apollo Astronauts Hared Deep Radiation</a></h3>
-                                                                                <div class="comon_meta clearfix">
-                                                                                    <span class="cm_author"><i class="twi-user"></i>By<a href="#">Jawn Staff</a></span>
-                                                                                    <span class="cm_date"><a href="#">Nov 10, 2019</a></span>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="tw1_list clearfix">
-                                                                            <div class="tw1l_thumb">
-                                                                                <img src="images/home1/top_week/6.jpg" alt="">
-                                                                                <div class="tw1l_cats">
-                                                                                    <a href="#" class="cats blues">Sports</a>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="tw1_l_content">
-                                                                                <h3><a href="#">Discovering Sydney’s See Attractions line</a></h3>
-                                                                                <div class="comon_meta clearfix">
-                                                                                    <span class="cm_author"><i class="twi-user"></i>By<a href="#">Jawn Staff</a></span>
-                                                                                    <span class="cm_date"><a href="#">Nov 10, 2019</a></span>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-lg-6 col-md-6 noPaddingRight">
-                                                                        <div class="tw1_list clearfix">
-                                                                            <div class="tw1l_thumb">
-                                                                                <img src="images/home1/top_week/3.jpg" alt="">
-                                                                                <div class="tw1l_cats">
-                                                                                    <a href="#" class="cats live reds">Live</a>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="tw1_l_content">
-                                                                                <h3><a href="#">Added Two New Vegan Flavors To Its Dairy</a></h3>
-                                                                                <div class="comon_meta clearfix">
-                                                                                    <span class="cm_author"><i class="twi-user"></i>By<a href="#">Jawn Staff</a></span>
-                                                                                    <span class="cm_date"><a href="#">Nov 10, 2019</a></span>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="tw1_list clearfix">
-                                                                            <div class="tw1l_thumb">
-                                                                                <img src="images/home1/top_week/4.jpg" alt="">
-                                                                                <div class="tw1l_cats">
-                                                                                    <a href="#" class="cats blues">Sports</a>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="tw1_l_content">
-                                                                                <h3><a href="#">Apollo Astronauts Hared Deep Radiation</a></h3>
-                                                                                <div class="comon_meta clearfix">
-                                                                                    <span class="cm_author"><i class="twi-user"></i>By<a href="#">Jawn Staff</a></span>
-                                                                                    <span class="cm_date"><a href="#">Nov 10, 2019</a></span>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="tab-pane fade" id="twt_4" role="tabpanel">
-                                                                <div class="row">
-                                                                    <div class="col-lg-6 col-md-6">
-                                                                        <div class="tw1_list clearfix">
-                                                                            <div class="tw1l_thumb">
-                                                                                <img src="images/home1/top_week/3.jpg" alt="">
-                                                                                <div class="tw1l_cats">
-                                                                                    <a href="#" class="cats live reds">Live</a>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="tw1_l_content">
-                                                                                <h3><a href="#">Added Two New Vegan Flavors To Its Dairy</a></h3>
-                                                                                <div class="comon_meta clearfix">
-                                                                                    <span class="cm_author"><i class="twi-user"></i>By<a href="#">Jawn Staff</a></span>
-                                                                                    <span class="cm_date"><a href="#">Nov 10, 2019</a></span>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="tw1_list clearfix">
-                                                                            <div class="tw1l_thumb">
-                                                                                <img src="images/home1/top_week/4.jpg" alt="">
-                                                                                <div class="tw1l_cats">
-                                                                                    <a href="#" class="cats blues">Sports</a>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="tw1_l_content">
-                                                                                <h3><a href="#">Apollo Astronauts Hared Deep Radiation</a></h3>
-                                                                                <div class="comon_meta clearfix">
-                                                                                    <span class="cm_author"><i class="twi-user"></i>By<a href="#">Jawn Staff</a></span>
-                                                                                    <span class="cm_date"><a href="#">Nov 10, 2019</a></span>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-lg-6 col-md-6 noPaddingRight">
-                                                                        <div class="tw1_list clearfix">
-                                                                            <div class="tw1l_thumb">
-                                                                                <img src="images/home1/top_week/2.jpg" alt="">
-                                                                                <div class="tw1l_cats">
-                                                                                    <a href="#" class="cats reds">Tech</a>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="tw1_l_content">
-                                                                                <h3><a href="#">Apollo Astronauts Hared Deep Radiation</a></h3>
-                                                                                <div class="comon_meta clearfix">
-                                                                                    <span class="cm_author"><i class="twi-user"></i>By<a href="#">Jawn Staff</a></span>
-                                                                                    <span class="cm_date"><a href="#">Nov 10, 2019</a></span>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="tw1_list clearfix">
-                                                                            <div class="tw1l_thumb">
-                                                                                <img src="images/home1/top_week/6.jpg" alt="">
-                                                                                <div class="tw1l_cats">
-                                                                                    <a href="#" class="cats blues">Sports</a>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="tw1_l_content">
-                                                                                <h3><a href="#">Discovering Sydney’s See Attractions line</a></h3>
-                                                                                <div class="comon_meta clearfix">
-                                                                                    <span class="cm_author"><i class="twi-user"></i>By<a href="#">Jawn Staff</a></span>
-                                                                                    <span class="cm_date"><a href="#">Nov 10, 2019</a></span>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
+                 </div>
+                 @endforeach
+                </div>
+                </div>
+                     @endforeach
+
                                                         </div>
                                                     </div>
                                                 </div>
@@ -347,4 +106,3 @@
                 </div>
             </div>
         </header>
-        <!-- Main Header -->

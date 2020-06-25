@@ -2,7 +2,7 @@
             <div class="container">
                 <div class="row cus_top_week_column clearfix">
                     <div class="col-lg-8 clearfix">
-                        <h2 class="sec_titles"><i></i>Top of The Week</h2>
+                        <h2 class="sec_titles"><i></i>C'est Chaud</h2>
                         <div class="magro_tab_1">
                             <ul class="mtab_1 right_top nav nav-tabs" id="top_of_the_week_tab">
                                 <li><a class="active" href="#t_tab_1" data-toggle="tab">Hot Vacation</a></li>
