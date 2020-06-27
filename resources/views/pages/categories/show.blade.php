@@ -1,7 +1,7 @@
 @extends('layouts.site')
 
 @section('main-section')
-<section class="category_page_3">
+<section class="category_page_3 bg-white">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
@@ -13,7 +13,7 @@
                     <div class="col-lg-4 col-md-6">
                         <div class="tt_s_post">
                             <div class="tt_thumb">
-                                <img src="rapvue.test{{$article->avatar}}" alt="">
+                                <img src="http://rapvue.test{{$article->avatar}}" alt="">
                                 <a class="view" href="#"><i class="magro-fire"></i>120</a>
                                 <a class="share" href="#"><i class="magro-share-2"></i>320</a>
                             </div>
@@ -29,11 +29,7 @@
                     </div>
                     @endforeach
                 </div>
-                <div class="row">
-                    <div class="col-lg-12 text-center">
-                        <a class="magro_btn" href="#"><span><img src="images/loading.png" alt=""><img src="images/loading_hover.png" alt=""></span>Load More</a>
-                    </div>
-                </div>
+
             </div>
         </section>
 @endsection

@@ -4,6 +4,8 @@
         <title>Toute l'actualité du Rap Français - Rap2France</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="canonical" href="http://rapfront.test/amp/news/this-is-a-new-article-from-editor/">
+
 
 
         <!-- Include All CSS -->
