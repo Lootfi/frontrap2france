@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "57a17e6fc5ee5d6142b3b1baa4eff08f",
+    "content-hash": "e3caa5c59d9af262a8d32b1dce2ce926",
     "packages": [
         {
             "name": "algolia/algoliasearch-client-php",
@@ -173,6 +173,57 @@
                 "math"
             ],
             "time": "2020-04-15T15:59:35+00:00"
+        },
+        {
+            "name": "dionisiy13/google-news-sitemap",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dionisiy13/sitemap-google-news.git",
+                "reference": "bba9184b30d5d7bbf6507fd29017d8e7c4d9e74b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dionisiy13/sitemap-google-news/zipball/bba9184b30d5d7bbf6507fd29017d8e7c4d9e74b",
+                "reference": "bba9184b30d5d7bbf6507fd29017d8e7c4d9e74b",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.0.0"
+            },
+            "require-dev": {
+                "ext-xmlwriter": "*"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Dionisiy\\SitemapGoogle\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": ":Dan Kurasov",
+                    "email": "dionisiy13@gmail.com",
+                    "role": "PHP Developer"
+                }
+            ],
+            "description": "Easy way to do sitemap for google news",
+            "homepage": "https://github.com/dionisiy13/google-news-sitemap",
+            "keywords": [
+                "Sitemap",
+                "google news",
+                "php"
+            ],
+            "time": "2018-01-29T10:20:05+00:00"
         },
         {
             "name": "dnoegel/php-xdg-base-dir",

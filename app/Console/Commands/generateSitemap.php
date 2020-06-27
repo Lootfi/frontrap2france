@@ -40,5 +40,6 @@ class generateSitemap extends Command
     {
         SitemapGenerator::create("http://rapfront.test")
             ->writeToFile(public_path('sitemap.xml'));
+            echo "sitemap generated"; 
     }
 }

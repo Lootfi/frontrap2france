@@ -36,7 +36,7 @@ class Article extends Model
      *
      * @var array
      */
-    protected $hidden = ['contenutext','contenu','contenuJson','id','idcat','admin_creator_id'];
+    protected $hidden = ['contenutext','contenuJson','id','idcat','admin_creator_id'];
     /**
     * The attributes that should be cast.
     *

@@ -4,7 +4,7 @@
                     <div class="col-lg-12 text-center">
                         <div class="banner_1_content">
                             <a href="{{Route('categories.show',$article->Category->slug)}}" class="cats blues2">{{$article->Category->nom}}</a>
-                            <h2>{{$article->titre}}</h2>
+                            <h2 class="title" tag="{{$article->tag}}">{{$article->titre}}</h2>
                             <div class="post_banner_meta clearfix">
                                 <img src="http://rapvue.test{{$article->Creator->Avatar}}" alt=""/>
                                 <span class="fi1cm_author">By <a href="{{Route('editors.show',$article->Creator->slug)}}">{{$article->Creator->Full_Name}}</a></span>

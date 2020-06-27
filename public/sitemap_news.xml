@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
+ <url>
+  <loc>http://rapfront.test/news/this-is-a-scheduled-post-to-be-featured</loc>
+  <news:news>
+   <news:publication>
+    <news:name>http://rapfront.test</news:name>
+    <news:language>fr</news:language>
+   </news:publication>
+   <news:genres>Actu Rap</news:genres>
+   <news:publication_date>2020-06-25T00:00:00+00:00</news:publication_date>
+   <news:title>This is a scheduled post to be featured</news:title>
+  </news:news>
+ </url>
+ <url>
+  <loc>http://rapfront.test/news/this-is-a-sechudeled-post</loc>
+  <news:news>
+   <news:publication>
+    <news:name>http://rapfront.test</news:name>
+    <news:language>fr</news:language>
+   </news:publication>
+   <news:genres>Actu Rap</news:genres>
+   <news:publication_date>2020-06-24T00:00:00+00:00</news:publication_date>
+   <news:title>This is a sechudeled post</news:title>
+  </news:news>
+ </url>
+ <url>
+  <loc>http://rapfront.test/news/tiitle</loc>
+  <news:news>
+   <news:publication>
+    <news:name>http://rapfront.test</news:name>
+    <news:language>fr</news:language>
+   </news:publication>
+   <news:genres>Street</news:genres>
+   <news:publication_date>2020-06-22T00:00:00+00:00</news:publication_date>
+   <news:title>tiitle</news:title>
+  </news:news>
+ </url>
+ <url>
+  <loc>http://rapfront.test/news/this-is-a-new-article-from-editor</loc>
+  <news:news>
+   <news:publication>
+    <news:name>http://rapfront.test</news:name>
+    <news:language>fr</news:language>
+   </news:publication>
+   <news:genres>Nouveau Talent</news:genres>
+   <news:publication_date>2020-06-20T00:00:00+00:00</news:publication_date>
+   <news:title>This is a new article from editor</news:title>
+  </news:news>
+ </url>
+ <url>
+  <loc>http://rapfront.test/news/this-is-a-title-for-your-post</loc>
+  <news:news>
+   <news:publication>
+    <news:name>http://rapfront.test</news:name>
+    <news:language>fr</news:language>
+   </news:publication>
+   <news:genres>Clash</news:genres>
+   <news:publication_date>2020-06-19T00:00:00+00:00</news:publication_date>
+   <news:title>This is a title for your post</news:title>
+  </news:news>
+ </url>
+ <url>
+  <loc>http://rapfront.test/news/cersei-lannister</loc>
+  <news:news>
+   <news:publication>
+    <news:name>http://rapfront.test</news:name>
+    <news:language>fr</news:language>
+   </news:publication>
+   <news:genres>Sortie Rap</news:genres>
+   <news:publication_date>2020-06-19T00:00:00+00:00</news:publication_date>
+   <news:title>Cersei Lannister</news:title>
+  </news:news>
+ </url>
+ <url>
+  <loc>http://rapfront.test/news/rim-k-l-interview-sur-africk</loc>
+  <news:news>
+   <news:publication>
+    <news:name>http://rapfront.test</news:name>
+    <news:language>fr</news:language>
+   </news:publication>
+   <news:genres>Actu Rap</news:genres>
+   <news:publication_date>2020-06-11T00:00:00+00:00</news:publication_date>
+   <news:title>Rim-K se livre sur Afrik.com</news:title>
+  </news:news>
+ </url>
+</urlset>

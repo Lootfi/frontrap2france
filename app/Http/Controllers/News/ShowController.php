@@ -24,4 +24,6 @@ class ShowController extends Controller
 
     	return redirect(Route('home'));
     }
+
+    
 }

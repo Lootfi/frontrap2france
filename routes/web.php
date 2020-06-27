@@ -20,6 +20,7 @@ Route::group(['prefix' => 'news' , 'namespace'=> 'News'],function(){
 
 });
 
+
 Route::group(['prefix' => 'editors', 'namespace' => 'Editors'],function(){
 
 
