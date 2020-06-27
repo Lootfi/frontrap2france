@@ -13,7 +13,8 @@ class ShowController extends Controller
 
 
     	if($article = Article::fetchByTag($tag)){
-
+    		
+    		$article->setAttribute('contenu', html_entity_decode($article->contenu));
     		return view('pages.news.show',[
 
     			'article' => $article,	

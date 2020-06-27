@@ -48,7 +48,6 @@ class Article extends Model
        'dateactu' =>'datetime:Y-m-d',
        'contenuJson' => 'array'
     ];
-
     
 
     public function getArtistsAttribute(){
@@ -110,6 +109,8 @@ class Article extends Model
             return ['type' => "json" , 'contenu' => $this->contenuJson];
         }
     }
+
+    
 
     public function getHashtagsAttribute(){
 

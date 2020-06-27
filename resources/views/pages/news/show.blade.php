@@ -9,7 +9,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
-                        <div class="sb_bg">
+                        <div class="sb_bg py-1">
                             <div class="row">
                                 <div class="col-lg-8 col-md-7">
                                     <div class="single_blog">
@@ -55,7 +55,7 @@
             )
             .then(response => response.json())
             .then(data => {
-            var article = Object.values(data)[0]
+            var article = data
             const template = 
             
             `
@@ -83,7 +83,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
-                        <div class="sb_bg">
+                        <div class="sb_bg py-0">
                             <div class="row">
                                 <div class="col-lg-8 col-md-7">
                                     <div class="single_blog">
@@ -113,6 +113,9 @@
                 sectionObserver.observe(sectionEl)
           })
 
+}).catch(error => {
+
+            loading.remove()
 })
         }
 
@@ -121,7 +124,6 @@
             if (entries[0].isIntersecting === true) {
                 loadPost();            
                 wrapper.appendChild(loading);
-                console.log('loaded')
             }
         },{threshold: [1] });
 
@@ -130,8 +132,6 @@
           var sectionObserver = new IntersectionObserver(function(entries){
 
                 entries.forEach(entry => {
-
-                    console.log(entry)
 
                     window.history.pushState( null, "", `/news/${entry.target.getAttribute('tag')}` );
                     
