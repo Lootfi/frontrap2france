@@ -13,7 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'HomeController@show')->name('home');
+Route::get('/','HomeController@redirectToHome');
+Route::get('/home', 'HomeController@show')->name('home');
+
 Route::group(['prefix' => 'news' , 'namespace'=> 'News'],function(){
 
 	Route::get('/{tag}','ShowController@show')->name('news.show');

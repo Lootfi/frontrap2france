@@ -11,6 +11,11 @@ use App\Models\FeaturedArticle;
 
 class HomeController extends Controller
 {
+
+    public function redirectToHome(){
+
+        return redirect(Route('home'));
+    }
     public function show(){
 
     	$popular_hashtags = DB::table('r2f_new_actualités_hashtags')
