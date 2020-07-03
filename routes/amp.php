@@ -15,6 +15,6 @@ use Illuminate\Support\Facades\Route;
 
 Route::group(['prefix' => 'news' , 'namespace'=> 'News'],function(){
 
-	Route::get('/{tag}','ShowController@show')->name('news.show');
+	Route::get('/{tag}','ShowController@show')->name('news.amp.show');
 
 });

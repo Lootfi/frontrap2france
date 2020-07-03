@@ -83,7 +83,7 @@
           <address class="ampstart-byline clearfix mb4 px3 h5">
             <time class="ampstart-byline-pubdate block bold my1" datetime="{{$article->dateactu}}">{{$article->DateActu}}</time>
           </address>
-          <amp-img src="http://rapvue.test{{$article->Avatar}}" width="1280" height="853" layout="responsive" alt="The final spritzer" class="mb-4 mx-3"></amp-img>
+          <amp-img src="{{$article->Avatar}}" width="1280" height="853" layout="responsive" alt="The final spritzer" class="mb-4 mx-3"></amp-img>
 
         </header>
     @yield('main-section')
