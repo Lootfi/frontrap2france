@@ -1,7 +1,10 @@
 @extends('layouts.site')
 
 @section('main-section')
+
+	@if($featuredArticles->count() > 0)
 	@include('components.homepage.featuredPosts')
+	@endif
 	@include('components.ad')
 	@include('components.homepage.topWeek')
 	@include('components.homepage.streetPosts')

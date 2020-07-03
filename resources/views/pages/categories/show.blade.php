@@ -13,7 +13,7 @@
                     <div class="col-lg-4 col-md-6">
                         <div class="tt_s_post">
                             <div class="tt_thumb">
-                                <img src="http://rapvue.test{{$article->avatar}}" alt="">
+                                <img src="{{$article->avatar}}" alt="">
                                 <a class="view" href="#"><i class="magro-fire"></i>120</a>
                                 <a class="share" href="#"><i class="magro-share-2"></i>320</a>
                             </div>

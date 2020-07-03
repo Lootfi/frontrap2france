@@ -94,7 +94,7 @@ class Article extends Model
     public function getAvatarAttribute(){
 
          
-        return "/images/admin/articles/avatars/" . $this->image; 
+        return "https://editor.rap2france.com/images/admin/articles/avatars/" . $this->image; 
     
 
     }

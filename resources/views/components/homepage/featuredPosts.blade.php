@@ -3,7 +3,7 @@
                 <div class="row custom_margin">
                     <div class="col-lg-8 col-md-6 custom_padding">
                         <div class="featured_item_1 first_featured_item">
-                            <img  src="http://rapvue.test{{$featuredArticles->first()->article->Avatar}}" alt=""/>
+                        <img  src="{{$featuredArticles->first()->article->Avatar}}" alt=""/>
                             <div class="fi1_content">
                                 <div class="fi1c_categories">
                                     <a href="{{Route('categories.show',$articles->first()->Category->slug)}}" class="cats blues2">{{$featuredArticles->first()->article->Category->nom}}</a>
@@ -19,7 +19,7 @@
                             @foreach($articles->slice(1)->take(2) as $article)
                             <div class="col-lg-6 col-md-12 custom_padding">
                                 <div class="featured_item_1 fi1_sm">
-                                    <img src="http://rapvue.test{{$article->Avatar}}" alt=""/>
+                                    <img src="{{$article->Avatar}}" alt=""/>
                                     <div class="fi1_content">
                                         <div class="fi1c_categories">
                                             <a href="{{Route('categories.show',$article->Category->slug)}}" class="cats blues2">{{$article->Category->nom}}</a>
@@ -40,7 +40,7 @@
                         @foreach($articles->slice(3)->take(2) as $article)
 
                         <div class="featured_item_1 fi1_sm">
-                                    <img src="http://rapvue.test{{$article->Avatar}}" alt=""/>
+                                    <img src="{{$article->Avatar}}" alt=""/>
                                     <div class="fi1_content">
                                         <div class="fi1c_categories">
                         <a href="{{Route('categories.show',$article->Category->slug)}}" class="cats blues2">{{$article->Category->nom}}</a>

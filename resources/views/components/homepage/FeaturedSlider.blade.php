@@ -20,7 +20,7 @@
                                     </div>
                                     <div class="col-lg-3 col-md-3">
                                         <div class="feature_img">
-                                            <img src="http://rapvue.test{{$article->Avatar}}" alt="">
+                                            <img src="{{$article->Avatar}}" alt="">
                                         </div>
                                     </div>
                                 </div>

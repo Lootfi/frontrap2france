@@ -6,7 +6,7 @@
                             <h2 class="widget_title"><i></i>Top Articles</h2>
                             @foreach($articles->take(3) as $article)
                             <div class="sf_s1_post">
-                                <img src="http://rapvue.test{{$article->Avatar}}" alt=""/>
+                                <img src="{{$article->Avatar}}" alt=""/>
                                 <h5><a href="{{Route('news.show',$article->tag)}}">{{$article->titre}}</a></h5>
                                 <a class="sf_date" href="#">{{$article->DateActu}}</a>
                             </div>
@@ -18,7 +18,7 @@
                             <h2 class="widget_title"><i></i>Derniers dossiers</h2>
                             @foreach($articles->take(3) as $article)
                             <div class="sf_s1_post">
-                                <img src="http://rapvue.test{{$article->Avatar}}" alt=""/>
+                                <img src="{{$article->Avatar}}" alt=""/>
                                 <h5><a href="{{Route('news.show',$article->tag)}}">{{$article->titre}}</a></h5>
                                 <a class="sf_date" href="#">{{$article->DateActu}}</a>
                             </div>

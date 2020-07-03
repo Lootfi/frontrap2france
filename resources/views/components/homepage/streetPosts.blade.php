@@ -10,7 +10,7 @@
                     <div class="col-lg-6">
                         <div class="tw2_list clearfix">
                             <div class="tw2l_thumb">
-                                <img src="http://rapvue.test/{{$article->Avatar}}" alt="">
+                                <img src="{{$article->Avatar}}" alt="">
                             </div>
                             <div class="tw2_l_content">
                                 <a href="{{Route('categories.show',$article->Category->slug)}}" class="cats reds">Street</a>
@@ -33,7 +33,7 @@
                         <div class="tw2_list_slide owl-carousel">
                             @foreach($articles->take(4) as $article)
                             <div class="single_tw2_list">
-                                <img src="http://rapvue.test{{$article->Avatar}}" alt=""/>
+                                <img src="{{$article->Avatar}}" alt=""/>
                                 <div class="tw2_list_content">
                                     <a href="#" class="cats reds">Dossiers</a>
                                     <div class="list_meta_con">

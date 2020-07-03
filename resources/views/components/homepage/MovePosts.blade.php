@@ -6,7 +6,7 @@
                         @foreach($articles->take(3) as $article)
                         <div class="tw3_list clearfix">
                             <div class="tw3_thumb">
-                                <img src="http://rapvue.test{{$article->Avatar}}" alt="">
+                                <img src="{{$article->Avatar}}" alt="">
                             </div>
                             <div class="tw_3_content">
                                 <a href="{{Route('categories.show',$article->Category->slug)}}" class="cats reds">Move</a>
@@ -21,7 +21,7 @@
                        @foreach($articles->take(3) as $article)
                         <div class="tw3_list clearfix">
                             <div class="tw3_thumb">
-                                <img src="http://rapvue.test{{$article->Avatar}}" alt="">
+                                <img src="{{$article->Avatar}}" alt="">
                             </div>
                             <div class="tw_3_content">
                                 <a href="{{Route('categories.show',$article->Category->slug)}}" class="cats reds">Gaming</a>

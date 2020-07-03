@@ -20,18 +20,16 @@ class HomeController extends Controller
                      ->orderBy('repetition', 'desc')
                      ->get();
 
-
          $featuredPosts = FeaturedArticle::featuredPosts()->get()->filter(function($item,$index){
 
                return  $item->article->status == 1;
          });
 
-
     	return view('pages.home',[
 
     		'categories' => Category::all(),
     		'articles' => Article::published()->orderBy('created_at','DESC')->get(),
-            'featuredArticles' =>$featuredPosts,
+            'featuredArticles' => $featuredPosts,
     		'tags' => Hashtag::all(),
     		'popular_hashtags'=>$popular_hashtags
     	]);

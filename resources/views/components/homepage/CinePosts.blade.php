@@ -10,7 +10,7 @@
                     @foreach($articles->take(3) as $article)
                         <div class="col-lg-4 col-md-6">
                         <div class="single_tc_post">
-                            <img src="http://rapvue.test{{$article->Avatar}}" alt=""/>
+                            <img src="{{$article->Avatar}}" alt=""/>
                             <div class="tc_content">
                                 <a href="{{Route('categories.show',$article->Category->slug)}}" class="cats blues">Ciné</a>
                                 <h3><a href="{{Route('news.show',$article->tag)}}"><span>{{$article->titre}}</span></a></h3>

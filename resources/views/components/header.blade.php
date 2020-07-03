@@ -46,7 +46,7 @@
                  <div class="col-lg-6 col-md-6">
                     <div class="tw1_list clearfix">
                             <div class="tw1l_thumb">
-                                   <img src="http://rapvue.test{{$article->Avatar}}" alt="">
+                                   <img src="{{$article->Avatar}}" alt="">
                                         <div class="tw1l_cats">
                                         <a href="{{Route('categories.show',$article->Category->slug)}}" class="cats reds">{{$article->Category->nom}}</a>
                                                                                 </div>

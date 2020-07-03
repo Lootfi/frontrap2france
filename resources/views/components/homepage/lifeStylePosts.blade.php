@@ -8,7 +8,7 @@
                             <div class="col-lg-6">
                                 <div class="top_week_1 mb_60">
                                     <div class="tw1_thumb">
-                                        <img src="http://rapvue.test/{{$article->Avatar}}" alt="">
+                                        <img src="{{$article->Avatar}}" alt="">
                                         <div class="tw1_cats">
                                             <a href="{{Route('categories.show',$article->Category->slug)}}" class="cats pinks2">LifeStyle</a>
                                         </div>
@@ -45,7 +45,7 @@
                                 <div class="single_modern">
 
                                     <div class="single_md_item">
-                                        <img src="http://rapvue.test{{$article->Avatar}}" alt=""/>
+                                        <img src="{{$article->Avatar}}" alt=""/>
                                         <a href="#">{{$article->titre}}</a>
                                     </div>
                                    </div>
@@ -61,7 +61,7 @@
                             <h3 class="widget_title"><span>Polémique</span></h3>
                             <div class="lr_post_area">
                                 <div class="lr_feature_post">
-                                    <img src="http://rapvue.test{{$articles->first()->Avatar}}" alt=""/>
+                                    <img src="{{$articles->first()->Avatar}}" alt=""/>
                                     <h4><a href="{{Route('news.show',$articles->first()->tag)}}">{{$articles->first()->titre}}</a></h4>
                                     <div class="comon_meta clearfix">
                                         <span class="cm_author"><i class="twi-user"></i>By<a href="{{Route('editors.show',$articles->first()->Creator->slug)}}">{{$articles->first()->Creator->Full_Name}}</a></span>
@@ -74,7 +74,7 @@
                                 </div>
                                 @foreach($articles->slice(1)->take(2) as $article)
                                 <div class="lr_sp">
-                                    <img src="http://rapvue.test{{$article->Avatar}}" alt=""/>
+                                    <img src="{{$article->Avatar}}" alt=""/>
                                     <h5><a href="{{Route('news.show',$article->tag)}}">{{$article->titre}}</a></h5>
                                     <span><a href="#">{{$article->DateActu}}</a></span>
                                 </div>
