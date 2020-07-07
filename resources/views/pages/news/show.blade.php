@@ -2,6 +2,7 @@
 
 @section('main-section')
 <div id="wrapper">
+    <div id="posts_wrapper">
     <div class="post-section" tag="{{$article->tag}}">
 	@include('components.news.postHeader')
     <div class="content-container">
@@ -24,6 +25,7 @@
         </section>
 </div>
 </div>
+</div>
 <div class="loading text-center"><img class="inline-block mx-auto " style="animation: rotation 2s infinite linear" src="{{asset('assets/template/images/loading_hover.png')}}"/></div>
 </div>
        
@@ -33,6 +35,7 @@
 @section('page-script')
     <script>    
         const wrapper = document.querySelector('#wrapper');
+        const posts_wrapper = document.querySelector('#posts_wrapper');
         const primaryTag = document.querySelector('.title').getAttribute('tag');
         var section = document.querySelectorAll('.post-section');
         var loading = document.querySelector('.loading')
@@ -103,7 +106,7 @@
         container.classList.add('post-section')
         container.setAttribute("tag",article.tag)
         container.innerHTML = template;
-        wrapper.append(container);
+        posts_wrapper.append(container);
         var lastTag = this.data.tags[this.data.tags.length - 1];
         this.data.tags = [...this.data.tags , article.tag]
         window.history.pushState( null, article.titre, `/news/${article.tag}` );
