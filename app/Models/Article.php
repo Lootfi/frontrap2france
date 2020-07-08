@@ -3,20 +3,18 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Carbon\Carbon;
-use Laravel\Scout\Searchable;
+use Spatie\Feed\Feedable;
+use Spatie\Feed\FeedItem;
 
-class Article extends Model
+class Article extends Model implements Feedable
 {
-        use Searchable;
 
-        
-    /**
+     /**
      * The table associated with the model.
      *
      * @var string
      */
-    protected $table = 'r2f_new_actualite_copy_testing';
+    protected $table = 'r2f_new_actualite_testing_copy';
     
     /**
      * Indicates if the model should be timestamped.
@@ -29,14 +27,14 @@ class Article extends Model
      *
      * @var array
      */
-    protected $appends = ['Creator','Category','ContenuFormat','Hashtags','Artists','Avatar','DateActu','IsFeatured'];
+    protected $appends = ['Creator','Category','ContenuFormat','Hashtags','Artists','Avatar','StatusName','IsFeatured'];
 
      /**
      * The attributes that should be hidden for arrays.
      *
      * @var array
      */
-    protected $hidden = ['contenutext','contenuJson','id','idcat','admin_creator_id'];
+    protected $hidden = ['contenuJson','idcat','admin_creator_id'];
     /**
     * The attributes that should be cast.
     *
@@ -48,11 +46,17 @@ class Article extends Model
        'dateactu' =>'datetime:Y-m-d',
        'contenuJson' => 'array'
     ];
-    
 
-    public function getArtistsAttribute(){
+    public function getStatusNameAttribute(){
 
-        return $this->artists()->orderBy('rank')->get();
+        if($this->status == 1){
+
+            return "Pending";
+        }
+        if($this->status == 2){
+
+            return "published";
+        }
     }
 
     public function getIsFeaturedAttribute(){
@@ -68,22 +72,55 @@ class Article extends Model
         }
     }
 
-    public static function published(){
+   public static function published(){
 
         return self::where('status',2);
     }
 
+    public static function Pending(){
 
-    public function getDateActuAttribute(){
+        return self::where('status',1);
+    }
 
-        return Carbon::parse($this->created_at)->isoFormat('MMM Do YY');
+    public function publish(){
+
+        $this->status = 2;
+        $this->updated_at = now();
+        $this->save();
+        return $this;
+
+    }
+    public function toFeedItem()
+    {
+        return FeedItem::create()
+            ->id($this->id)
+            ->title($this->titre)
+            ->summary($this->contenu)
+            ->updated($this->updated_at)
+            ->link('/articles/'.$this->tag)
+            ->author($this->Creator->Full_Name);
+    }
+
+    public static function getFeedItems()
+            {
+               return static::all();
+            }
+
+    public function getLinkAttribute()
+{
+    return route('events.show', $this);
+}
+
+    public function getArtistsAttribute(){
+
+        return $this->artists()->orderBy('rank')->get();
     }
 
 
     public function getCreatorAttribute(){
 
 
-    	return \App\Models\Administrator::findOrFail($this->admin_creator_id);
+        return \App\Models\Administrator::findOrFail($this->admin_creator_id);
     }
 
     public function getCategoryAttribute(){
@@ -93,24 +130,26 @@ class Article extends Model
     
     public function getAvatarAttribute(){
 
+        if($this->type == 1){
+
+            return "https://cd1.rap2france.com/public/medias/news/".$this->id."/660x330/mdpi/".$this->image;
+        }
          
-        return "https://editor.rap2france.com/images/admin/articles/avatars/" . $this->image; 
+        return "/images/admin/articles/avatars/optimized/".$this->image; 
     
 
     }
     public function getContenuFormatAttribute(){
 
-        if($this->contenuJson == null ){
+        if($this->type == 1 ){
 
             return ['type' => "raw", 'contenu' => html_entity_decode($this->contenu)  ];
        
         }else{
 
-            return ['type' => "json" , 'contenu' => $this->contenuJson];
+            return ['type' => "json" , 'contenu' => $this->contenuJSON];
         }
     }
-
-    
 
     public function getHashtagsAttribute(){
 
