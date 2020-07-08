@@ -30,10 +30,11 @@ class HomeController extends Controller
                return  $item->article->status == 1;
          });
 
+         $articles = Article::published()->orderBy('created_at','DESC')->take(10)->get();
     	return view('pages.home',[
 
     		'categories' => Category::all(),
-    		'articles' => Article::published()->orderBy('created_at','DESC')->take(50)->get(),
+    		'articles' => $articles,
             'featuredArticles' => $featuredPosts,
     		'tags' => Hashtag::all(),
     		'popular_hashtags'=>$popular_hashtags
