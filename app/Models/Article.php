@@ -3,13 +3,15 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Spatie\Feed\Feedable;
-use Spatie\Feed\FeedItem;
+use Carbon\Carbon;
+use Laravel\Scout\Searchable;
 
-class Article extends Model implements Feedable
+class Article extends Model
 {
+        use Searchable;
 
-     /**
+        
+    /**
      * The table associated with the model.
      *
      * @var string
@@ -27,14 +29,14 @@ class Article extends Model implements Feedable
      *
      * @var array
      */
-    protected $appends = ['Creator','Category','ContenuFormat','Hashtags','Artists','Avatar','StatusName','IsFeatured'];
+    protected $appends = ['Creator','Category','ContenuFormat','Hashtags','Artists','Avatar','DateActu','IsFeatured'];
 
      /**
      * The attributes that should be hidden for arrays.
      *
      * @var array
      */
-    protected $hidden = ['contenuJson','idcat','admin_creator_id'];
+    protected $hidden = ['contenutext','contenuJson','id','idcat','admin_creator_id'];
     /**
     * The attributes that should be cast.
     *
@@ -46,17 +48,11 @@ class Article extends Model implements Feedable
        'dateactu' =>'datetime:Y-m-d',
        'contenuJson' => 'array'
     ];
+    
 
-    public function getStatusNameAttribute(){
+    public function getArtistsAttribute(){
 
-        if($this->status == 1){
-
-            return "Pending";
-        }
-        if($this->status == 2){
-
-            return "published";
-        }
+        return $this->artists()->orderBy('rank')->get();
     }
 
     public function getIsFeaturedAttribute(){
@@ -72,55 +68,22 @@ class Article extends Model implements Feedable
         }
     }
 
-   public static function published(){
+    public static function published(){
 
         return self::where('status',2);
     }
 
-    public static function Pending(){
 
-        return self::where('status',1);
-    }
+    public function getDateActuAttribute(){
 
-    public function publish(){
-
-        $this->status = 2;
-        $this->updated_at = now();
-        $this->save();
-        return $this;
-
-    }
-    public function toFeedItem()
-    {
-        return FeedItem::create()
-            ->id($this->id)
-            ->title($this->titre)
-            ->summary($this->contenu)
-            ->updated($this->updated_at)
-            ->link('/articles/'.$this->tag)
-            ->author($this->Creator->Full_Name);
-    }
-
-    public static function getFeedItems()
-            {
-               return static::all();
-            }
-
-    public function getLinkAttribute()
-{
-    return route('events.show', $this);
-}
-
-    public function getArtistsAttribute(){
-
-        return $this->artists()->orderBy('rank')->get();
+        return Carbon::parse($this->created_at)->isoFormat('MMM Do YY');
     }
 
 
     public function getCreatorAttribute(){
 
 
-        return \App\Models\Administrator::findOrFail($this->admin_creator_id);
+    	return \App\Models\Administrator::findOrFail($this->admin_creator_id);
     }
 
     public function getCategoryAttribute(){
@@ -150,6 +113,8 @@ class Article extends Model implements Feedable
             return ['type' => "json" , 'contenu' => $this->contenuJSON];
         }
     }
+
+    
 
     public function getHashtagsAttribute(){
 
