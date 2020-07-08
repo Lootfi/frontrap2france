@@ -20,7 +20,7 @@
                                     <span class="cm_date"><a href="#">{{$article->DateActu}}</a></span>
                                 </div>
                                 <p>
-                            {!! html_entity_decode($article->contenutext, ENT_QUOTES, 'UTF-8') !!}                </p>
+                            {!! substr(html_entity_decode($article->contenutext, ENT_QUOTES, 'UTF-8'),0,100) !!} ...      </p>
                             </div>
                         </div>
                     </div>

@@ -30,7 +30,8 @@ class HomeController extends Controller
                return  $item->article->status == 1;
          });
 
-         $articles = Article::published()->orderBy('created_at','DESC')->take(10)->get();
+
+         $articles = Article::published()->orderBy('created_at','DESC')->take(50)->get();
     	return view('pages.home',[
 
     		'categories' => Category::all(),

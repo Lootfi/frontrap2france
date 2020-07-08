@@ -25,13 +25,6 @@ class Article extends Model
      */
     public $timestamps = false;
      /**
-     * The accessors to append to the model's array form.
-     *
-     * @var array
-     */
-    protected $appends = ['Creator','Category','ContenuFormat','Hashtags','Artists','Avatar','DateActu','IsFeatured'];
-
-     /**
      * The attributes that should be hidden for arrays.
      *
      * @var array
