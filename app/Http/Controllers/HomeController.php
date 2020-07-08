@@ -33,7 +33,7 @@ class HomeController extends Controller
     	return view('pages.home',[
 
     		'categories' => Category::all(),
-    		'articles' => Article::published()->orderBy('created_at','DESC')->get(),
+    		'articles' => Article::published()->orderBy('created_at','DESC')->take(50)->get(),
             'featuredArticles' => $featuredPosts,
     		'tags' => Hashtag::all(),
     		'popular_hashtags'=>$popular_hashtags
