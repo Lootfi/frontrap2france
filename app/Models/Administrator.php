@@ -61,7 +61,8 @@ class Administrator extends Model
     public function getAvatarAttribute(){
 
         $detail = \App\Models\AdministratorDetail::where('admin_id',$this->id)->first();
-        return "/images/admin/users/avatars/" . $detail->picture; 
+
+        return "https://editor.rap2france.com/images/admin/users/avatars/" . $detail->picture; 
     }
     public static function fetchBySlug($slug){
 

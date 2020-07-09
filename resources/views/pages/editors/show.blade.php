@@ -1,4 +1,4 @@
-@extends('layouts.site')
+	@extends('layouts.site')
 
 @section('main-section')
 
@@ -23,7 +23,7 @@
 		<h2 class="text-2xl my-2" >Les Articles</h2>
 
 		<div class="row my-2">
-			@foreach($editor->articles as $article)
+			@foreach($editor->articles()->latest()->take(12)->get() as $article)
                     <div class="col-lg-4 col-md-6">
                         <div class="tw3_list clearfix">
                             <div class="tw3_thumb">

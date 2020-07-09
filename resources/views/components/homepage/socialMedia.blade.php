@@ -1,6 +1,6 @@
 <div class="col-lg-6 pad_left_25">
                         <aside class="widget mag_social_widget">
-                            <h3 class="widget_title"><span>Stay Connected</span></h3>
+                            <h3 class="widget_title"><span>Restez Connecté! </span></h3>
                             <div class="social_area">
                                 <div class="single_social twi">
                                     <a href="#"><i class="twi-twitter"></i></a>

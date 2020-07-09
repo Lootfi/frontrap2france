@@ -11,16 +11,52 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="sb_bg py-1">
-                            <div class="row">
+                            <div class="row pt-4">
                                 <div class="col-lg-8 col-md-7">
-                                    <div class="single_blog">
+                                    <div class="single_blog ">
                                         {!! html_entity_decode($article->contenu, ENT_QUOTES, 'UTF-8') !!} 
                                     </div>
                                 </div>
+                                <div class="col-lg-4 col-md-5">
+                                    <div class="sidebar_1">
+                                        <aside class="widget mag_social_widget">
+                                            <h3 class="widget_title"><span>Restez Connecté!</span></h3>
+                                            <div class="social_area">
+                                                <div class="single_social twi">
+                                                    <a href="#"><i class="twi-twitter"></i></a>
+                                                    <div class="social_meta">
+                                                        <span>36.798</span> Fans
+                                                        <a href="#">Like</a>
+                                                    </div>
+                                                </div>
+                                                <div class="single_social fac">
+                                                    <a href="#"><i class="twi-facebook-f"></i></a>
+                                                    <div class="social_meta">
+                                                        <span>145.519</span> Followers
+                                                        <a href="#">Follow</a>
+                                                    </div>
+                                                </div>
+                                                <div class="single_social you">
+                                                    <a href="#"><i class="magro-play-button"></i></a>
+                                                    <div class="social_meta">
+                                                        <span>980</span> Subscribers
+                                                        <a href="#">Subscribe</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </aside>
+                                        <aside class="widget">
+                                            <div class="ads_widget">
+                                                <h6>advertisement</h6>
+                                                <a href="#"><img src="{{asset('assets/template/images/home1/ad2.jpg')}}" alt=""></a>
+                                            </div>
+                                        </aside>
+                                    </div>
+                     </div>
+                </div>
                             </div>
                         </div>
                     </div>
-                </div>
             </div>
         </section>
 </div>
@@ -67,7 +103,7 @@
                 <div class="row">
                     <div class="col-lg-12 text-center">
                         <div class="banner_1_content">
-                            <a href="http://rapfront.test/categories/${article.Category.slug}" class="cats blues2">${article.Category.nom}</a>
+                            <a href="/categories/${article.Category.slug}" class="cats blues2">${article.Category.nom}</a>
                             <h2 class="title" tag="${article.tag}">${article.titre}</h2>
                             <div class="post_banner_meta clearfix">
                                 <img src="${article.Creator.Avatar}" alt=""/>
@@ -87,7 +123,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="sb_bg py-0">
-                            <div class="row">
+                            <div class="row pt-4">
                                 <div class="col-lg-8 col-md-7">
                                     <div class="single_blog">
                                         ${article.contenu}

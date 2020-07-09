@@ -11,7 +11,7 @@ class IndexController extends Controller
     public function getMoreNews(Request $request){
     	
 
-    	$article = Article::published()->get()->whereNotIn('tag',request('tags'))->first();
+    	$article = Article::published()->latest()->get()->whereNotIn('tag',request('tags'))->first();
 		$article->setAttribute('contenu', html_entity_decode($article->contenu));
     	return $article->toJson();
     }
