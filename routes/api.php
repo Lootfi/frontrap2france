@@ -16,4 +16,5 @@ use Illuminate\Support\Facades\Route;
 
 	Route::post('/news/getMoreNews','Api\News\IndexController@getMoreNews')->name('news.getMoreNews');
 	Route::post('/categories/getMoreNews','Api\Categories\IndexController@getMoreNews');
+	Route::post('/editors/getMoreNews','Api\Editors\IndexController@getMoreNews');
 

@@ -34,9 +34,8 @@
                 <div class="row">
                     <div class="col-lg-12 text-center">
                         <button class="magro_btn flex items-center justify-center  w-1/4 mx-auto" id="loadMore" category="{{$category->slug}}" dataTotal="{{$category->articles()->take(12)->get()->count()}}">
-                            <div class="row items-center"><span>Load More</span>
-                                <span><img src="{{asset('assets/template/images/loading.png')}}" alt=""><img src="{{asset('assets/template/images/loading_hover.png')}}" alt=""></span>
-                            </div></button>
+                            <span id="loadText" style="top:0px;" class="top-0">Chargez</span>
+                        </button>
                     </div>
                 </div>
 
@@ -49,12 +48,19 @@
     <script>
         const loadMore = document.querySelector('#loadMore')
         const wrapper = document.querySelector('#wrapper')
+        var dataTotal = loadMore.getAttribute('dataTotal')
+        var category = loadMore.getAttribute('category')
+        const loadText = document.querySelector("#loadText");
+        const loading = `<img src="/assets/template/images/loading.png" alt=""><img src="/assets/template/images/loading_hover.png" alt="">`
+        const loadingSpan = document.createElement('span');
+        loadingSpan.style.top = "0px";
+        loadingSpan.innerHTML = loading;
 
         loadMore.addEventListener('click',() => {
-
-            var dataTotal = loadMore.getAttribute('dataTotal')
-            var category = loadMore.getAttribute('category')
+            dataTotal = loadMore.getAttribute('dataTotal');
             loadMore.disabled = true;
+            loadMore.append(loadingSpan)
+            loadMore.removeChild(loadText)
             loadMorePosts(dataTotal,category)
         })
 
@@ -72,14 +78,14 @@
             .then(response => response.json())
             .then(data => {
                 console.log(data)
-                var row = null;
+                var row = "";
                 Object.values(data).map(article => {
 
                     const template = `
                     <div class="col-lg-4 col-md-6">
                         <div class="tt_s_post">
                             <div class="tt_thumb">
-                                <img src="${article.avatar}" alt="">
+                                <img src="${article.Avatar}" alt="">
                                 <a class="view" href="#"><i class="magro-fire"></i>120</a>
                                 <a class="share" href="#"><i class="magro-share-2"></i>320</a>
                             </div>
@@ -101,7 +107,10 @@
                 wrap.classList.add('row')
                 wrap.innerHTML = row;
                 wrapper.append(wrap)
+                loadMore.setAttribute("dataTotal",parseInt(dataTotal) + 12);
                 loadMore.disabled = false
+                loadMore.append(loadText)
+                loadMore.removeChild(loadingSpan)
 
             })
             .catch(function(error){
