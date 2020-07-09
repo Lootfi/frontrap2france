@@ -62,6 +62,7 @@
 </div>
 </div>
 </div>
+<div class="loader"></div>
 <div class="loading text-center"><img class="inline-block mx-auto " style="animation: rotation 2s infinite linear" src="{{asset('assets/template/images/loading_hover.png')}}"/></div>
 </div>
        
@@ -75,6 +76,7 @@
         const primaryTag = document.querySelector('.title').getAttribute('tag');
         var section = document.querySelectorAll('.post-section');
         var loading = document.querySelector('.loading')
+        var loader = document.querySelector('.loader');
 
         var data  = {
 
@@ -145,6 +147,7 @@
         posts_wrapper.append(container);
         var lastTag = this.data.tags[this.data.tags.length - 1];
         this.data.tags = [...this.data.tags , article.tag]
+        wrapper.append(loader);
         window.history.pushState( null, article.titre, `/news/${article.tag}` );
         section = document.querySelectorAll('.post-section');
         section.forEach(sectionEl => {
@@ -161,22 +164,24 @@
         var LoadingObserver = new IntersectionObserver(function(entries){
 
             if (entries[0].isIntersecting === true) {
-                loadPost();            
-                wrapper.appendChild(loading);
+                wrapper.removeChild(loader)
+                loadPost();           
+                wrapper.append(loading) 
             }
         },{threshold: [1] });
 
-          LoadingObserver.observe(loading);
+          LoadingObserver.observe(loader);
 
           var sectionObserver = new IntersectionObserver(function(entries){
 
                 entries.forEach(entry => {
 
+                    console.log(entry.target.getAttribute('tag'))
                     window.history.pushState( null, "", `/news/${entry.target.getAttribute('tag')}` );
                     
                 })
 
-             },{threshold : [0.5]});
+             },{threshold : [0.3]});
 
         
 
