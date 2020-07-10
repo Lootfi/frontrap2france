@@ -41,4 +41,12 @@ class HomeController extends Controller
     		'popular_hashtags'=>$popular_hashtags
     	]);
     }
+
+    public function search(){
+
+        return view('pages.search',[
+
+            'categories' => Category::all(),
+        ]);
+    }
 }

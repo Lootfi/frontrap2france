@@ -13,11 +13,14 @@ class IndexController extends Controller
         		$category = Category::fetchBySlug($request->category);
         		$articles =  $category->articles()->get()->slice($request->dataTotal)->take(12);
         		$articles->map(function($item,$index){
-
         			$item->setAttribute('DateActu',$item->DateActu);
         			$item->setAttribute('Avatar',$item->Avatar);
         		});
 
+        		if($articles->count() == 0){
+
+        			return response()->json("No articles");
+        		}
         		return $articles;
         }
 }

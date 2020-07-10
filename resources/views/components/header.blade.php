@@ -90,13 +90,15 @@
                                             <a href="#"><i class="twi-linkedin-in"></i></a>
                                             <a href="#"><i class="twi-youtube"></i></a>
                                         </div>
-                                        <div class="search_btn">
-                                            <a href="javascript:void(0);"><i class="twi-search"></i></a>
-                                            <form role="search" method="get" class="searchForms" action="#">
-                                                <input type="search" class="search-field" placeholder="Type and Hit Enter..." name="s">
-                                                <button type="submit" class="search-submit"><i class="twi-search2"></i></button>
+                                        <div class="search_btn relative">
+                                             <a href="javascript:void(0);"><i class="twi-search"></i></a>
+                                            <form id="cse-search-box" class="searchForms" action="/search" role="search">
+                                            <input type="search" value="{{request()->get('q')}}" id="search-input" class="search-field" name="q" placeholder="Recherche" autocomplete="off" data-bind="textInput:keyword"> <input type="hidden" name="cx" value="partner-pub-2176698891774775:9098524048" />
+                                            <input type="hidden" name="cof" value="FORID:10" />
+                                            <input type="hidden" name="ie" value="UTF-8" />
                                             </form>
-                                        </div>
+                                    </div>
+                                        
                                        
                                     </div>
                                 </div>

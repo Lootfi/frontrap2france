@@ -1,6 +1,15 @@
 @extends('layouts.site')
 
 @section('main-section')
+<section class="banner_02">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="breadcrumb"><a href="{{Route('home')}}">Accueil</a>><a href="{{Route('categories.show',$category->slug)}}">{{$category->nom}}</a></div>
+                    </div>
+                </div>
+            </div>
+        </section>
 <section class="category_page_3 bg-white">
             <div class="container">
                 <div class="row">
@@ -8,6 +17,7 @@
                         <h2 class="sec_titles"><i></i>{{$category->nom}}</h2>
                     </div>
                 </div>
+                @if($category->articles()->count() > 0)
                 <div id="wrapper">
                 <div class="row" >
                 	@foreach($category->articles()->take(12)->get() as $article)
@@ -38,6 +48,10 @@
                         </button>
                     </div>
                 </div>
+
+                @else
+                    <p>Pas d'articles dans cette catégorie</p>
+                @endif
 
             </div>
         </section>
@@ -77,7 +91,10 @@
             )
             .then(response => response.json())
             .then(data => {
-                console.log(data)
+                if(data == "No articles"){
+                    loadMore.remove();
+                    return;
+                }
                 var row = "";
                 Object.values(data).map(article => {
 

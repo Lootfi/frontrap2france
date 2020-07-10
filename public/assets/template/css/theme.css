@@ -1884,6 +1884,8 @@ a.cats.pinks2 {
     font-weight: 800;
     letter-spacing: 0;
     margin: 0;
+    background:white;
+    padding-left:3px;
 }
 .tc_content h3 a{
     color: #101010;
@@ -1893,7 +1895,6 @@ a.cats.pinks2 {
 }
 .tc_content h3 a span{
     padding: 2px 14px;
-    background: #fff;
 }
 .tc_content h3 a span:first-of-type{
     padding-top: 16px;
