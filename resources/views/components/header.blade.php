@@ -16,10 +16,10 @@
                                         </div>
                                         <ul class="clearfix">
                                             <li class="current-menu-item  mg_menu">
-                                                <a href="{{Route('home')}}">Home</a>
+                                                <a href="{{Route('home')}}">Accueil</a>
                                             </li>
                                             <li class="menu-item-has-children mg_menu">
-                                                <a href="#">News</a>
+                                                <a href="#">Actualité</a>
                                                 <div class="megamenu_2">
                                                     <div class="magro_tab_1">
                                                         <ul class="mtab_1 menu_tab nav nav-tabs" id="menu_post_tab">
