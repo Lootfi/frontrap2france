@@ -23,6 +23,7 @@
         <link rel="stylesheet" type="text/css" href="{{@asset('assets/template/css/theme.css')}}"/>
         <link rel="stylesheet" type="text/css" href="{{@asset('assets/template/css/responsive.css')}}"/>
         <link rel="stylesheet" type="text/css" href="{{@asset('css/app.css')}}" />
+        <meta property="fb:pages" content="42863617656" />
         
 
 
