@@ -13,8 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/','HomeController@redirectToHome');
-Route::get('/home', 'HomeController@show')->name('home');
+Route::get('/','HomeController@show')->name('home');
 Route::get('/search','HomeController@search')->name('search');
 
 Route::group(['prefix' => 'news' , 'namespace'=> 'News'],function(){

@@ -64,6 +64,15 @@
         <script src="{{@asset('assets/template/js/owl.carousel.min.js')}}"></script>
         <script src="{{@asset('assets/template/js/theme.js')}}"></script>
         <script src="{{@asset('js/app.js')}}"></script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-8897495-1"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-8897495-1');
+        </script>
+
          @yield('page-script')
 
     </body>
