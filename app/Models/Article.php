@@ -63,7 +63,7 @@ class Article extends Model
 
     public static function published(){
 
-        return self::where('status',2);
+        return self::where('status',1);
     }
 
 
