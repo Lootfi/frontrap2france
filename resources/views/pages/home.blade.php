@@ -9,7 +9,6 @@
 	@include('components.homepage.topWeek')
 	@include('components.homepage.streetPosts')
 	@include('components.homepage.FeaturedSlider')
-	@include('components.homepage.lifeStylePosts')
 	@include('components.homepage.CinePosts')
 	@include('components.homepage.MovePosts')
 	@include('components.homepage.instagramPictures')
