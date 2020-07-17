@@ -1,7 +1,7 @@
 @extends('layouts.site')
 
 @section('main-section')
-
+	
 	@if($featuredArticles->count() > 0)
 	@include('components.homepage.featuredPosts')
 	@endif
