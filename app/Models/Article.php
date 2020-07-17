@@ -99,7 +99,7 @@ class Article extends Model
 
         if($this->type == 1 ){
 
-            return ['type' => "raw", 'contenu' => $this->FormattedContent($this)  ];
+            return ['type' => "raw", 'contenu' => $this->FormattedContent($this)];
        
         }else{
 

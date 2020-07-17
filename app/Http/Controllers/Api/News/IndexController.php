@@ -12,7 +12,7 @@ class IndexController extends Controller
     	
 
     	$article = Article::published()->latest()->get()->whereNotIn('tag',request('tags'))->first();
-		$article->setAttribute('contenu', html_entity_decode($article->contenu));
+		$article->setAttribute('contenu', $article->ContenuFormat['contenu']);
 		$article->setAttribute('DateActu',$article->DateActu);
         $article->setAttribute('Avatar',$article->Avatar);
         $article->setAttribute('Creator',$article->Creator);
