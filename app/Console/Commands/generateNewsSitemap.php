@@ -40,7 +40,7 @@ class generateNewsSitemap extends Command
     public function handle()
     {
         $sitemap = new \Dionisiy\SitemapGoogle\Sitemap(public_path('sitemap_news.xml'));
-        $siteName = "http://rapfront.test";
+        $siteName = env('APP_URL');
         foreach(Article::orderBy('created_at','DESC')->take(50)->get() as $article){
 
         

@@ -1,87 +1,603 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
  <url>
-  <loc>http://rapfront.test/news/this-is-a-scheduled-post-to-be-featured</loc>
+  <loc>http://rapfront.test/news/lartson-un-rappeur-tres-talentueux-au-style-unique-et-au-flow-original-7245</loc>
   <news:news>
    <news:publication>
     <news:name>http://rapfront.test</news:name>
     <news:language>fr</news:language>
    </news:publication>
    <news:genres>Actu Rap</news:genres>
-   <news:publication_date>2020-06-25T00:00:00+00:00</news:publication_date>
-   <news:title>This is a scheduled post to be featured</news:title>
+   <news:publication_date>1970-01-01T00:00:00+00:00</news:publication_date>
+   <news:title>Lartson, un rappeur très talentueux au style unique et au flow original </news:title>
   </news:news>
  </url>
  <url>
-  <loc>http://rapfront.test/news/this-is-a-sechudeled-post</loc>
+  <loc>http://rapfront.test/news/nekfeu-gagne-la-bataille-judiciaire-contre-y-w-concernant-le-black-album-7237</loc>
   <news:news>
    <news:publication>
     <news:name>http://rapfront.test</news:name>
     <news:language>fr</news:language>
    </news:publication>
    <news:genres>Actu Rap</news:genres>
-   <news:publication_date>2020-06-24T00:00:00+00:00</news:publication_date>
-   <news:title>This is a sechudeled post</news:title>
+   <news:publication_date>1970-01-01T00:00:00+00:00</news:publication_date>
+   <news:title>Nekfeu gagne la bataille judiciaire contre Y&amp;W concernant le ''Black Album''</news:title>
   </news:news>
  </url>
  <url>
-  <loc>http://rapfront.test/news/tiitle</loc>
+  <loc>http://rapfront.test/news/booba-feat-mhd-leur-collaboration-jamais-sortie-fuite-sur-les-reseaux-7236</loc>
   <news:news>
    <news:publication>
     <news:name>http://rapfront.test</news:name>
     <news:language>fr</news:language>
    </news:publication>
-   <news:genres>Street</news:genres>
-   <news:publication_date>2020-06-22T00:00:00+00:00</news:publication_date>
-   <news:title>tiitle</news:title>
+   <news:genres>Actu Rap</news:genres>
+   <news:publication_date>1970-01-01T00:00:00+00:00</news:publication_date>
+   <news:title>Booba feat MHD : Leur collaboration jamais sortie fuite sur les réseaux </news:title>
   </news:news>
  </url>
  <url>
-  <loc>http://rapfront.test/news/this-is-a-new-article-from-editor</loc>
+  <loc>http://rapfront.test/news/acp-envoie-son-nouveau-hit-d-ete-dans-mon-yacht-clip-officiel-7235</loc>
   <news:news>
    <news:publication>
     <news:name>http://rapfront.test</news:name>
     <news:language>fr</news:language>
    </news:publication>
-   <news:genres>Nouveau Talent</news:genres>
-   <news:publication_date>2020-06-20T00:00:00+00:00</news:publication_date>
-   <news:title>This is a new article from editor</news:title>
+   <news:genres>Actu Rap</news:genres>
+   <news:publication_date>1970-01-01T00:00:00+00:00</news:publication_date>
+   <news:title>ACP envoie son nouveau hit d'été dans ''Mon Yacht'' (Clip Officiel)</news:title>
   </news:news>
  </url>
  <url>
-  <loc>http://rapfront.test/news/this-is-a-title-for-your-post</loc>
+  <loc>http://rapfront.test/news/maes-ajoute-3-titres-supplementaires-a-son-album-les-derniers-salopards-7220</loc>
   <news:news>
    <news:publication>
     <news:name>http://rapfront.test</news:name>
     <news:language>fr</news:language>
    </news:publication>
-   <news:genres>Clash</news:genres>
-   <news:publication_date>2020-06-19T00:00:00+00:00</news:publication_date>
-   <news:title>This is a title for your post</news:title>
+   <news:genres>Actu Rap</news:genres>
+   <news:publication_date>1970-01-01T00:00:00+00:00</news:publication_date>
+   <news:title>Maes ajoute 3 titres supplémentaires à son album ''Les derniers salopards'' </news:title>
   </news:news>
  </url>
  <url>
-  <loc>http://rapfront.test/news/cersei-lannister</loc>
+  <loc>http://rapfront.test/news/mac-tyer-et-ninho-nous-balancent-une-collaboration-de-dingue-dans-moto-son-7219</loc>
+  <news:news>
+   <news:publication>
+    <news:name>http://rapfront.test</news:name>
+    <news:language>fr</news:language>
+   </news:publication>
+   <news:genres>Actu Rap</news:genres>
+   <news:publication_date>1970-01-01T00:00:00+00:00</news:publication_date>
+   <news:title>Mac Tyer et Ninho nous balancent une collaboration de dingue dans ''Moto'' (Son) </news:title>
+  </news:news>
+ </url>
+ <url>
+  <loc>http://rapfront.test/news/l-hilarant-delire-de-twitter-autour-du-si-kaaris-n-avait-pas-mis-la-lumiere-sur-sevran-7218</loc>
+  <news:news>
+   <news:publication>
+    <news:name>http://rapfront.test</news:name>
+    <news:language>fr</news:language>
+   </news:publication>
+   <news:genres>Actu Rap</news:genres>
+   <news:publication_date>1970-01-01T00:00:00+00:00</news:publication_date>
+   <news:title>L'hilarant délire de Twitter autour du ''Si Kaaris n’avait pas mis la lumière sur Sevran'' </news:title>
+  </news:news>
+ </url>
+ <url>
+  <loc>http://rapfront.test/news/decouvrez-ratepi-un-rappeur-tres-polyvalent-et-talentueux-qui-nous-devoile-so-much-clip-officiel-7217</loc>
+  <news:news>
+   <news:publication>
+    <news:name>http://rapfront.test</news:name>
+    <news:language>fr</news:language>
+   </news:publication>
+   <news:genres>Actu Rap</news:genres>
+   <news:publication_date>1970-01-01T00:00:00+00:00</news:publication_date>
+   <news:title>Découvrez Ratepi, un rappeur très polyvalent et talentueux qui nous dévoile ''So Much'' (Clip Officiel)</news:title>
+  </news:news>
+ </url>
+ <url>
+  <loc>http://rapfront.test/news/mhd-vient-d-etre-libere-de-prison-sous-controle-judiciaire-7216</loc>
+  <news:news>
+   <news:publication>
+    <news:name>http://rapfront.test</news:name>
+    <news:language>fr</news:language>
+   </news:publication>
+   <news:genres>Actu Rap</news:genres>
+   <news:publication_date>1970-01-01T00:00:00+00:00</news:publication_date>
+   <news:title>MHD vient d’être libéré de prison sous contrôle judiciaire !</news:title>
+  </news:news>
+ </url>
+ <url>
+  <loc>http://rapfront.test/news/lacrim-reagit-apres-son-clash-avec-marc-blata-en-publiant-un-long-message-7202</loc>
+  <news:news>
+   <news:publication>
+    <news:name>http://rapfront.test</news:name>
+    <news:language>fr</news:language>
+   </news:publication>
+   <news:genres>Actu Rap</news:genres>
+   <news:publication_date>1970-01-01T00:00:00+00:00</news:publication_date>
+   <news:title>Lacrim réagit après son clash avec Marc Blata en publiant un long message </news:title>
+  </news:news>
+ </url>
+ <url>
+  <loc>http://rapfront.test/news/decouvrez-la-nouvelle-pepite-du-rap-francais-2th-le-prochain-nekfeu-7196</loc>
+  <news:news>
+   <news:publication>
+    <news:name>http://rapfront.test</news:name>
+    <news:language>fr</news:language>
+   </news:publication>
+   <news:genres>Actu Rap</news:genres>
+   <news:publication_date>1970-01-01T00:00:00+00:00</news:publication_date>
+   <news:title>Découvrez la nouvelle pépite du rap français 2TH : Le prochain Nekfeu ?</news:title>
+  </news:news>
+ </url>
+ <url>
+  <loc>http://rapfront.test/news/kanye-west-se-retire-deja-de-la-course-pour-la-maison-blanche-7189</loc>
+  <news:news>
+   <news:publication>
+    <news:name>http://rapfront.test</news:name>
+    <news:language>fr</news:language>
+   </news:publication>
+   <news:genres>Actu Rap</news:genres>
+   <news:publication_date>1970-01-01T00:00:00+00:00</news:publication_date>
+   <news:title>Kanye West se retire déjà de la course pour la Maison Blanche !</news:title>
+  </news:news>
+ </url>
+ <url>
+  <loc>http://rapfront.test/news/kaaris-realise-le-meilleur-demarrage-single-de-sa-carriere-avec-goulag-7188</loc>
+  <news:news>
+   <news:publication>
+    <news:name>http://rapfront.test</news:name>
+    <news:language>fr</news:language>
+   </news:publication>
+   <news:genres>Actu Rap</news:genres>
+   <news:publication_date>1970-01-01T00:00:00+00:00</news:publication_date>
+   <news:title>Kaaris réalise le meilleur démarrage single de sa carrière avec ''Goulag''</news:title>
+  </news:news>
+ </url>
+ <url>
+  <loc>http://rapfront.test/news/naza-balance-le-tube-de-l-ete-la-musique-est-bonne-feat-heuss-l-enfoire-clip-officiel-7186</loc>
   <news:news>
    <news:publication>
     <news:name>http://rapfront.test</news:name>
     <news:language>fr</news:language>
    </news:publication>
    <news:genres>Sortie Rap</news:genres>
-   <news:publication_date>2020-06-19T00:00:00+00:00</news:publication_date>
-   <news:title>Cersei Lannister</news:title>
+   <news:publication_date>1970-01-01T00:00:00+00:00</news:publication_date>
+   <news:title>Naza balance le tube de l'été ''La Musique Est Bonne'' feat Heuss L'Enfoiré (Clip Officiel)</news:title>
   </news:news>
  </url>
  <url>
-  <loc>http://rapfront.test/news/rim-k-l-interview-sur-africk</loc>
+  <loc>http://rapfront.test/news/6ix9ine-disparait-des-reseaux-sociaux-pour-mieux-preparer-sa-fuite-7178</loc>
   <news:news>
    <news:publication>
     <news:name>http://rapfront.test</news:name>
     <news:language>fr</news:language>
    </news:publication>
    <news:genres>Actu Rap</news:genres>
-   <news:publication_date>2020-06-11T00:00:00+00:00</news:publication_date>
-   <news:title>Rim-K se livre sur Afrik.com</news:title>
+   <news:publication_date>1970-01-01T00:00:00+00:00</news:publication_date>
+   <news:title>6ix9ine disparaît des réseaux sociaux pour mieux préparer sa fuite </news:title>
+  </news:news>
+ </url>
+ <url>
+  <loc>http://rapfront.test/news/vincelar-un-rappeur-aux-multiples-facettes-musicales-sort-son-puissant-clip-romper-clip-officiel-7160</loc>
+  <news:news>
+   <news:publication>
+    <news:name>http://rapfront.test</news:name>
+    <news:language>fr</news:language>
+   </news:publication>
+   <news:genres>Actu Rap</news:genres>
+   <news:publication_date>1970-01-01T00:00:00+00:00</news:publication_date>
+   <news:title>Vincelar, un rappeur aux multiples facettes musicales sort son puissant clip ''Romper'' (Clip Officiel) </news:title>
+  </news:news>
+ </url>
+ <url>
+  <loc>http://rapfront.test/news/14-juillet-tensions-a-paris-a-cause-des-feux-d-artifice-tires-sur-des-habitations-et-voitures-video-7159</loc>
+  <news:news>
+   <news:publication>
+    <news:name>http://rapfront.test</news:name>
+    <news:language>fr</news:language>
+   </news:publication>
+   <news:genres>Actu Rap</news:genres>
+   <news:publication_date>1970-01-01T00:00:00+00:00</news:publication_date>
+   <news:title>14 juillet : Tensions à Paris à cause des feux d’artifice tirés sur des habitations et voitures (Vidéo) </news:title>
+  </news:news>
+ </url>
+ <url>
+  <loc>http://rapfront.test/news/lacrim-menace-le-blogueur-marc-blata-au-sujet-du-trading-ce-dernier-lui-repond-video-7154</loc>
+  <news:news>
+   <news:publication>
+    <news:name>http://rapfront.test</news:name>
+    <news:language>fr</news:language>
+   </news:publication>
+   <news:genres>Actu Rap</news:genres>
+   <news:publication_date>1970-01-01T00:00:00+00:00</news:publication_date>
+   <news:title>Lacrim menace le blogueur Marc Blata au sujet du trading, ce dernier lui répond (Vidéo) </news:title>
+  </news:news>
+ </url>
+ <url>
+  <loc>http://rapfront.test/news/booba-rend-hommage-a-george-floyd-dans-un-morceau-surprise-dolce-vita-audio-7150</loc>
+  <news:news>
+   <news:publication>
+    <news:name>http://rapfront.test</news:name>
+    <news:language>fr</news:language>
+   </news:publication>
+   <news:genres>Sortie Rap</news:genres>
+   <news:publication_date>1970-01-01T00:00:00+00:00</news:publication_date>
+   <news:title>Booba rend hommage à George Floyd dans un morceau surprise ''Dolce Vita'' (Audio) </news:title>
+  </news:news>
+ </url>
+ <url>
+  <loc>http://rapfront.test/news/la-scene-du-rap-us-de-nouveau-en-deuil-un-autre-rappeur-tue-par-balles-7149</loc>
+  <news:news>
+   <news:publication>
+    <news:name>http://rapfront.test</news:name>
+    <news:language>fr</news:language>
+   </news:publication>
+   <news:genres>Actu Rap</news:genres>
+   <news:publication_date>1970-01-01T00:00:00+00:00</news:publication_date>
+   <news:title>La scène du rap US de nouveau en deuil : un autre rappeur tué par balles</news:title>
+  </news:news>
+ </url>
+ <url>
+  <loc>http://rapfront.test/news/impar-un-rappeur-tres-talentueux-et-hyper-polyvalent-qui-nous-devoile-mauvais-sang-clip-officiel-7148</loc>
+  <news:news>
+   <news:publication>
+    <news:name>http://rapfront.test</news:name>
+    <news:language>fr</news:language>
+   </news:publication>
+   <news:genres>Actu Rap</news:genres>
+   <news:publication_date>1970-01-01T00:00:00+00:00</news:publication_date>
+   <news:title>Impar, un rappeur très talentueux et hyper polyvalent qui nous dévoile ''Mauvais sang'' (Clip Officiel) </news:title>
+  </news:news>
+ </url>
+ <url>
+  <loc>http://rapfront.test/news/playstation-reprend-une-phrase-du-titre-goulag-de-kaaris-pour-promouvoir-warzone-7141</loc>
+  <news:news>
+   <news:publication>
+    <news:name>http://rapfront.test</news:name>
+    <news:language>fr</news:language>
+   </news:publication>
+   <news:genres>Actu Rap</news:genres>
+   <news:publication_date>1970-01-01T00:00:00+00:00</news:publication_date>
+   <news:title>Playstation reprend une phrase du titre ''Goulag'' de Kaaris pour promouvoir Warzone  </news:title>
+  </news:news>
+ </url>
+ <url>
+  <loc>http://rapfront.test/news/niska-et-madrane-envoient-le-puissant-clip-bandit-chef-clip-officiel-7139</loc>
+  <news:news>
+   <news:publication>
+    <news:name>http://rapfront.test</news:name>
+    <news:language>fr</news:language>
+   </news:publication>
+   <news:genres>Sortie Rap</news:genres>
+   <news:publication_date>1970-01-01T00:00:00+00:00</news:publication_date>
+   <news:title>Niska et Madrane envoient le puissant clip ''Bandit Chef'' (Clip Officiel) </news:title>
+  </news:news>
+ </url>
+ <url>
+  <loc>http://rapfront.test/news/booba-revele-sa-conversation-privee-avec-demdem-la-femme-de-gims-7138</loc>
+  <news:news>
+   <news:publication>
+    <news:name>http://rapfront.test</news:name>
+    <news:language>fr</news:language>
+   </news:publication>
+   <news:genres>Actu Rap</news:genres>
+   <news:publication_date>1970-01-01T00:00:00+00:00</news:publication_date>
+   <news:title>Booba révèle sa conversation privée avec DemDem, la femme de Gims </news:title>
+  </news:news>
+ </url>
+ <url>
+  <loc>http://rapfront.test/news/pop-smoke-realise-le-meilleur-demarrage-d-un-album-posthume-depuis-michael-jackson-en-2009-7137</loc>
+  <news:news>
+   <news:publication>
+    <news:name>http://rapfront.test</news:name>
+    <news:language>fr</news:language>
+   </news:publication>
+   <news:genres>Actu Rap</news:genres>
+   <news:publication_date>1970-01-01T00:00:00+00:00</news:publication_date>
+   <news:title>Pop Smoke réalise le meilleur démarrage d'un album posthume depuis Michael Jackson en 2009</news:title>
+  </news:news>
+ </url>
+ <url>
+  <loc>http://rapfront.test/news/50-cent-s-embrouille-avec-un-mec-dans-un-restaurant-et-lui-balance-une-table-et-une-chaise-video-7136</loc>
+  <news:news>
+   <news:publication>
+    <news:name>http://rapfront.test</news:name>
+    <news:language>fr</news:language>
+   </news:publication>
+   <news:genres>Actu Rap</news:genres>
+   <news:publication_date>1970-01-01T00:00:00+00:00</news:publication_date>
+   <news:title>50 Cent s'embrouille avec un mec dans un restaurant et lui balance une table et une chaise (Vidéo)</news:title>
+  </news:news>
+ </url>
+ <url>
+  <loc>http://rapfront.test/news/plk-revient-avec-un-nouveau-hit-d-ete-c-est-mort-clip-officiel-7134</loc>
+  <news:news>
+   <news:publication>
+    <news:name>http://rapfront.test</news:name>
+    <news:language>fr</news:language>
+   </news:publication>
+   <news:genres>Sortie Rap</news:genres>
+   <news:publication_date>1970-01-01T00:00:00+00:00</news:publication_date>
+   <news:title>PLK revient avec un nouveau hit d'été ''C'est Mort'' (Clip Officiel) </news:title>
+  </news:news>
+ </url>
+ <url>
+  <loc>http://rapfront.test/news/guizmo-melancolique-il-rend-hommage-a-son-pere-decede-dans-si-tu-m-entends-clip-officiel-7133</loc>
+  <news:news>
+   <news:publication>
+    <news:name>http://rapfront.test</news:name>
+    <news:language>fr</news:language>
+   </news:publication>
+   <news:genres>Actu Rap</news:genres>
+   <news:publication_date>1970-01-01T00:00:00+00:00</news:publication_date>
+   <news:title>Guizmo mélancolique, il rend hommage à son père décédé dans ''Si tu m'entends'' (Clip Officiel)</news:title>
+  </news:news>
+ </url>
+ <url>
+  <loc>http://rapfront.test/news/lefa-devoile-sa-collaboration-avec-sch-dans-smile-clip-officiel-7132</loc>
+  <news:news>
+   <news:publication>
+    <news:name>http://rapfront.test</news:name>
+    <news:language>fr</news:language>
+   </news:publication>
+   <news:genres>Sortie Rap</news:genres>
+   <news:publication_date>1970-01-01T00:00:00+00:00</news:publication_date>
+   <news:title>Lefa dévoile sa collaboration avec SCH dans ''Smile'' (Clip Officiel) </news:title>
+  </news:news>
+ </url>
+ <url>
+  <loc>http://rapfront.test/news/kaaris-et-gims-se-donnent-de-la-force-sur-les-reseaux-booba-n-aime-pas-il-reagit-7131</loc>
+  <news:news>
+   <news:publication>
+    <news:name>http://rapfront.test</news:name>
+    <news:language>fr</news:language>
+   </news:publication>
+   <news:genres>Actu Rap</news:genres>
+   <news:publication_date>1970-01-01T00:00:00+00:00</news:publication_date>
+   <news:title>Kaaris et Gims se donnent de la force sur les réseaux, Booba n'aime pas.. il réagit</news:title>
+  </news:news>
+ </url>
+ <url>
+  <loc>http://rapfront.test/news/lefa-s-associe-a-bosh-dans-une-collaboration-tres-sauvage-dans-top-boy-son-7127</loc>
+  <news:news>
+   <news:publication>
+    <news:name>http://rapfront.test</news:name>
+    <news:language>fr</news:language>
+   </news:publication>
+   <news:genres>Sortie Rap</news:genres>
+   <news:publication_date>1970-01-01T00:00:00+00:00</news:publication_date>
+   <news:title>Lefa s'associe à Bosh dans une collaboration très sauvage dans ''Top Boy'' (Son) </news:title>
+  </news:news>
+ </url>
+ <url>
+  <loc>http://rapfront.test/news/niska-et-madrane-ont-balance-une-dinguerie-sur-de-la-drill-dans-bandit-chef-son-7126</loc>
+  <news:news>
+   <news:publication>
+    <news:name>http://rapfront.test</news:name>
+    <news:language>fr</news:language>
+   </news:publication>
+   <news:genres>Actu Rap</news:genres>
+   <news:publication_date>1970-01-01T00:00:00+00:00</news:publication_date>
+   <news:title>Niska et Madrane ont balancé une dinguerie sur de la Drill dans ''Bandit Chef'' (Son) </news:title>
+  </news:news>
+ </url>
+ <url>
+  <loc>http://rapfront.test/news/l-album-de-maes-les-derniers-salopards-est-certifie-double-disque-de-platine-7123</loc>
+  <news:news>
+   <news:publication>
+    <news:name>http://rapfront.test</news:name>
+    <news:language>fr</news:language>
+   </news:publication>
+   <news:genres>Actu Rap</news:genres>
+   <news:publication_date>1970-01-01T00:00:00+00:00</news:publication_date>
+   <news:title>L'album de Maes ''Les derniers salopards'' est certifié double disque de platine </news:title>
+  </news:news>
+ </url>
+ <url>
+  <loc>http://rapfront.test/news/rk-est-le-plus-jeune-rappeur-de-l-histoire-a-avoir-decroche-un-disque-d-or-et-de-platine-7122</loc>
+  <news:news>
+   <news:publication>
+    <news:name>http://rapfront.test</news:name>
+    <news:language>fr</news:language>
+   </news:publication>
+   <news:genres>Actu Rap</news:genres>
+   <news:publication_date>1970-01-01T00:00:00+00:00</news:publication_date>
+   <news:title>RK est le plus jeune rappeur de l'histoire à avoir décroché un disque d'or et de platine </news:title>
+  </news:news>
+ </url>
+ <url>
+  <loc>http://rapfront.test/news/booba-se-moque-de-kaaris-d-avoir-paye-pour-mettre-son-clip-dans-les-recherches-youtube-de-booba-7121</loc>
+  <news:news>
+   <news:publication>
+    <news:name>http://rapfront.test</news:name>
+    <news:language>fr</news:language>
+   </news:publication>
+   <news:genres>Actu Rap</news:genres>
+   <news:publication_date>1970-01-01T00:00:00+00:00</news:publication_date>
+   <news:title>Booba se moque de Kaaris d'avoir payé pour mettre son clip dans les recherches Youtube de ''Booba''</news:title>
+  </news:news>
+ </url>
+ <url>
+  <loc>http://rapfront.test/news/6ix9ine-devoile-les-derniers-messages-que-xxxtentacion-lui-a-envoyes-avant-sa-mort-7120</loc>
+  <news:news>
+   <news:publication>
+    <news:name>http://rapfront.test</news:name>
+    <news:language>fr</news:language>
+   </news:publication>
+   <news:genres>Actu Rap</news:genres>
+   <news:publication_date>1970-01-01T00:00:00+00:00</news:publication_date>
+   <news:title>6ix9ine dévoile les derniers messages que XXXTentacion lui a envoyés avant sa mort</news:title>
+  </news:news>
+ </url>
+ <url>
+  <loc>http://rapfront.test/news/sadek-devient-papa-et-fete-la-naissance-de-son-enfant-sur-instagram-7118</loc>
+  <news:news>
+   <news:publication>
+    <news:name>http://rapfront.test</news:name>
+    <news:language>fr</news:language>
+   </news:publication>
+   <news:genres>Actu Rap</news:genres>
+   <news:publication_date>1970-01-01T00:00:00+00:00</news:publication_date>
+   <news:title>Sadek devient papa et fête la naissance de son enfant sur instagram </news:title>
+  </news:news>
+ </url>
+ <url>
+  <loc>http://rapfront.test/news/niro-s-associe-a-gims-dans-un-nouveau-morceau-inedit-paye-son-7116</loc>
+  <news:news>
+   <news:publication>
+    <news:name>http://rapfront.test</news:name>
+    <news:language>fr</news:language>
+   </news:publication>
+   <news:genres>Sortie Rap</news:genres>
+   <news:publication_date>1970-01-01T00:00:00+00:00</news:publication_date>
+   <news:title>Niro s'associe à Gims dans un nouveau morceau inédit ''Paye'' (Son) </news:title>
+  </news:news>
+ </url>
+ <url>
+  <loc>http://rapfront.test/news/le-clip-goulag-de-kaaris-s-affiche-quand-tu-cherches-le-nom-de-booba-sur-youtube-7115</loc>
+  <news:news>
+   <news:publication>
+    <news:name>http://rapfront.test</news:name>
+    <news:language>fr</news:language>
+   </news:publication>
+   <news:genres>Actu Rap</news:genres>
+   <news:publication_date>1970-01-01T00:00:00+00:00</news:publication_date>
+   <news:title>Le clip ''Goulag'' de Kaaris s'affiche quand tu cherches le nom de Booba sur Youtube </news:title>
+  </news:news>
+ </url>
+ <url>
+  <loc>http://rapfront.test/news/iam-lache-un-coup-de-gueule-contre-le-gouvernement-apres-une-nouvelle-annulation-de-concert-7114</loc>
+  <news:news>
+   <news:publication>
+    <news:name>http://rapfront.test</news:name>
+    <news:language>fr</news:language>
+   </news:publication>
+   <news:genres>Actu Rap</news:genres>
+   <news:publication_date>1970-01-01T00:00:00+00:00</news:publication_date>
+   <news:title>IAM lâche un coup de gueule contre le gouvernement après une nouvelle annulation de concert </news:title>
+  </news:news>
+ </url>
+ <url>
+  <loc>http://rapfront.test/news/l-album-rooftop-de-sch-est-certifie-disque-de-platine-7112</loc>
+  <news:news>
+   <news:publication>
+    <news:name>http://rapfront.test</news:name>
+    <news:language>fr</news:language>
+   </news:publication>
+   <news:genres>Actu Rap</news:genres>
+   <news:publication_date>1970-01-01T00:00:00+00:00</news:publication_date>
+   <news:title>L'album ''Rooftop'' de SCH est certifié disque de platine </news:title>
+  </news:news>
+ </url>
+ <url>
+  <loc>http://rapfront.test/news/emmanuel-macron-rejoint-tiktok-pour-feliciter-les-nouveaux-bacheliers-video-7111</loc>
+  <news:news>
+   <news:publication>
+    <news:name>http://rapfront.test</news:name>
+    <news:language>fr</news:language>
+   </news:publication>
+   <news:genres>Actu Rap</news:genres>
+   <news:publication_date>1970-01-01T00:00:00+00:00</news:publication_date>
+   <news:title>Emmanuel Macron rejoint TikTok pour féliciter les nouveaux bacheliers (Vidéo)</news:title>
+  </news:news>
+ </url>
+ <url>
+  <loc>http://rapfront.test/news/mhd-bientot-libere-son-avocate-va-demander-sa-liberation-7109</loc>
+  <news:news>
+   <news:publication>
+    <news:name>http://rapfront.test</news:name>
+    <news:language>fr</news:language>
+   </news:publication>
+   <news:genres>Actu Rap</news:genres>
+   <news:publication_date>1970-01-01T00:00:00+00:00</news:publication_date>
+   <news:title>MHD bientôt libéré ? Son avocate va demander sa libération </news:title>
+  </news:news>
+ </url>
+ <url>
+  <loc>http://rapfront.test/news/benash-quitte-le-label-92i-et-demande-son-argent-booba-lui-repond-7101</loc>
+  <news:news>
+   <news:publication>
+    <news:name>http://rapfront.test</news:name>
+    <news:language>fr</news:language>
+   </news:publication>
+   <news:genres>Actu Rap</news:genres>
+   <news:publication_date>1970-01-01T00:00:00+00:00</news:publication_date>
+   <news:title>Benash quitte le label 92i et demande son argent, Booba lui répond </news:title>
+  </news:news>
+ </url>
+ <url>
+  <loc>http://rapfront.test/news/moha-la-squale-balance-son-nouveau-morceau-malaga-clip-officiel-7099</loc>
+  <news:news>
+   <news:publication>
+    <news:name>http://rapfront.test</news:name>
+    <news:language>fr</news:language>
+   </news:publication>
+   <news:genres>Actu Rap</news:genres>
+   <news:publication_date>1970-01-01T00:00:00+00:00</news:publication_date>
+   <news:title>Moha La Squale balance son nouveau morceau ''Malaga'' (Clip Officiel) </news:title>
+  </news:news>
+ </url>
+ <url>
+  <loc>http://rapfront.test/news/bigflo-et-oli-lachent-une-pluie-de-punchlines-dans-leur-titre-insolent-4-clip-officiel-7098</loc>
+  <news:news>
+   <news:publication>
+    <news:name>http://rapfront.test</news:name>
+    <news:language>fr</news:language>
+   </news:publication>
+   <news:genres>Actu Rap</news:genres>
+   <news:publication_date>1970-01-01T00:00:00+00:00</news:publication_date>
+   <news:title>Bigflo et Oli lâchent une pluie de punchlines dans leur titre ''Insolent #4'' (Clip Officiel) </news:title>
+  </news:news>
+ </url>
+ <url>
+  <loc>http://rapfront.test/news/kaaris-a-regle-une-affaire-de-2018-avec-ibra-tv-pendant-son-sejour-dans-le-sud-de-la-france-7097</loc>
+  <news:news>
+   <news:publication>
+    <news:name>http://rapfront.test</news:name>
+    <news:language>fr</news:language>
+   </news:publication>
+   <news:genres>Actu Rap</news:genres>
+   <news:publication_date>1970-01-01T00:00:00+00:00</news:publication_date>
+   <news:title>Kaaris a réglé une affaire de 2018 avec Ibra TV pendant son séjour dans le sud de la France </news:title>
+  </news:news>
+ </url>
+ <url>
+  <loc>http://rapfront.test/news/kanye-west-annonce-sa-candidature-aux-presidentielles-2020-aux-etats-unis-7096</loc>
+  <news:news>
+   <news:publication>
+    <news:name>http://rapfront.test</news:name>
+    <news:language>fr</news:language>
+   </news:publication>
+   <news:genres>Actu Rap</news:genres>
+   <news:publication_date>1970-01-01T00:00:00+00:00</news:publication_date>
+   <news:title>Kanye West annonce sa candidature aux présidentielles 2020 aux Etats-Unis !</news:title>
+  </news:news>
+ </url>
+ <url>
+  <loc>http://rapfront.test/news/gims-repond-de-la-plus-belles-des-manieres-aux-attaques-de-booba-7095</loc>
+  <news:news>
+   <news:publication>
+    <news:name>http://rapfront.test</news:name>
+    <news:language>fr</news:language>
+   </news:publication>
+   <news:genres>Actu Rap</news:genres>
+   <news:publication_date>1970-01-01T00:00:00+00:00</news:publication_date>
+   <news:title>Gims répond de la plus belles des manières aux attaques de Booba </news:title>
+  </news:news>
+ </url>
+ <url>
+  <loc>http://rapfront.test/news/booba-s-en-prend-a-gims-et-sa-femme-demdem-sur-instagram-7094</loc>
+  <news:news>
+   <news:publication>
+    <news:name>http://rapfront.test</news:name>
+    <news:language>fr</news:language>
+   </news:publication>
+   <news:genres>Actu Rap</news:genres>
+   <news:publication_date>1970-01-01T00:00:00+00:00</news:publication_date>
+   <news:title>Booba s'en prend à Gims et sa femme DemDem sur Instagram </news:title>
   </news:news>
  </url>
 </urlset>
