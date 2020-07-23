@@ -38,7 +38,7 @@ class generateSitemap extends Command
      */
     public function handle()
     {
-        SitemapGenerator::create(url('/'))
+        SitemapGenerator::create(env('APP_URL'))
             ->writeToFile(public_path('sitemap.xml'));
             echo "sitemap generated"; 
     }
