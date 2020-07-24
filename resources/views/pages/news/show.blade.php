@@ -2,12 +2,16 @@
 @section('meta-section')
 
 <title>{{$article->titre}}</title>
+<meta property="og:title" content="{{$article->title}}" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="{{Route('news.show',$article->tag)}}" />
+<meta property="og:image" content="{{$article->Avatar}}" />
 
 @endsection
 @section('main-section')
 <div id="wrapper">
     <div id="posts_wrapper">
-    <div class="post-section" tag="{{$article->tag}}">
+    <div class="post-section" title="{{$article->titre}}" tag="{{$article->tag}}">
 	@include('components.news.postHeader')
     <div class="content-container">
  <section class="sp_1_section " >
@@ -147,6 +151,7 @@
         var container = document.createElement('div');
         container.classList.add('post-section')
         container.setAttribute("tag",article.tag)
+        container.setAttribute("title",article.titre)
         container.innerHTML = template;
         posts_wrapper.append(container);
         var lastTag = this.data.tags[this.data.tags.length - 1];
@@ -180,6 +185,7 @@
                 entries.forEach(entry => {
 
                     window.history.pushState( null, "", `/news/${entry.target.getAttribute('tag')}` );
+                    document.title = entry.target.getAttribute("title")
                     
                 })
 
