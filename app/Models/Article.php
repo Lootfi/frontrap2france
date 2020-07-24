@@ -86,13 +86,9 @@ class Article extends Model
     
     public function getAvatarAttribute(){
 
-        if($this->type == 1){
 
-            return "https://cd1.rap2france.com/public/medias/news/".$this->id."/660x330/mdpi/".$this->image;
-        }
-         
-        return "http://rapvue.test/images/admin/articles/avatars/optimized/".$this->image; 
-    
+        
+        return "https://cd1.rap2france.com/public/medias/news/".$this->id."/660x330/mdpi/".$this->image;
 
     }
     public function getContenuFormatAttribute(){
@@ -103,7 +99,7 @@ class Article extends Model
        
         }else{
 
-            return ['type' => "json" , 'contenu' => $this->contenuJSON];
+            return ['type' => "json" , 'contenu' => $this->contenu];
         }
     }
 
