@@ -1,6 +1,6 @@
 @extends('layouts.amp')
 @section('page-title')
-{{$article->titre}}
+<title>{{$article->titre}}</title>
 @endsection
 @section('main-section')
 

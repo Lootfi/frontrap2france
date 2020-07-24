@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Toute l'actualité du Rap Français - Rap2France</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="canonical" href="http://rapfront.test/amp/news/this-is-a-new-article-from-editor/">
 
 
-
+        @yield('meta-section')
+        <meta name="description" content="Rap2France est le site le plus complet sur le Rap Français. On y retrouve toute l'actualité du rap français, des paroles rap, écoutez des clips rap français, des biographies, des photos des rappeurs, des interviews rap.">
+        
+        <meta name="keywords" content="paroles clips rap français mp3 son biographies rappeur vidéos album tracklist pochette photos booba rohff medine sinik diam's 113 kery james mafia K1 fry ntm assassin la rumeur mc solaar lacrim booba rohff gradur maitre gims black m">
         <!-- Include All CSS -->
         <link rel="stylesheet" type="text/css" href="{{@asset('assets/template/css/bootstrap.css')}}"/>
         <link rel="stylesheet" type="text/css" href="{{@asset('assets/template/css/themewar-icons.css')}}"/>

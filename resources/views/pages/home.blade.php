@@ -1,5 +1,9 @@
 @extends('layouts.site')
+@section('meta-section')
+        
+        <title>Toute l'actualité du Rap Français - Rap2France</title>
 
+@endsection
 @section('main-section')
 	
 	@if($featuredArticles->count() > 0)

@@ -1,5 +1,9 @@
 @extends('layouts.site')
+@section('meta-section')
 
+<title>{{$article->titre}}</title>
+
+@endsection
 @section('main-section')
 <div id="wrapper">
     <div id="posts_wrapper">
@@ -148,7 +152,6 @@
         var lastTag = this.data.tags[this.data.tags.length - 1];
         this.data.tags = [...this.data.tags , article.tag]
         wrapper.append(loader);
-        window.history.pushState( null, article.titre, `/news/${article.tag}` );
         section = document.querySelectorAll('.post-section');
         section.forEach(sectionEl => {
 
@@ -176,7 +179,6 @@
 
                 entries.forEach(entry => {
 
-                    console.log(entry.target.getAttribute('tag'))
                     window.history.pushState( null, "", `/news/${entry.target.getAttribute('tag')}` );
                     
                 })
