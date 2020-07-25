@@ -7,7 +7,7 @@
 
 @endsection
 @section('main-section')
-<div class="px-4">
+<div class="main">
 
 
 @if($article->contenuFormat['type'] == "raw")
@@ -18,17 +18,17 @@
 
 		@if($block['type'] == "paragraph")
 
-			<p class="my-2">{{strip_tags($block['data']['text'])}}</p>
+			<p class="block">{{strip_tags($block['data']['text'])}}</p>
 
 		@endif
 
 		@if($block['type'] == "header")
-					<h{{$block['data']['level']}} class="my-2">{{strip_tags($block['data']['text'])}}</h{{$block['data']['level']}}>
+					<h{{$block['data']['level']}} class="block">{{strip_tags($block['data']['text'])}}</h{{$block['data']['level']}}>
 
 		@endif
 		@if($block['type'] == "quote")
 
-		<div class="my-4">
+		<div class="block">
                 <blockquote class="relative p-4 text-xl italic border-l-4 bg-neutral-100 text-neutral-600 border-neutral-500 quote">
                        <div style="font-size: 5rem; right: 100%;" class="mr-2 font-dank-mono text-neutral-500 absolute top-0 leading-none;" aria-hidden="true">
                          &ldquo;
@@ -48,14 +48,14 @@
 		@if($block['type'] == "list")
 
 			@if($block['data']['style'] == "ordered")
-			<ol style="list-style-type:decimal;">
+			<ol style="list-style-type:decimal;" class="block">
 				@foreach($block['data']['items'] as $item)
 					<li>{{strip_tags($item)}}</li>
 				@endforeach
 			</ol>
 				
 			@else
-			<ul style="list-style-type:disc;">
+			<ul style="list-style-type:disc;" class="block">
 				@foreach($block['data']['items'] as $item)
 					<li>{{strip_tags($item)}}</li>
 				@endforeach
@@ -66,19 +66,20 @@
 		@if($block['type'] == "image")
 		
 		@if($block['data']['file']) 
-		<figure class="my-4 ">
+		<figure class="block">
 		      <amp-img src="{{$block['data']['file']['url']}}" layout="fill"></amp-img>
 		      <figcaption>{{strip_tags($block['data']['caption'])}}</figcaption>
    		 </figure>
            
 		@else
-          <figure class="my-4 ">
+          <figure class="block">
 		      <amp-img src="{{$block['data']['url']}}" layout="fill"></amp-img>
 		      <figcaption>{{strip_tags($block['data']['caption'])}}</figcaption>
    		 </figure>
 		@endif
 		@endif
 		@if($block['type'] == "embed")
+		<div class="block">
 		@if($block['data']['service'] == "instagram")
 		<?php preg_match('/^(?:.*\/p\/)([\d\w\-_]+)/',$block['data']['embed'], $matches) ?>
 	
@@ -124,6 +125,7 @@
 
 
 @endif
+</div>
 @endif
 @endforeach
 
