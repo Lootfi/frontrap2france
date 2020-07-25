@@ -78,9 +78,9 @@
      <main id="content" role="main" class="">
       <article class="px-3 ">
         <header class="">
-          <span class="ampstart-subtitle block px-3 pt-2 mb-2"><a href="{{Route('categories.show',$article->Category->slug)}}">{{$article->Category->nom}}</a></span>
-          <h1 class="mb1 px3">{{$article->titre}}</h1>
-          <address class="ampstart-byline clearfix mb4 px3 h5">
+          <span class="ampstart-subtitle block pt-2 mb-2"><a href="{{Route('categories.show',$article->Category->slug)}}">{{$article->Category->nom}}</a></span>
+          <h1 class="mb1 ">{{$article->titre}}</h1>
+          <address class="ampstart-byline clearfix mb4 h5">
             <time class="ampstart-byline-pubdate block bold my1" datetime="{{$article->dateactu}}">{{$article->DateActu}}</time>
           </address>
           <amp-img src="{{$article->Avatar}}" width="1280" height="853" layout="responsive" alt="The final spritzer" class="mb-4 mx-3"></amp-img>

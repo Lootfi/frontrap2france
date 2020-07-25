@@ -13,7 +13,6 @@ class ShowController extends Controller
 
     	if($article = Article::fetchByTag($tag)){
     		
-    		$article->setAttribute('contenu', html_entity_decode($article->ContenuFormat['contenu'], ENT_QUOTES, 'UTF-8'));
     		return view('pages.amp.news.show',[
 
     			'article' => $article,	

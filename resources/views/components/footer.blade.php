@@ -14,7 +14,7 @@
                                 </p>
                                 <h4>Contactez nous :  <span>rap2france@gmail.com</span></h4>
                             </div>
-                        </aside>
+                        </aside> 
                     </div>
                     <div class="col-lg-5 col-md-5">
                         <aside class="widget">

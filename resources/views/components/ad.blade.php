@@ -3,4 +3,4 @@
                                     <h5>advertisement</h5>
                                     <a href="#"><img src="{{asset('assets/template/images/home1/ad2.jpg')}}" alt=""></a>
                                 </div>
- </div>
+ </div 

@@ -87,7 +87,7 @@ class Article extends Model
     public function getAvatarAttribute(){
 
 
-        
+
         return "https://cd1.rap2france.com/public/medias/news/".$this->id."/660x330/mdpi/".$this->image;
 
     }
@@ -99,7 +99,7 @@ class Article extends Model
        
         }else{
 
-            return ['type' => "json" , 'contenu' => $this->contenu];
+            return ['type' => "json" , 'contenu' => $this->contenuJSON];
         }
     }
 
