@@ -6,6 +6,10 @@
     @yield("page-title")
     <link rel="canonical" href="http://rapfront.test/news/this-is-a-new-article-from-editor/">
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+   <meta name="description" content="Rap2France est le site le plus complet sur le Rap Français. On y retrouve toute l'actualité du rap français, des paroles rap, écoutez des clips rap français, des biographies, des photos des rappeurs, des interviews rap.">
+        
+        <meta name="keywords" content="paroles clips rap français mp3 son biographies rappeur vidéos album tracklist pochette photos booba rohff medine sinik diam's 113 kery james mafia K1 fry ntm assassin la rumeur mc solaar lacrim booba rohff gradur maitre gims black m">
+
     <script type="application/ld+json">
       {
         "@context": "http://schema.org",
