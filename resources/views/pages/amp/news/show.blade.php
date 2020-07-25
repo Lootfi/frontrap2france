@@ -4,14 +4,12 @@
 <script async custom-element="amp-instagram" src="https://cdn.ampproject.org/v0/amp-instagram-0.1.js"></script>
 <script async custom-element="amp-twitter" src="https://cdn.ampproject.org/v0/amp-twitter-0.1.js"></script>
 <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
-<style amp-costum>
-	
 
-
-</style>
 @endsection
 @section('main-section')
 <div class="px-4">
+
+
 @if($article->contenuFormat['type'] == "raw")
 {!! html_entity_decode($article->contenuFormat['contenu'], ENT_QUOTES, 'UTF-8') !!} 
 @else
