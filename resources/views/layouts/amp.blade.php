@@ -50,9 +50,9 @@
   <body>
     <!-- Start Navbar -->
   <header class=" ampstart-headerbar fixed flex justify-start items-center top-0 left-0 right-0 pl-2 pr-4 ">
-    <div role="button" aria-label="open sidebar" on="tap:header-sidebar.toggle" tabindex="0" class="ampstart-navbar-trigger  pr2  ">☰
+    <div role="button" aria-label="open sidebar" on="tap:header-sidebar.toggle" tabindex="0" class="ampstart-navbar-trigger  pr2  " style="position: absolute;">☰
     </div>
-        <amp-img src="{{@asset('assets/logos/r2f_logo_black_150.png')}}" width="100" height="61.3" layout="fixed" class="my0 mx-auto " alt="The Blog"></amp-img>
+        <amp-img src="{{@asset('assets/logos/R2F-logo-b.png')}}" width="80" height="61.3" layout="fixed" class="my0 mx-auto " alt="The Blog"></amp-img>
   </header>
 
 <!-- Start Sidebar -->
