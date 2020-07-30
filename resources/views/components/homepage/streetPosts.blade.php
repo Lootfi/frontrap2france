@@ -9,19 +9,20 @@
                     @foreach($articles->take(4) as $article)
                     <div class="col-lg-6">
                         <div class="tw2_list clearfix">
-                            <div class="tw2l_thumb">
-                                <img src="{{$article->Avatar}}" alt="">
+                            <div class="tw2l_thumb" style="width:300px" >
+                                 <img src="{{$article->getAvatar(300,180)}}" alt="">
                             </div>
-                            <div class="tw2_l_content">
+                            <div class="tw2_l_content" style="padding-top:0px;">
                                 <a href="{{Route('categories.show',$article->Category->slug)}}" class="cats reds">Street</a>
                                 <h3><a href="{{Route('news.show',$article->tag)}}">{{$article->titre}}</a></h3>
                                 <div class="comon_meta clearfix">
                                     <span class="cm_author"><i class="twi-user"></i>By <a href="{{Route('editors.show',$article->Creator->slug)}}"> {{$article->Creator->Full_Name}}</a></span>
                                     <span class="cm_date"><a href="#">{{$article->DateActu}}</a></span>
                                 </div>
-                                <p>
-                            {!! substr(html_entity_decode($article->contenutext, ENT_QUOTES, 'UTF-8'),0,100) !!} ...      </p>
+                                
                             </div>
+                            <p>
+                            {!! substr(html_entity_decode($article->contenutext, ENT_QUOTES, 'UTF-8'),0,100) !!} ...      </p>
                         </div>
                     </div>
                     

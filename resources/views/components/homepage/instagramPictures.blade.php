@@ -1,8 +1,8 @@
 <section class="mag_instagram_section">
             <div class="container-fluid">
-                <div class="row">
+                <div class="row bg-white" >
                     <div class="col-lg-12 text-center">
-                        <h3><img src="images/instagram.png" alt=""/>@Magazine Images</h3>
+                        <h3 class="flex justify-center "><img src="{{asset('assets/template/images/instagram.png')}}" alt=""/>@Magazine Images</h3>
                     </div>
                 </div>
                 <div class="row">

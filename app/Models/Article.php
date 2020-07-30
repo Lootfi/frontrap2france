@@ -91,6 +91,11 @@ class Article extends Model
         return "https://cd1.rap2france.com/public/medias/news/".$this->id."/660x330/mdpi/".$this->image;
 
     }
+
+    public function getAvatar($width,$height){
+
+        return "https://cd1.rap2france.com/public/medias/news/".$this->id."/".$width."x".$height."/mdpi/".$this->image;
+    }
     public function getContenuFormatAttribute(){
 
         if($this->type == 1 ){
