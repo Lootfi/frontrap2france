@@ -6,7 +6,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    @foreach($articles->take(4) as $article)
+                    @foreach($categories->where('slug','street')->first()->articles()->latest()->take(4) as $article)
                     <div class="col-lg-6">
                         <div class="tw2_list clearfix">
                             <div class="tw2l_thumb" style="width:300px" >
@@ -32,11 +32,11 @@
                     
                     <div class="col-lg-12">
                         <div class="tw2_list_slide owl-carousel">
-                            @foreach($articles->take(4) as $article)
+                            @foreach($articles->random(4) as $article)
                             <div class="single_tw2_list">
                                 <img src="{{$article->Avatar}}" alt=""/>
                                 <div class="tw2_list_content">
-                                    <a href="#" class="cats reds">Dossiers</a>
+                                    <a href="#" class="cats reds">{{$article->Category->nom}}</a>
                                     <div class="list_meta_con">
                                         <h3><a href="{{Route('news.show',$article->tag)}}">{{$article->titre}}</a></h3>
                                         <div class="comon_meta clearfix">
