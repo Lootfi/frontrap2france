@@ -4,7 +4,7 @@
                     <div class="col-lg-8">
                         <h2 class="sec_titles"><i></i>LifeStyle</h2>
                         <div class="row">
-                            @foreach($articles->take(6) as $article)
+                            @foreach($articles->take(4) as $article)
                             <div class="col-lg-6">
                                 <div class="top_week_1 mb_60">
                                     <div class="tw1_thumb">
@@ -69,7 +69,7 @@
                                         <a class="comments" href="#">23</a>
                                     </div>
                                     <p>
-                                        {!! html_entity_decode($articles->first()->contenutext, ENT_QUOTES, 'UTF-8') !!}
+                                        {!! substr(html_entity_decode($articles->first()->contenutext, ENT_QUOTES, 'UTF-8'),0,100) !!} ...
                                     </p>
                                 </div>
                                 @foreach($articles->slice(1)->take(2) as $article)
