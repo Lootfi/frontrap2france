@@ -31,7 +31,7 @@ class HomeController extends Controller
          });
 
 
-         $articles = Article::published()->latest()->take(50)->get();
+         $articles = Article::published()->latest()->take(5)->get();
     	return view('pages.home',[
 
     		'categories' => Category::all(),

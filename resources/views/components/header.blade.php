@@ -42,11 +42,11 @@
                 <div class="tab-pane fade " id="{{$category->slug}}" role="tabpanel">
               @endif
                 <div class="row">
-                  @foreach($category->articles->take(4) as $article)
+                  @foreach($category->articles()->latest()->take(4) as $article)
                  <div class="col-lg-6 col-md-6">
                     <div class="tw1_list clearfix">
-                            <div class="tw1l_thumb">
-                                   <img src="{{$article->Avatar}}" alt="">
+                            <div class="tw1l_thumb" style="width:100px;">
+                                   <img src="{{$article->getAvatar(100,60)}}" alt="">
                                         <div class="tw1l_cats">
                                         <a href="{{Route('categories.show',$article->Category->slug)}}" class="cats reds">{{$article->Category->nom}}</a>
                                                                                 </div>
