@@ -10,7 +10,7 @@
                     <div class="col-lg-6">
                         <div class="tw2_list clearfix">
                             <div class="tw2l_thumb" style="width:300px" >
-                                 <img src="{{$article->getAvatar(300,180)}}" alt="">
+                                 <img loading="lazy" src="{{$article->getAvatar(300,180)}}" alt="">
                             </div>
                             <div class="tw2_l_content" style="padding-top:0px;">
                                 <a href="{{Route('categories.show',$article->Category->slug)}}" class="cats reds">Street</a>
@@ -34,7 +34,7 @@
                         <div class="tw2_list_slide owl-carousel">
                             @foreach($articles->random(4) as $article)
                             <div class="single_tw2_list">
-                                <img src="{{$article->Avatar}}" alt=""/>
+                                <img loading="lazy" src="{{$article->Avatar}}" alt=""/>
                                 <div class="tw2_list_content">
                                     <a href="#" class="cats reds">{{$article->Category->nom}}</a>
                                     <div class="list_meta_con">

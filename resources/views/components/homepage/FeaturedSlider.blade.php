@@ -20,7 +20,7 @@
                                     </div>
                                     <div class="col-lg-3 col-md-3">
                                         <div class="feature_img">
-                                            <img src="{{$article->getAvatar(290,380)}}" alt="">
+                                            <img loading="lazy"  src="{{$article->getAvatar(290,380)}}" alt="">
                                         </div>
                                     </div>
                                 </div>

@@ -6,7 +6,7 @@
                             <div class="row items-center">
                                 <div class="col-lg-3">
                                     <div class="logo_01">
-                                        <a href="index-2.html"><img src="{{@asset('assets/logos/logo.png')}}" alt="Rap2France"/></a>
+                                        <a href="index-2.html"><img src="{{@asset('assets/logos/logo.png')}}" loading="lazy" alt="Rap2France"/></a>
                                     </div>
                                 </div>
                                 <div class="col-lg-6 noPaddingLeft">
@@ -42,11 +42,11 @@
                 <div class="tab-pane fade " id="{{$category->slug}}" role="tabpanel">
               @endif
                 <div class="row">
-                  @foreach($category->articles()->latest()->take(4) as $article)
+                  @foreach($category->articles->take(4) as $article)
                  <div class="col-lg-6 col-md-6">
                     <div class="tw1_list clearfix">
-                            <div class="tw1l_thumb" style="width:100px;">
-                                   <img src="{{$article->getAvatar(100,60)}}" alt="">
+                            <div class="tw1l_thumb" style="width:155px; height:90px;">
+                                   <img loading="lazy" src="{{$article->getAvatar(155,90)}}" alt="">
                                         <div class="tw1l_cats">
                                         <a href="{{Route('categories.show',$article->Category->slug)}}" class="cats reds">{{$article->Category->nom}}</a>
                                                                                 </div>
@@ -93,9 +93,11 @@
                                         <div class="search_btn relative">
                                              <a href="javascript:void(0);"><i class="twi-search"></i></a>
                                             <form id="cse-search-box" class="searchForms" action="/search" role="search">
+                                            <label style="display:none;" for="search-input"></label>
                                             <input type="search" value="{{request()->get('q')}}" id="search-input" class="search-field" name="q" placeholder="Recherche" autocomplete="off" data-bind="textInput:keyword"> <input type="hidden" name="cx" value="partner-pub-2176698891774775:9098524048" />
                                             <input type="hidden" name="cof" value="FORID:10" />
                                             <input type="hidden" name="ie" value="UTF-8" />
+                                            <input type="submit" class="hidden" />
                                             </form>
                                     </div>
                                         

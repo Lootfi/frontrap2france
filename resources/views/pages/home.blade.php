@@ -2,6 +2,9 @@
 @section('meta-section')
         
         <title>Toute l'actualité du Rap Français - Rap2France</title>
+ <meta property="og:title" content="RAP 2 FRANCE" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="{{env('APP_URL')}}" />
 
 @endsection
 @section('main-section')

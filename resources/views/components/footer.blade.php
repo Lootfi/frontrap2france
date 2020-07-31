@@ -8,7 +8,7 @@
                     <div class="col-lg-7 col-md-7">
                         <aside class="widget widget_about">
                             <div class="about_magro">
-                                <img src="{{asset('assets/logos/logo-footer.png')}}" alt="Rap2France">
+                                <img loading="lazy"  src="{{asset('assets/logos/logo-footer.png')}}" alt="Rap2France">
                                 <p>
                                     Rap 2 france est un site ...................................................................................................
                                 </p>
@@ -20,7 +20,8 @@
                         <aside class="widget">
                             <div class="mailchimp_form">
                                 <form action="#" method="post">
-                                    <input type="email" name="email" placeholder="your email address">
+                                    <label style="display:none;" for="email"></label>
+                                    <input type="email" id="email" name="email" placeholder="your email address">
                                     <input type="submit" value="Subcribe">
                                 </form>
                             </div>
@@ -33,7 +34,7 @@
                 <div class="row">
                     <div class="col-lg-12 text-center">
                         <div class="copyies">© RAP2FRANCE. All rights reserved {{date('Y')}}. 
-                            <a href="rap2france.com">rap2france.com</a>
+                            <a href="rap2france.com">RAP2FRANCE</a>
                         </div>
                         <div class="f_menu clearfix">
                             <a href="#">Privacy</a>

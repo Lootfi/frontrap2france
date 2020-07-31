@@ -16,7 +16,7 @@
                                         <div class="col-lg-6 col-md-6">
                                             <div class="top_week_1">
                                                 <div class="tw1_thumb">
-                                                    <img src="{{asset('assets/template/images/home1/top_week/1.jpg')}}" alt="">
+                                                    <img loading="lazy" src="{{asset('assets/template/images/home1/top_week/1.jpg')}}" alt="">
                                                     <div class="tw1_cats">
                                                         <a href="#" class="cats blues2">Design</a>
                                                     </div>
@@ -33,7 +33,7 @@
                                         <div class="col-lg-6 col-md-6 noPaddingRight">
                                             <div class="tw1_list clearfix">
                                                 <div class="tw1l_thumb">
-                                                    <img src="{{asset('assets/template/images/home1/top_week/2.jpg')}}" alt="">
+                                                    <img loading="lazy" src="{{asset('assets/template/images/home1/top_week/2.jpg')}}" alt="">
                                                     <div class="tw1l_cats">
                                                         <a href="#" class="cats reds">Tech</a>
                                                     </div>
@@ -48,7 +48,7 @@
                                             </div>
                                             <div class="tw1_list clearfix">
                                                 <div class="tw1l_thumb">
-                                                    <img src="{{asset('assets/template/images/home1/top_week/3.jpg')}}" alt="">
+                                                    <img loading="lazy" src="{{asset('assets/template/images/home1/top_week/3.jpg')}}" alt="">
                                                     <div class="tw1l_cats">
                                                         <a href="#" class="cats live reds">Live</a>
                                                     </div>
@@ -63,7 +63,7 @@
                                             </div>
                                             <div class="tw1_list clearfix">
                                                 <div class="tw1l_thumb">
-                                                    <img src="{{asset('assets/template/images/home1/top_week/4.jpg')}}" alt="">
+                                                    <img loading="lazy" src="{{asset('assets/template/images/home1/top_week/4.jpg')}}" alt="">
                                                     <div class="tw1l_cats">
                                                         <a href="#" class="cats blues">Sports</a>
                                                     </div>
@@ -84,7 +84,7 @@
                                         <div class="col-lg-6 col-md-6">
                                             <div class="top_week_1">
                                                 <div class="tw1_thumb">
-                                                    <img src="{{asset('assets/template/images/home1/top_week/5.jpg')}}" alt="">
+                                                    <img loading="lazy" src="{{asset('assets/template/images/home1/top_week/5.jpg')}}" alt="">
                                                     <div class="tw1_cats">
                                                         <a href="#" class="cats blues2">Design</a>
                                                     </div>
@@ -101,7 +101,7 @@
                                         <div class="col-lg-6 col-md-6 noPaddingRight">
                                             <div class="tw1_list clearfix">
                                                 <div class="tw1l_thumb">
-                                                    <img src="{{asset('assets/template/images/home1/top_week/4.jpg')}}" alt="">
+                                                    <img loading="lazy" src="{{asset('assets/template/images/home1/top_week/4.jpg')}}" alt="">
                                                     <div class="tw1l_cats">
                                                         <a href="#" class="cats live reds">Live</a>
                                                     </div>
@@ -116,7 +116,7 @@
                                             </div>
                                             <div class="tw1_list clearfix">
                                                 <div class="tw1l_thumb">
-                                                    <img src="{{asset('assets/template/images/home1/top_week/2.jpg')}}" alt="">
+                                                    <img loading="lazy" src="{{asset('assets/template/images/home1/top_week/2.jpg')}}" alt="">
                                                     <div class="tw1l_cats">
                                                         <a href="#" class="cats reds">Tech</a>
                                                     </div>
@@ -131,7 +131,7 @@
                                             </div>
                                             <div class="tw1_list clearfix">
                                                 <div class="tw1l_thumb">
-                                                    <img src="{{asset('assets/template/images/home1/top_week/6.jpg')}}" alt="">
+                                                    <img loading="lazy" src="{{asset('assets/template/images/home1/top_week/6.jpg')}}" alt="">
                                                     <div class="tw1l_cats">
                                                         <a href="#" class="cats blues">Sports</a>
                                                     </div>
@@ -152,7 +152,7 @@
                                         <div class="col-lg-6 col-md-6">
                                             <div class="top_week_1">
                                                 <div class="tw1_thumb">
-                                                    <img src="{{asset('assets/template/images/home1/top_week/1.jpg')}}" alt="">
+                                                    <img loading="lazy" src="{{asset('assets/template/images/home1/top_week/1.jpg')}}" alt="">
                                                     <div class="tw1_cats">
                                                         <a href="#" class="cats blues2">Design</a>
                                                     </div>
@@ -169,7 +169,7 @@
                                         <div class="col-lg-6 col-md-6 noPaddingRight">
                                             <div class="tw1_list clearfix">
                                                 <div class="tw1l_thumb">
-                                                    <img src="{{asset('assets/template/images/home1/top_week/2.jpg')}}" alt="">
+                                                    <img loading="lazy" src="{{asset('assets/template/images/home1/top_week/2.jpg')}}" alt="">
                                                     <div class="tw1l_cats">
                                                         <a href="#" class="cats reds">Tech</a>
                                                     </div>
@@ -184,7 +184,7 @@
                                             </div>
                                             <div class="tw1_list clearfix">
                                                 <div class="tw1l_thumb">
-                                                    <img src="{{asset('assets/template/images/home1/top_week/3.jpg')}}" alt="">
+                                                    <img loading="lazy" src="{{asset('assets/template/images/home1/top_week/3.jpg')}}" alt="">
                                                     <div class="tw1l_cats">
                                                         <a href="#" class="cats live reds">Live</a>
                                                     </div>
@@ -199,7 +199,7 @@
                                             </div>
                                             <div class="tw1_list clearfix">
                                                 <div class="tw1l_thumb">
-                                                    <img src="{{asset('assets/template/images/home1/top_week/4.jpg')}}" alt="">
+                                                    <img loading="lazy" src="{{asset('assets/template/images/home1/top_week/4.jpg')}}" alt="">
                                                     <div class="tw1l_cats">
                                                         <a href="#" class="cats blues">Sports</a>
                                                     </div>
@@ -220,7 +220,7 @@
                                         <div class="col-lg-6 col-md-6">
                                             <div class="top_week_1">
                                                 <div class="tw1_thumb">
-                                                    <img src="{{asset('assets/template/images/home1/top_week/5.jpg')}}" alt="">
+                                                    <img loading="lazy" src="{{asset('assets/template/images/home1/top_week/5.jpg')}}" alt="">
                                                     <div class="tw1_cats">
                                                         <a href="#" class="cats blues2">Design</a>
                                                     </div>
@@ -237,7 +237,7 @@
                                         <div class="col-lg-6 col-md-6 noPaddingRight">
                                             <div class="tw1_list clearfix">
                                                 <div class="tw1l_thumb">
-                                                    <img src="{{asset('assets/template/images/home1/top_week/4.jpg')}}" alt="">
+                                                    <img loading="lazy" src="{{asset('assets/template/images/home1/top_week/4.jpg')}}" alt="">
                                                     <div class="tw1l_cats">
                                                         <a href="#" class="cats live reds">Live</a>
                                                     </div>
@@ -252,7 +252,7 @@
                                             </div>
                                             <div class="tw1_list clearfix">
                                                 <div class="tw1l_thumb">
-                                                    <img src="{{asset('assets/template/images/home1/top_week/6.jpg')}}" alt="">
+                                                    <img loading="lazy" src="{{asset('assets/template/images/home1/top_week/6.jpg')}}" alt="">
                                                     <div class="tw1l_cats">
                                                         <a href="#" class="cats blues">Sports</a>
                                                     </div>
@@ -267,7 +267,7 @@
                                             </div>
                                             <div class="tw1_list clearfix">
                                                 <div class="tw1l_thumb">
-                                                    <img src="{{asset('assets/template/images/home1/top_week/2.jpg')}}" alt="">
+                                                    <img loading="lazy" src="{{asset('assets/template/images/home1/top_week/2.jpg')}}" alt="">
                                                     <div class="tw1l_cats">
                                                         <a href="#" class="cats reds">Tech</a>
                                                     </div>
@@ -294,7 +294,7 @@
                             <div class="mcw_content">   
                                 <div class="mcwc_items">
                                     <a href="#">
-                                        <img src="{{asset('assets/template/images/widget/cat/1.jpg')}}" alt="">
+                                        <img loading="lazy" src="{{asset('assets/template/images/widget/cat/1.jpg')}}" alt="">
                                         <span class="mcwc_name">{{$hashtag->nom}}</span>
                                         <span class="mcwc_count">{{$hashtag->repetition}}</span>
                                     </a>

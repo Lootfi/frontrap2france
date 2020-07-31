@@ -8,7 +8,7 @@
                             <div class="col-lg-6">
                                 <div class="top_week_1 mb_60">
                                     <div class="tw1_thumb">
-                                        <img src="{{$article->Avatar}}" alt="">
+                                        <img loading="lazy" src="{{$article->Avatar}}" alt="">
                                         <div class="tw1_cats">
                                             <a href="{{Route('categories.show',$article->Category->slug)}}" class="cats pinks2">LifeStyle</a>
                                         </div>
@@ -26,7 +26,7 @@
                             <div class="col-lg-12 mt_10">
                                 <div class="ads text-center">
                                     <h5>advertisement</h5>
-                                    <a href="#"><img src="{{asset('assets/template/images/home1/ad2.jpg')}}" alt=""></a>
+                                    <a href="#"><img  loading="lazy"src="{{asset('assets/template/images/home1/ad2.jpg')}}" alt=""></a>
                                 </div>
                             </div>
                         </div>
@@ -35,7 +35,7 @@
                         <aside class="widget mag_ads_widget">
                             <div class="ads_widget">
                                 <h6>advertisement</h6>
-                                <a href="#"><img src="{{asset('assets/template/images/home1/ad3.jpg')}}" alt=""></a>
+                                <a href="#"><img loading="lazy" src="{{asset('assets/template/images/home1/ad3.jpg')}}" alt=""></a>
                             </div>
                         </aside>
                         <aside class="widget mag_modern_widget">

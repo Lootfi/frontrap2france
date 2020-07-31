@@ -420,7 +420,6 @@ html[data-lc-type=image] #lightcase-content .lightcase-contentInner {
   line-height: 1;
   text-align: center;
   text-shadow: none;
-  position: fixed;
   z-index: 2001;
   top: 50%;
   left: 50%;

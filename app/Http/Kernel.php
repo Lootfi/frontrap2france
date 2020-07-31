@@ -37,6 +37,15 @@ class Kernel extends HttpKernel
             \Illuminate\View\Middleware\ShareErrorsFromSession::class,
             \App\Http\Middleware\VerifyCsrfToken::class,
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
+             \Mitnick\Laravel\Security\cache::class,
+             \Mitnick\Laravel\Security\cors::class,
+             \Mitnick\Laravel\Security\crossDomain::class,
+             \Mitnick\Laravel\Security\dns::class,
+             \Mitnick\Laravel\Security\frameGuard::class,
+             \Mitnick\Laravel\Security\hsts::class,
+             \Mitnick\Laravel\Security\noSniff::class ,
+             \Mitnick\Laravel\Security\xPoweredBy::class,
+             \Mitnick\Laravel\Security\xss::class
         ],
 
         'api' => [

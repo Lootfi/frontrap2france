@@ -60,8 +60,6 @@
         <script src="{{@asset('assets/template/js/jquery.countdown.min.js')}}"></script>
         <script src="{{@asset('assets/template/js/jquery.appear.js')}}"></script>
         <script src="{{@asset('assets/template/js/slick.js')}}"></script>
-        <script src="{{@asset('assets/template/js/gmaps.js')}}"></script>
-        <script src="https://maps.google.com/maps/api/js?key=AIzaSyBJtPMZ_LWZKuHTLq5o08KSncQufIhPU3o"></script>
         <script src="{{@asset('assets/template/js/jquery.shuffle.min.js')}}"></script>
         <script src="{{@asset('assets/template/js/stickyfill.min.js')}}"></script>
         <script src="{{@asset('assets/template/js/owl.carousel.min.js')}}"></script>
@@ -77,6 +75,7 @@
         </script>
 
          @yield('page-script')
+         <noscript>Votre navigateur ne supporte pas Javascript</noscript>
 
     </body>
 </html>

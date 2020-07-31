@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e3caa5c59d9af262a8d32b1dce2ce926",
+    "content-hash": "03397f72fe03a5910b69aef33ab828b7",
     "packages": [
         {
             "name": "algolia/algoliasearch-client-php",
@@ -1457,6 +1457,55 @@
                 "processing"
             ],
             "time": "2019-04-03T23:46:42+00:00"
+        },
+        {
+            "name": "mitnick/laravel-security",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/getspooky/Laravel-Mitnick.git",
+                "reference": "a317a72b38ac53c6f421bfe40a0f378d59a79544"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/getspooky/Laravel-Mitnick/zipball/a317a72b38ac53c6f421bfe40a0f378d59a79544",
+                "reference": "a317a72b38ac53c6f421bfe40a0f378d59a79544",
+                "shasum": ""
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^7.5"
+            },
+            "type": "package",
+            "autoload": {
+                "psr-4": {
+                    "Mitnick\\Laravel\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Yasser Ameur el idrissi",
+                    "email": "spookyframework@gmail.com"
+                }
+            ],
+            "description": "Laravel-Mitnick helps you secure your Laravel apps by setting various HTTP headers. it can help!",
+            "keywords": [
+                "attack",
+                "clickjacking",
+                "cors",
+                "dns",
+                "laravel",
+                "no-cache",
+                "noSniff",
+                "security",
+                "vulnerability",
+                "x-powered-by",
+                "xss"
+            ],
+            "time": "2020-07-13T23:27:24+00:00"
         },
         {
             "name": "monolog/monolog",

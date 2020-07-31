@@ -8,7 +8,7 @@
 	<div class="flex items-center justify-around ">
 
 		<div class="col-lg-3">
-			<img class="inline-block rounded-full object-cover " style="width:200px; height:200px;" src="{{$editor->Avatar}}"></div>
+			<img class="inline-block rounded-full object-cover " style="width:200px; height:200px;" src="{{$editor->Avatar}}" loading="lazy" ></div>
 		<div class="col-lg-8">
 		<p><span class="font-bold" style="color:#F5A815">Nom :</span> 	{{$editor->Full_Name}}</p>
 		<p><span class="font-bold" style="color:#F5A815">E-mail professionnel :</span> {{$editor->email}} </p>
@@ -27,7 +27,7 @@
                     <div class="col-lg-4 col-md-6">
                         <div class="tw3_list clearfix">
                             <div class="tw3_thumb">
-                                <img src="{{$article->Avatar}}" alt="">
+                                <img src="{{$article->Avatar}}" alt="" loading="lazy" >
                             </div>
                             <div class="tw_3_content">
                                 <a href="{{Route('categories.show',$article->Category->slug)}}" class="cats reds">{{$article->Category->nom}}</a>
@@ -94,7 +94,7 @@
                     <div class="col-lg-4 col-md-6">
                         <div class="tw3_list clearfix">
                             <div class="tw3_thumb">
-                                <img src="${article.Avatar}" alt="">
+                                <img src="${article.Avatar}" alt="" loading="lazy">
                             </div>
                             <div class="tw_3_content">
                                 <a href="/categories/${article.Category.slug}" class="cats reds">

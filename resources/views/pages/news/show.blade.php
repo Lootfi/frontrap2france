@@ -56,7 +56,7 @@
                                         <aside class="widget">
                                             <div class="ads_widget">
                                                 <h6>advertisement</h6>
-                                                <a href="#"><img src="{{asset('assets/template/images/home1/ad2.jpg')}}" alt=""></a>
+                                                <a href="#"><img loading="lazy"  src="{{asset('assets/template/images/home1/ad2.jpg')}}" alt=""></a>
                                             </div>
                                         </aside>
                                     </div>

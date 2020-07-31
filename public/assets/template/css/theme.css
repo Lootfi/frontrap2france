@@ -189,7 +189,6 @@ License URI:
 }
 .main_menu > ul > li{
     float: left;
-    position: relative;
     padding: 0 3px 36px;
     position: relative;
     margin-right: 29px;
@@ -359,7 +358,6 @@ License URI:
     visibility: hidden;
     opacity: 0;
     text-align: left;
-    opacity: 0;
     -webkit-box-shadow: 0 10px 20px 0 rgba(49,49,49,.2);
     -moz-box-shadow:    0 10px 20px 0 rgba(49,49,49,.2);
     box-shadow:         0 10px 20px 0 rgba(49,49,49,.2);
@@ -4611,7 +4609,6 @@ a.share:hover{
 }
 .widget .magrotab_widget ul li a:after{
     position: absolute;
-    content: '';
     content: '';
     left: 28px;
     bottom: -8px;
