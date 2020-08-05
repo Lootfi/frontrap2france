@@ -87,7 +87,7 @@ class Article extends Model
     public function getAvatarAttribute(){
 
 
-        if(now()->diffInSeconds($this->updated_at) < 120){
+        if(now()->diffInSeconds($this->updated_at) < 60){
 
                     return "/images/admin/articles/avatars/". $this->image; 
                }
@@ -98,11 +98,11 @@ class Article extends Model
 
     public function getAvatar($width,$height){
 
-         if(now()->diffInSeconds($this->updated_at) < 120){
+         if(now()->diffInSeconds($this->updated_at) < 60){
 
                             return "/images/admin/articles/avatars/". $this->image; 
                        }
-                       
+
         return "https://cd1.rap2france.com/public/medias/news/".$this->id."/".$width."x".$height."/mdpi/".$this->image;
     }
     public function getContenuFormatAttribute(){
