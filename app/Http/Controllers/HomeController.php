@@ -25,10 +25,7 @@ class HomeController extends Controller
                      ->orderBy('repetition', 'desc')
                      ->get();
 
-         $featuredPosts = FeaturedArticle::featuredPosts()->get()->filter(function($item,$index){
-
-               return  $item->article->published();
-         });
+         $featuredPosts = FeaturedArticle::featuredPosts()->get();
 
 
          $articles = Article::published()->latest()->take(5)->get();
