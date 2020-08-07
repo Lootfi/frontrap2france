@@ -63,7 +63,7 @@ class Article extends Model
 
     public static function published(){
 
-        return self::where('status',1);
+        return self::where('status',1)->where('updated_at','<',Carbon::now()->subMinutes(1)->toDateTimeString());
     }
 
 
