@@ -28,6 +28,7 @@ class HomeController extends Controller
          $featuredPosts = FeaturedArticle::featuredPosts()->get();
 
 
+            return $featuredPosts->first()->article;
          $articles = Article::published()->latest()->take(5)->get();
     	return view('pages.home',[
 
