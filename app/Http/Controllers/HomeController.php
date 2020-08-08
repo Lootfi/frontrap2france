@@ -6,7 +6,6 @@ use Illuminate\Http\Request;
 use App\Models\Category;
 use App\Models\Article;
 use DB;
-use Carbon\Carbon;
 use App\Models\Hashtag;
 use App\Models\FeaturedArticle;
 
@@ -26,8 +25,13 @@ class HomeController extends Controller
                      ->orderBy('repetition', 'desc')
                      ->get();
 
-        $featuredArticles = FeaturedArticle::where('date_start','<=',Carbon::now())->where('date_end','>=',Carbon::now())->get();
-        return $featuredArticles;
+         $featuredPosts = FeaturedArticle::featuredPosts()->get()->filter(function($item,$index){
+
+            return $item->
+
+         });
+
+
 
          $articles = Article::published()->latest()->take(5)->get();
     	return view('pages.home',[
