@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Category;
 use App\Models\Article;
 use DB;
+use Carbon\Carbon;
 use App\Models\Hashtag;
 use App\Models\FeaturedArticle;
 
