@@ -1,3 +1,4 @@
+<div class=" fixed bottom-0 right-0 w-full">
 <div class="px-4">
 <div class="row">
                     <div class="col-lg-12">
@@ -37,11 +38,12 @@
                             <a href="rap2france.com">RAP2FRANCE</a>
                         </div>
                         <div class="f_menu clearfix">
-                            <a href="#">Privacy</a>
-                            <a href="#">Advertisement</a>
-                            <a href="#">About us</a>
+                            <a href="{{Route('terms_conditions')}}">Termes et conditions</a>
+                            <a href="{{Route('privacy')}}">Privacy</a>
+                            <a href="{{Route('about')}}">À propos</a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+    </div>

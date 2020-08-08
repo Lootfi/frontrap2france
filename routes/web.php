@@ -34,3 +34,8 @@ Route::group(['prefix' => 'categories','namespace' => 'Categories'],function(){
 	Route::get('/{slug}','ShowController@show')->name('categories.show');
 
 });
+
+
+Route::get('/termes-et-conditions','InformationController@terms')->name('terms_conditions');
+Route::get('/confidentialité','InformationController@privacy')->name('privacy');
+Route::get('/à-propos','InformationController@about')->name('about');
