@@ -25,10 +25,8 @@ class HomeController extends Controller
                      ->orderBy('repetition', 'desc')
                      ->get();
 
-         $featuredPosts = FeaturedArticle::featuredPosts();
-
-         return $featuredPosts;
-
+        $featuredArticles = FeaturedArticle::where('date_start','>=',Carbon::now())->where('date_end','>=',Carbon::now())->get();
+        return $featuredArticles;
 
          $articles = Article::published()->latest()->take(5)->get();
     	return view('pages.home',[

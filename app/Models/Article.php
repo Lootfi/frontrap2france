@@ -52,7 +52,7 @@ class Article extends Model
 
         if($featured = \App\Models\FeaturedArticle::where('article_id',$this->id)->first()){
 
-            return ['date_start' => $featured->date_start, 'date_end' => $featured->date_end];
+            return ['article' => $this, 'date_start' => $featured->date_start, 'date_end' => $featured->date_end];
 
         }else{
 
