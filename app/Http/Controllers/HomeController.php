@@ -8,6 +8,7 @@ use App\Models\Article;
 use DB;
 use App\Models\Hashtag;
 use App\Models\FeaturedArticle;
+use Carbon\Carbon;
 
 class HomeController extends Controller
 {
