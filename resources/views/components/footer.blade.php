@@ -1,4 +1,3 @@
-<div class=" fixed bottom-0 right-0 w-full">
 <div class="px-4">
 <div class="row">
                     <div class="col-lg-12">
@@ -28,7 +27,6 @@
                             </div>
                         </aside>
                     </div>
-</div>
 </div>
 <section class="copyright">
             <div class="container">
