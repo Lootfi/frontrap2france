@@ -27,7 +27,7 @@ class HomeController extends Controller
 
          $featuredPosts = FeaturedArticle::featuredPosts()->get()->filter(function($item,$index){
 
-            return $item->article->status == 2;
+            return $item->article->status == 1;
 
          });
 
