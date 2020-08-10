@@ -31,6 +31,7 @@ class HomeController extends Controller
 
          });
 
+         return $featuredPosts;
 
 
          $articles = Article::published()->latest()->take(5)->get();
