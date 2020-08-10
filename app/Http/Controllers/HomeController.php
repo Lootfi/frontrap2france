@@ -25,7 +25,7 @@ class HomeController extends Controller
                      ->orderBy('repetition', 'desc')
                      ->get();
 
-         return  FeaturedArticle::featuredPosts()->get();
+         return  FeaturedArticle::featuredPosts();
          $featuredPosts = FeaturedArticle::featuredPosts()->get()->filter(function($item,$index){
 
             return $item->article->status == 2;
