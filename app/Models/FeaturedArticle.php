@@ -23,7 +23,7 @@ class FeaturedArticle extends Model
 
     public static function featuredPosts(){
 
-    	return self::where('date_start','<=',Carbon::now())->where('date_end','>=',Carbon::now());
+    	return self::where('date_start','>=',Carbon::now())->where('date_end','<=',Carbon::now());
     	
     }
 

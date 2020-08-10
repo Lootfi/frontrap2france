@@ -8,7 +8,6 @@ use App\Models\Article;
 use DB;
 use App\Models\Hashtag;
 use App\Models\FeaturedArticle;
-use Carbon\Carbon;
 
 class HomeController extends Controller
 {
@@ -26,7 +25,7 @@ class HomeController extends Controller
                      ->orderBy('repetition', 'desc')
                      ->get();
 
-         return  FeaturedArticle::where('date_start','>=',Carbon::now())->get();
+         return  FeaturedArticle::featuredPosts()->get();
          $featuredPosts = FeaturedArticle::featuredPosts()->get()->filter(function($item,$index){
 
             return $item->article->status == 2;
