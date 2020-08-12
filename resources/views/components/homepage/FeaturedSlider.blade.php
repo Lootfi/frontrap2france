@@ -10,7 +10,7 @@
                                     <div class="col-lg-6 col-md-6">
                                         <div class="featured_slider_content">
                                             <a href="{{Route('categories.show',$article->Category->slug)}}" class="cats pinks">{{$article->Category->nom}}</a>
-                        <h2><a href="{{Route('news.show',$article->tag)}}">{{$article->titre}}</a></h2>
+                        <h2><a href="#">{{$article->titre}}</a></h2>
                                             <p>
                            {!! substr(html_entity_decode($article->contenutext, ENT_QUOTES, 'UTF-8'),0,100) !!} ...                  </p>
                                             <a href="{{Route('news.show',$article->tag)}}" class="read_more">Read More</a>
