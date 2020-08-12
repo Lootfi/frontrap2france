@@ -8,6 +8,11 @@ use App\Models\Article;
 use DB;
 use App\Models\Hashtag;
 use App\Models\FeaturedArticle;
+use App\Models\ArticleMonthAnalytic;
+use App\Models\ArticleLastMonthAnalytic;
+use App\Models\ArticleTodayAnalytic;
+use App\Models\ArticleYesterdayAnalytic;
+use App\Models\ArticleWeekAnalytic;
 
 class HomeController extends Controller
 {
@@ -16,6 +21,7 @@ class HomeController extends Controller
 
         return redirect(Route('home'));
     }
+
     public function show(){
 
     	$popular_hashtags = DB::table('r2f_new_actualités_hashtags')
@@ -27,20 +33,29 @@ class HomeController extends Controller
 
          $featuredPosts = FeaturedArticle::featuredPosts()->get()->filter(function($item,$index){
 
-            return $item->article->status == 1;
+             return $item->article->status == 1;
 
          });
 
 
 
+
          $articles = Article::published()->latest()->take(5)->get();
+
+
+        
     	return view('pages.home',[
 
     		'categories' => Category::all(),
     		'articles' => $articles,
             'featuredArticles' => $featuredPosts,
     		'tags' => Hashtag::all(),
-    		'popular_hashtags'=>$popular_hashtags
+    		'popular_hashtags'=>$popular_hashtags,
+            'topToday' => ArticleTodayAnalytic::OrderBy('views','DESC')->take(4)->get(),
+            'topYesterday' => ArticleYesterdayAnalytic::OrderBy('views','DESC')->take(4)->get(),
+            'topWeek' => ArticleWeekAnalytic::OrderBy('views','DESC')->take(4)->get(),
+            'topMonth' => ArticleMonthAnalytic::OrderBy('views','DESC')->take(4)->get(),
+            'topLastMonth' => ArticleLastMonthAnalytic::OrderBy('views','DESC')->take(4)->get(),
     	]);
     }
 

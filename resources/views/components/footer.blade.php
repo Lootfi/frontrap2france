@@ -16,19 +16,19 @@
                             </div>
                         </aside> 
                     </div>
-                    <div class="col-lg-5 col-md-5">
-                        <aside class="widget">
-                            <div class="mailchimp_form">
-                                <form action="#" method="post">
-                                    <label style="display:none;" for="email"></label>
-                                    <input type="email" id="email" name="email" placeholder="your email address">
+            <div class="col-lg-5 col-md-5">
+                <aside class="widget">
+                  <div class="mailchimp_form">
+                    <form action="#" method="post">
+                      <label style="display:none;" for="email"></label>
+                       <input type="email" id="email" name="email" placeholder="your email address">
                                     <input type="submit" value="Subcribe">
-                                </form>
+                     </form>
                             </div>
-                        </aside>
-                    </div>
-</div>
-<section class="copyright">
+                </aside>
+            </div>
+        </div>
+        <section class="copyright">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12 text-center">
