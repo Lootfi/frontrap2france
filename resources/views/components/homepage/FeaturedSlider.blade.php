@@ -13,7 +13,7 @@
                         <h2><a href="#">{{$article->titre}}</a></h2>
                                             <p>
                            {!! substr(html_entity_decode($article->contenutext, ENT_QUOTES, 'UTF-8'),0,100) !!} ...                  </p>
-                                            <a href="{{Route('news.show',$article->tag)}}" class="read_more">Read More</a>
+                                            <a href="#" class="read_more">Read More</a>
                                         </div>
                                     </div>
                                     <div class="col-lg-3 col-md-3 noPaddingRight">
