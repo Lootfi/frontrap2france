@@ -38,7 +38,7 @@
                                 <div class="tw2_list_content">
                                     <a href="#" class="cats reds">{{$article->Category->nom}}</a>
                                     <div class="list_meta_con">
-                                        <h3><a href="{{Route('news.show',$article->tag)}}">{{$article->titre}}</a></h3>
+                                        <h3><a href="#">{{$article->titre}}</a></h3>
                                         <div class="comon_meta clearfix">
                                             <span class="cm_author"><i class="twi-user"></i>By<a href="{{Route('editors.show',$article->Creator->slug)}}">{{$article->Creator->Full_Name}}</a></span>
                                             <span class="cm_date"><a href="#">{{$article->DateActu}}</a></span>
