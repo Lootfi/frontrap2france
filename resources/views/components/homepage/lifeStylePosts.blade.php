@@ -14,7 +14,7 @@
                                         </div>
                                     </div>
                                     <div class="tw1_details">
-                                        <h2><a href="#">{{$article->titre}}</a></h2>
+                                        <h2><a href="/news/{{$article->tag}}">{{$article->titre}}</a></h2>
                                         <div class="comon_meta clearfix">
                                             <span class="cm_author"><i class="twi-user"></i>By<a href="{{Route('editors.show',$article->Creator->slug)}}">{{$article->Creator->Full_Name}}</a></span>
                                             <span class="cm_date"><a href="#">{{$article->DateActu}}</a></span>
