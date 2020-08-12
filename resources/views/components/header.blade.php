@@ -52,8 +52,8 @@
                                                                                 </div>
                                                                             </div>
                                 <div class="tw1_l_content">
-                                    {{$tag = $article->tag}}
-                                        <h3><a href="{{Route("news.show",$tag )}}">{{$article->titre}}</a></h3>
+                                    
+                                        <h3><a href="/news/{{$article->tag}}">{{$article->titre}}</a></h3>
                                    
                                     <div class="comon_meta clearfix">
                                 <span class="cm_author"><i class="twi-user"></i>By<a href="{{Route('editors.show',$article->Creator->slug)}}">{{$article->Creator->Full_Name}}</a></span>
