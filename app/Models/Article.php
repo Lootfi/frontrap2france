@@ -4,6 +4,9 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Carbon\Carbon;
+use Analytics;
+use DB;
+use Spatie\Analytics\Period;
 use Laravel\Scout\Searchable;
 
 class Article extends Model
@@ -93,6 +96,22 @@ class Article extends Model
                }
 
         return "https://cd1.rap2france.com/public/medias/news/".$this->id."/660x330/mdpi/".$this->image;
+
+    }
+
+    public function getArticleViewsAttribute(){
+    
+
+    $pageViews =  Analytics::performQuery(
+    Period::years(5),
+    'ga:sessions',
+    [
+        'metrics' => 'ga:sessions, ga:pageviews',
+        'dimensions' => 'ga:pagePath',
+        'filters' => "ga:pagePath==".$this->url
+    ]
+    );
+    return json_decode(json_encode($pageViews),true)['rows'][0][2];
 
     }
 

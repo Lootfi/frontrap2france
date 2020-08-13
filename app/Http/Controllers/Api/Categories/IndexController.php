@@ -15,6 +15,7 @@ class IndexController extends Controller
         		$articles->map(function($item,$index){
         			$item->setAttribute('DateActu',$item->DateActu);
         			$item->setAttribute('Avatar',$item->Avatar);
+                                $item->setAttribute('ArticleViews',$item->ArticleViews);
         		});
 
         		if($articles->count() == 0){

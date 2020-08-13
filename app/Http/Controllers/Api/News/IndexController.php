@@ -17,6 +17,8 @@ class IndexController extends Controller
         $article->setAttribute('Avatar',$article->Avatar);
         $article->setAttribute('Creator',$article->Creator);
         $article->setAttribute('Category',$article->Category);
+        $article->setAttribute('ArticleViews',$article->ArticleViews);
+
 
     	return $article->toJson();
     }

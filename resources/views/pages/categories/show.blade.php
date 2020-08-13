@@ -25,14 +25,12 @@
                         <div class="tt_s_post">
                             <div class="tt_thumb">
                                 <img src="{{$article->avatar}}" alt="" loading="lazy" >
-                                <a class="view" href="#"><i class="magro-fire"></i>120</a>
-                                <a class="share" href="#"><i class="magro-share-2"></i>320</a>
+                        
                             </div>
                             <div class="tt_s_content">
                                 <div class="rc_meta">
                                     <a href="#">{{$article->DateActu}}</a>
-                                    <a class="like" href="#"><i class="magro-view"></i>1.1k</a>
-                                    <a class="commnet" href="#"><i class="magro-pencil"></i>22</a>
+                                    <a class="like" href="#"><i class="magro-view"></i>{{$article->ArticleViews}}</a>
                                 </div>
                                 <h3><a href="{{Route('news.show',$article->tag)}}">{{$article->titre}}</a></h3>
                             </div>
@@ -103,14 +101,12 @@
                         <div class="tt_s_post">
                             <div class="tt_thumb">
                                 <img src="${article.Avatar}" alt="">
-                                <a class="view" href="#"><i class="magro-fire"></i>120</a>
-                                <a class="share" href="#"><i class="magro-share-2"></i>320</a>
+                                
                             </div>
                             <div class="tt_s_content">
                                 <div class="rc_meta">
                                     <a href="#">${article.DateActu}</a>
-                                    <a class="like" href="#"><i class="magro-view"></i>1.1k</a>
-                                    <a class="commnet" href="#"><i class="magro-pencil"></i>22</a>
+                                    <a class="like" href="#"><i class="magro-view"></i>${article.ArticleViews}</a>
                                 </div>
                                 <h3><a href="/news/${article.tag}">${article.titre}</a></h3>
                             </div>

@@ -24,6 +24,7 @@ class HomeController extends Controller
 
     public function show(){
 
+    
     	$popular_hashtags = DB::table('r2f_new_actualités_hashtags')
                       ->join('r2f_new_actualité_hashtag', 'r2f_new_actualités_hashtags.hashtag_id', '=', 'r2f_new_actualité_hashtag.id')
                      ->select(DB::raw('count(*) as repetition, r2f_new_actualité_hashtag.nom'))
