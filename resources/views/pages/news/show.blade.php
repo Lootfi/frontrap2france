@@ -22,7 +22,7 @@
                             <div class="row pt-4">
                                 <div class="col-lg-8 col-md-7">
                                     <div class="single_blog ">
-                                        {!! html_entity_decode($article->contenu, ENT_QUOTES, 'UTF-8') !!} 
+                                        {!! html_entity_decode($article->ContenuFormat['contenu'], ENT_QUOTES, 'UTF-8') !!} 
                                     </div>
                                 </div>
                                 <div class="col-lg-4 col-md-5">
@@ -108,7 +108,7 @@
             const template = 
             
             `
-            <section class="banner_01" style="position:relative; background:url('${article.Avatar}') no-repeat center center / cover;">
+            <section class="banner_01" style="position:relative; background:url('${article.Avatar}') no-repeat fixed center center / cover;">
             <div style="position: absolute; width: 100%; height: 100%; top: 0;left: 0;right: 0;bottom: 0;background-color: rgba(0,0,0,0.5);"></div>
             <div class="container">
                 <div class="row">

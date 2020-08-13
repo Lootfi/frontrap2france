@@ -1,4 +1,4 @@
-  <section class="comon_section bg_white clearfix">
+  <section class="comon_section bg_white clearfix sm-pt-4">
             <div class="container">
                 <div class="row cus_top_week_column clearfix">
                     <div class="col-lg-8 clearfix">
