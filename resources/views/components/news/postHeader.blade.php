@@ -7,7 +7,7 @@
                         <div class="banner_1_content relative">
                             
                             <a href="{{Route('categories.show',$article->Category->slug)}}" class="cats blues2">{{$article->Category->nom}}</a>
-                            <h1 class="title" tag="{{$article->tag}}">{{$article->titre}}</h1>
+                            <h1 class="title" style="color:white;" tag="{{$article->tag}}">{{$article->titre}}</h1>
                             <div class="post_banner_meta clearfix">
                                 <img loading="lazy" src="{{$article->Creator->Avatar}}" alt=""/>
                                 <span class="fi1cm_author">By <a href="{{Route('editors.show',$article->Creator->slug)}}">{{$article->Creator->Full_Name}}</a></span>
