@@ -7,7 +7,7 @@
                             @foreach($articles->take(3) as $article)
                             <div class="sf_s1_post">
                                 <img loading="lazy"  src="{{$article->getAvatar(155,90)}}" alt=""/>
-                                <h5><a href="{{Route('news.show',$article->tag)}}">{{$article->titre}}</a></h5>
+                                <h5><a href="/news/{{$article->tag}}">{{$article->titre}}</a></h5>
                                 <a class="sf_date" href="#">{{$article->DateActu}}</a>
                             </div>
                                 @endforeach
@@ -19,7 +19,7 @@
                             @foreach($categories->where('slug','dossier')->first()->articles()->take(3) as $article)
                             <div class="sf_s1_post">
                                 <img loading="lazy"  src="{{$article->getAvatar(155,90)}}" alt=""/>
-                                <h5><a href="{{Route('news.show',$article->tag)}}">{{$article->titre}}</a></h5>
+                                <h5><a href="/news/{{$article->tag}}">{{$article->titre}}</a></h5>
                                 <a class="sf_date" href="#">{{$article->DateActu}}</a>
                             </div>
                                 @endforeach
