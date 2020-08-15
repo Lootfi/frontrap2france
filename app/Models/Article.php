@@ -111,7 +111,10 @@ class Article extends Model
         'filters' => "ga:pagePath==".$this->url
     ]
     );
+    if(json_decode(json_encode($pageViews),true)['rows']){
     return json_decode(json_encode($pageViews),true)['rows'][0][2];
+}
+return 0;
 
     }
 

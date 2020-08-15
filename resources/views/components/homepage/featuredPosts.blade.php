@@ -2,7 +2,7 @@
             <div class="container">
                 <div class="row custom_margin">
                     <div class="col-lg-8 col-md-6 custom_padding">
-                        <div class="featured_item_1 fi1_sm">
+                        <div class="featured_item_1 ">
                         <img  src="{{$featuredArticles->first()->Avatar}}" alt="" loading="lazy" />
                             <div class="fi1_content">
                                 <div class="fi1c_categories">
@@ -37,7 +37,7 @@
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 custom_padding">
-                        @foreach($featuredArticles->slice(3)->take(2) as $article)
+                        @foreach($featuredArticles->slice(3)->take(3) as $article)
 
                         <div class="featured_item_1 fi1_sm">
                                     <img src="{{$article->Avatar}}" alt=""/>

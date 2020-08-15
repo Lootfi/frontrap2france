@@ -43,7 +43,7 @@ class HomeController extends Controller
             $item = $item->article;
          });
         
-        if(($count = (5 - $featuredPosts->count())) > 0) {
+        if(($count = (6 - $featuredPosts->count())) > 0) {
 
            $articles = Article::published()->latest()->where('alaune',"1")->take($count)->get();
             
