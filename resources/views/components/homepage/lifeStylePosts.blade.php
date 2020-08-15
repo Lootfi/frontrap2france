@@ -62,7 +62,7 @@
                             <div class="lr_post_area">
                                 <div class="lr_feature_post">
                                     <img src="{{$articles->first()->Avatar}}" alt=""/>
-                                    <h4><a href="{{Route('news.show',$articles->first()->tag)}}">{{$articles->first()->titre}}</a></h4>
+                                    <h4><a href="/news/{{$articles->first()->tag}}">{{$articles->first()->titre}}</a></h4>
                                     <div class="comon_meta clearfix">
                                         <span class="cm_author"><i class="twi-user"></i>By<a href="{{Route('editors.show',$articles->first()->Creator->slug)}}">{{$articles->first()->Creator->Full_Name}}</a></span>
                                         <span class="cm_date"><a href="#">{{$article->first()->DateActu}}</a></span>
@@ -75,7 +75,7 @@
                                 @foreach($articles->slice(1)->take(2) as $article)
                                 <div class="lr_sp">
                                     <img src="{{$article->Avatar}}" alt=""/>
-                                    <h5><a href="{{Route('news.show',$article->tag)}}">{{$article->titre}}</a></h5>
+                                    <h5><a href="/news/{{$article->tag}}">{{$article->titre}}</a></h5>
                                     <span><a href="#">{{$article->DateActu}}</a></span>
                                 </div>
                                 @endforeach
