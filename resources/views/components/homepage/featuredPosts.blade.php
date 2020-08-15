@@ -8,7 +8,7 @@
                                 <div class="fi1c_categories">
                                     <a href="{{Route('categories.show',$featuredArticles->first()->Category->slug)}}" class="cats blues2">{{$featuredArticles->first()->Category->nom}}</a>
                                 </div>
-                                <h2><a href="/news/{{$featuredArticles->first()->tag)}}">{{$featuredArticles->first()->titre}}</a></h2>
+                                <h2><a href="/news/{{$featuredArticles->first()->tag}}">{{$featuredArticles->first()->titre}}</a></h2>
                                 <div class="fi1c_meta clearfix">
                                     <span class="fi1cm_author">By <a href="{{Route('editors.show',$featuredArticles->first()->Creator->slug)}}">{{$featuredArticles->first()->Creator->Full_Name}}</a></span>
                                     <span class="fi1cm_date font-italic"><a href="#">{{$featuredArticles->first()->DateActu}}</a></span>
