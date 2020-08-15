@@ -75,7 +75,7 @@
 </div>
 </div>
 <div class="loader"></div>
-<div class="loading text-center"><img class="inline-block mx-auto " style="animation: rotation 2s infinite linear" src="{{asset('assets/template/images/loading_hover.png')}}"/></div>
+<div class="loading text-center"><img class="inline-block mx-auto " style="animation: rotation 2s infinite linear" src="https://cd1.rap2france.com/public/templates/template/images/loading_hover.png"/></div>
 </div>
        
 
@@ -119,7 +119,7 @@
                     <div class="col-lg-12 text-center">
                         <div class="banner_1_content">
                             <a href="/categories/${article.Category.slug}" class="cats blues2">${article.Category.nom}</a>
-                            <h2 class="title" tag="${article.tag}">${article.titre}</h2>
+                            <h1 class="title" tag="${article.tag}">${article.titre}</h1>
                             <div class="post_banner_meta clearfix">
                                 <img src="${article.Creator.Avatar}" alt=""/>
                                 <span class="fi1cm_author">By <a href="#">${article.Creator.Full_Name}</a></span>

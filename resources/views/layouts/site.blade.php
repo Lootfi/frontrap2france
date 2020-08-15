@@ -11,19 +11,19 @@
         
         <meta name="keywords" content="paroles clips rap français mp3 son biographies rappeur vidéos album tracklist pochette photos booba rohff medine sinik diam's 113 kery james mafia K1 fry ntm assassin la rumeur mc solaar lacrim booba rohff gradur maitre gims black m">
         <!-- Include All CSS -->
-        <link rel="stylesheet" type="text/css" href="{{@asset('assets/template/css/bootstrap.css')}}"/>
-        <link rel="stylesheet" type="text/css" href="{{@asset('assets/template/css/themewar-icons.css')}}"/>
-        <link rel="stylesheet" type="text/css" href="{{@asset('assets/template/css/linea-weather-icons.css')}}"/>
-        <link rel="stylesheet" type="text/css" href="{{@asset('assets/template/css/magro-icons.css')}}"/>
-        <link rel="stylesheet" type="text/css" href="{{@asset('assets/template/css/lightcase.css')}}">
-        <link rel="stylesheet" type="text/css" href="{{@asset('assets/template/css/slick.css')}}">
-        <link rel="stylesheet" type="text/css" href="{{@asset('assets/template/css/owl.carousel.min.css')}}"/>
-        <link rel="stylesheet" type="text/css" href="{{@asset('assets/template/css/owl.theme.default.min.css')}}"/>
-        <link rel="stylesheet" type="text/css" href="{{@asset('assets/template/css/animate.css')}}"/>
-        <link rel="stylesheet" type="text/css" href="{{@asset('assets/template/css/preset.css')}}"/>
-        <link rel="stylesheet" type="text/css" href="{{@asset('assets/template/css/ignore_for_wp.css')}}"/>
-        <link rel="stylesheet" type="text/css" href="{{@asset('assets/template/css/theme.css')}}"/>
-        <link rel="stylesheet" type="text/css" href="{{@asset('assets/template/css/responsive.css')}}"/>
+        <link rel="stylesheet" type="text/css" href="https://cd1.rap2france.com/public/templates/template/css/bootstrap.css"/>
+        <link rel="stylesheet" type="text/css" href="https://cd1.rap2france.com/public/templates/template/css/themewar-icons.css"/>
+        <link rel="stylesheet" type="text/css" href="https://cd1.rap2france.com/public/templates/template/css/linea-weather-icons.css"/>
+        <link rel="stylesheet" type="text/css" href="https://cd1.rap2france.com/public/templates/template/css/magro-icons.css"/>
+        <link rel="stylesheet" type="text/css" href="https://cd1.rap2france.com/public/templates/template/css/lightcase.css">
+        <link rel="stylesheet" type="text/css" href="https://cd1.rap2france.com/public/templates/template/css/slick.css">
+        <link rel="stylesheet" type="text/css" href="https://cd1.rap2france.com/public/templates/template/css/owl.carousel.min.css"/>
+        <link rel="stylesheet" type="text/css" href="https://cd1.rap2france.com/public/templates/template/css/owl.theme.default.min.css"/>
+        <link rel="stylesheet" type="text/css" href="https://cd1.rap2france.com/public/templates/template/css/animate.css"/>
+        <link rel="stylesheet" type="text/css" href="https://cd1.rap2france.com/public/templates/template/css/preset.css"/>
+        <link rel="stylesheet" type="text/css" href="https://cd1.rap2france.com/public/templates/template/css/ignore_for_wp.css"/>
+        <link rel="stylesheet" type="text/css" href="https://cd1.rap2france.com/public/templates/template/css/theme.css"/>
+        <link rel="stylesheet" type="text/css" href="https://cd1.rap2france.com/public/templates/template/css/responsive.css"/>
         <meta property="fb:pages" content="42863617656" />
         
 
@@ -51,18 +51,18 @@
         <!-- Bact To Top -->
 
         <!-- Include All JS -->
-        <script src="{{@asset('assets/template/js/jquery.js')}}"></script>
-        <script src="{{@asset('assets/template/js/jquery-ui.js')}}"></script>
-        <script src="{{@asset('assets/template/js/bootstrap.js')}}"></script>
-        <script src="{{@asset('assets/template/js/lightcase.js')}}"></script>
-        <script src="{{@asset('assets/template/js/jquery.plugin.min.js')}}"></script>
-        <script src="{{@asset('assets/template/js/jquery.countdown.min.js')}}"></script>
-        <script src="{{@asset('assets/template/js/jquery.appear.js')}}"></script>
-        <script src="{{@asset('assets/template/js/slick.js')}}"></script>
-        <script src="{{@asset('assets/template/js/jquery.shuffle.min.js')}}"></script>
-        <script src="{{@asset('assets/template/js/stickyfill.min.js')}}"></script>
-        <script src="{{@asset('assets/template/js/owl.carousel.min.js')}}"></script>
-        <script src="{{@asset('assets/template/js/theme.js')}}"></script>
+        <script src="https://cd1.rap2france.com/public/templates/template/js/jquery.js"></script>
+        <script src="https://cd1.rap2france.com/public/templates/template/js/jquery-ui.js"></script>
+        <script src="https://cd1.rap2france.com/public/templates/template/js/bootstrap.js"></script>
+        <script src="https://cd1.rap2france.com/public/templates/template/js/lightcase.js"></script>
+        <script src="https://cd1.rap2france.com/public/templates/template/js/jquery.plugin.min.js"></script>
+        <script src="https://cd1.rap2france.com/public/templates/template/js/jquery.countdown.min.js"></script>
+        <script src="https://cd1.rap2france.com/public/templates/template/js/jquery.appear.js"></script>
+        <script src="https://cd1.rap2france.com/public/templates/template/js/slick.js"></script>
+        <script src="https://cd1.rap2france.com/public/templates/template/js/jquery.shuffle.min.js"></script>
+        <script src="https://cd1.rap2france.com/public/templates/template/js/stickyfill.min.js"></script>
+        <script src="https://cd1.rap2france.com/public/templates/template/js/owl.carousel.min.js"></script>
+        <script src="https://cd1.rap2france.com/public/templates/template/js/theme.js"></script>
         <script src="{{@asset('js/app.js')}}"></script>
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-8897495-1"></script>
         <script>

@@ -15,7 +15,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="row custom_margin" style="flex-wrap:nowrap;">
+                        <div class="row custom_margin">
                             @foreach($featuredArticles->slice(1)->take(2) as $article)
                             <div class="col-lg-6 col-md-12 custom_padding">
                                 <div class="featured_item_1 fi1_sm">
