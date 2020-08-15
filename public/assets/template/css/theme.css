@@ -2135,6 +2135,11 @@ a.cats.pinks2 {
     font-weight: 400;
     display: block;
 }
+
+iframe{
+
+    min-width:0px;
+}
 .sf_s1_post .sf_date:hover{
     color: #F5A815;
 }

@@ -24,7 +24,6 @@
         <link rel="stylesheet" type="text/css" href="{{@asset('assets/template/css/ignore_for_wp.css')}}"/>
         <link rel="stylesheet" type="text/css" href="{{@asset('assets/template/css/theme.css')}}"/>
         <link rel="stylesheet" type="text/css" href="{{@asset('assets/template/css/responsive.css')}}"/>
-        <link rel="stylesheet" type="text/css" href="{{@asset('css/app.css')}}" />
         <meta property="fb:pages" content="42863617656" />
         
 
@@ -33,7 +32,7 @@
         <link rel="icon"  type="image/png" href="https://cd1.rap2france.com/public/templates/default/assets/images/icone/57.jpg">
         <!-- Favicon Icon -->
     </head>
-    <body class="bg-black" >
+    <body style="background:black" >
         <!-- Preloading -->
         <div class="preloader text-center">
             <div class="la-ball-scale-multiple la-2x">

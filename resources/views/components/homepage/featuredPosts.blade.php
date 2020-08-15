@@ -2,7 +2,7 @@
             <div class="container">
                 <div class="row custom_margin">
                     <div class="col-lg-8 col-md-6 custom_padding">
-                        <div class="featured_item_1 first_featured_item">
+                        <div class="featured_item_1 fi1_sm">
                         <img  src="{{$featuredArticles->first()->Avatar}}" alt="" loading="lazy" />
                             <div class="fi1_content">
                                 <div class="fi1c_categories">

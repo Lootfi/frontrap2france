@@ -22,3 +22,7 @@
 	@include('components.homepage.instagramPictures')
 	@include('components.homepage.footer')
 @endsection
+
+@section('page-script')
+
+@endsection
