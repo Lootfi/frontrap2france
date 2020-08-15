@@ -22,7 +22,11 @@
                             <div class="row pt-4">
                                 <div class="col-lg-8 col-md-7">
                                     <div class="single_blog ">
+                                        @if($article->type == 1)
                                         {!! html_entity_decode($article->ContenuFormat['contenu'], ENT_QUOTES, 'UTF-8') !!} 
+                                        @else
+                                         {!! html_entity_decode($article->contenu, ENT_QUOTES, 'UTF-8') !!} 
+                                        @endif
                                     </div>
                                 </div>
                                 <div class="col-lg-4 col-md-5">
@@ -120,7 +124,7 @@
                                 <img src="${article.Creator.Avatar}" alt=""/>
                                 <span class="fi1cm_author">By <a href="#">${article.Creator.Full_Name}</a></span>
                                 <span class="fi1cm_date">-<a href="#"><i class="twi-clock2"></i>${article.DateActu}</a></span>
-                                <a class="view" href="#"><i class="magro-fire"></i>120</a>
+                            
                                 <a class="like" href="#"><i class="magro-view"></i>${article.ArticleViews}</a>
                             </div>
                         </div>
