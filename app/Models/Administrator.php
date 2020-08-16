@@ -62,7 +62,13 @@ class Administrator extends Model
 
         $detail = \App\Models\AdministratorDetail::where('admin_id',$this->id)->first();
 
-        return "https://editor.rap2france.com/images/admin/users/avatars/" . $detail->picture; 
+
+       if(now()->diffInSeconds($this->updated_at) < 60){
+
+            return "/images/admin/users/avatars/" . $detail->picture; 
+       }
+       
+        return "https://cd1.rap2france.com/public/medias/users/".$this->id."/photoprofil/raw/mdpi/" . $detail->picture; 
     }
     public static function fetchBySlug($slug){
 
