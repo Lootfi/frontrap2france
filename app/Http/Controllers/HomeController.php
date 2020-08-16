@@ -45,15 +45,15 @@ class HomeController extends Controller
         
         if(($count = (6 - $featuredPosts->count())) > 0) {
 
-           $articles = Article::published()->latest()->where('alaune',"1")->take($count)->get();
+           $featuredarticle = Article::published()->latest()->where('alaune',"1")->take($count)->get();
             
-            foreach($articles as $article){
+            foreach($featuredarticle as $article){
 
                 $featuredPosts->push($article);
             }        
         } 
 
-        
+         $articles = Article::published()->latest()->take(5)->get();
         
     	return view('pages.home',[
 
