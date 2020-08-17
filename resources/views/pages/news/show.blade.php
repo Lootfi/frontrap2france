@@ -49,7 +49,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="single_social you">
-                                                    <a href="#"><i class="magro-play-buttno"></i></a>
+                                                    <a href="#"><i class="feather icon-youtube"></i></a>
                                                     <div class="social_meta">
                                                         <span>980</span> Subscribers
                                                         <a href="#">Subscribe</a>
