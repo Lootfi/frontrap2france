@@ -3,14 +3,14 @@
                             <h3 class="widget_title"><span>Restez Connecté! </span></h3>
                             <div class="social_area">
                                 <div class="single_social twi">
-                                    <a href="#"><i class="twi-twitter"></i></a>
+                                    <a href="#"><i class="feather icon-twitter"></i></a>
                                     <div class="social_meta">
                                         <span>36.798</span> Fans
                                         <a href="#">Like</a>
                                     </div>
                                 </div>
                                 <div class="single_social fac">
-                                    <a href="#"><i class="twi-facebook-f"></i></a>
+                                    <a href="#"><i class="feather icon-facebook"></i></a>
                                     <div class="social_meta">
                                         <span>145.519</span> Followers
                                         <a href="#">Follow</a>

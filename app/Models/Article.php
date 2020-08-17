@@ -104,7 +104,7 @@ class Article extends Model
 
     $pageViews =  Analytics::performQuery(
     Period::years(5),
-    'ga:sessions',
+    'ga:pageviews',
     [
         'metrics' => 'ga:sessions, ga:pageviews',
         'dimensions' => 'ga:pagePath',

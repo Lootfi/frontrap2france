@@ -12,7 +12,7 @@
                                 <div class="col-lg-6 noPaddingLeft">
                                     <nav class="main_menu mobile_menu">
                                         <div class="mobileMenuBar">
-                                            <a href="javascript: void(0);"><span>Menu</span><i class="twi-bars"></i></a>
+                                            <a href="javascript: void(0);"><span>Menu</span><i class="feather icon-menu"></i></a>
                                         </div>
                                         <ul class="clearfix">
                                             <li class="current-menu-item  mg_menu">
@@ -56,7 +56,7 @@
                                         <h3><a href="/news/{{$article->tag}}">{{$article->titre}}</a></h3>
                                    
                                     <div class="comon_meta clearfix">
-                                <span class="cm_author"><i class="twi-user"></i>By<a href="{{Route('editors.show',$article->Creator->slug)}}">{{$article->Creator->Full_Name}}</a></span>
+                                <span class="cm_author"><i class="feather icon-user"></i>By<a href="{{Route('editors.show',$article->Creator->slug)}}">{{$article->Creator->Full_Name}}</a></span>
                             <span class="cm_date"><a href="#">{{$article->DateActu}}</a></span>
                                                                                 </div>
                                                                             </div>
@@ -87,19 +87,18 @@
                                 <div class="col-lg-3">
                                     <div class="header_01_settings">
                                         <div class="social_01 clearfix">
-                                            <a href="#"><i class="twi-facebook-f"></i></a>
-                                            <a href="#"><i class="twi-twitter"></i></a>
-                                            <a href="#"><i class="twi-linkedin-in"></i></a>
-                                            <a href="#"><i class="twi-youtube"></i></a>
+                                            <a href="#"><i class="feather icon-facebook"></i></a>
+                                            <a href="#"><i class="feather icon-twitter"></i></a>
+                                            <a href="#"><i class="feather icon-youtube"></i></a>
                                         </div>
                                         <div class="search_btn relative">
-                                             <a href="javascript:void(0);"><i class="twi-search"></i></a>
+                                             <a href="javascript:void(0);"><i class="feather icon-search"></i></a>
                                             <form id="cse-search-box" class="searchForms" action="/search" role="search">
                                             <label style="display:none;" for="search-input"></label>
                                             <input type="search" value="{{request()->get('q')}}" id="search-input" class="search-field" name="q" placeholder="Recherche" autocomplete="off" data-bind="textInput:keyword"> <input type="hidden" name="cx" value="partner-pub-2176698891774775:9098524048" />
                                             <input type="hidden" name="cof" value="FORID:10" />
                                             <input type="hidden" name="ie" value="UTF-8" />
-                                            <input type="submit" class="hidden" />
+                                            <input type="submit" style="display:none;" class="hidden" />
                                             </form>
                                     </div>
                                         

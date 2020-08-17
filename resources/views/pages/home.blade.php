@@ -7,8 +7,8 @@
 <meta property="og:url" content="{{env('APP_URL')}}" />
 
 @endsection
-@section('main-section')
-	
+@section('main-section') 
+	 
 	@if($featuredArticles->count() > 0)
 	@include('components.homepage.featuredPosts')
 	@endif

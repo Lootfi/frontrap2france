@@ -2454,7 +2454,7 @@ footer .mailchimp_form{
     left: 0;
     top: 0;
     content: "\ebed";
-    font-family: 'themewar' !important;
+    font-family: 'feather' !important;
     width: 26px;
     height: 26px;
     background: rgba(0, 0, 0, .3);
@@ -11546,7 +11546,7 @@ body.menu_open{
     top: 8px;
     content: "\f659";
     transition: all 0.3s cubic-bezier(0.7, 0, 0.3, 1);
-    font-family: "themewar";
+    font-family: "feather";
     font-size: 10px;
     color: #fff;
     line-height: .8;

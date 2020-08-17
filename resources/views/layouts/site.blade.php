@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
+    <head> 
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="canonical" href="http://rapfront.test/amp/news/this-is-a-new-article-from-editor/">
@@ -12,12 +12,8 @@
         <meta name="keywords" content="paroles clips rap français mp3 son biographies rappeur vidéos album tracklist pochette photos booba rohff medine sinik diam's 113 kery james mafia K1 fry ntm assassin la rumeur mc solaar lacrim booba rohff gradur maitre gims black m">
         <!-- Include All CSS -->
         <link rel="stylesheet" type="text/css" href="https://cd1.rap2france.com/public/templates/template/css/bootstrap.css"/>
-        @if(URL::current() != "https://front.rap2france.com/news/kaaris-a-invite-bosh-gims-dadju-mac-tyer-et-4keus-gang-dans-son-album-2-7-0-7457")
-        <link rel="stylesheet" type="text/css" href="https://cd1.rap2france.com/public/templates/template/css/themewar-icons.css"/>
-        @endif
-        <link rel="stylesheet" type="text/css" href="https://cd1.rap2france.com/public/templates/template/css/linea-weather-icons.css"/>
         <link rel="stylesheet" type="text/css" href="https://cd1.rap2france.com/public/templates/template/css/magro-icons.css"/>
-        <link rel="stylesheet" type="text/css" href="https://cd1.rap2france.com/public/templates/template/css/lightcase.css">
+        <link rel="stylesheet" type="text/css" href="https://cd1.rap2france.com/public/templates/template/css/iconfont.css">
         <link rel="stylesheet" type="text/css" href="https://cd1.rap2france.com/public/templates/template/css/slick.css">
         <link rel="stylesheet" type="text/css" href="https://cd1.rap2france.com/public/templates/template/css/owl.carousel.min.css"/>
         <link rel="stylesheet" type="text/css" href="https://cd1.rap2france.com/public/templates/template/css/owl.theme.default.min.css"/>
@@ -49,7 +45,7 @@
         @include('components.footer')
 
         <!-- Bact To Top -->
-        <a href="#" id="backtotop"><i class="twi-angle-double-up2"></i></a>
+        <a href="#" id="backtotop"><i class="feather icon-chevrons-up "></i></a>
         <!-- Bact To Top -->
 
         <!-- Include All JS -->

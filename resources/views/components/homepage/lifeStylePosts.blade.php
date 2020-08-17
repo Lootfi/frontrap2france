@@ -16,7 +16,7 @@
                                     <div class="tw1_details">
                                         <h2><a href="/news/{{$article->tag}}">{{$article->titre}}</a></h2>
                                         <div class="comon_meta clearfix">
-                                            <span class="cm_author"><i class="twi-user"></i>By<a href="{{Route('editors.show',$article->Creator->slug)}}">{{$article->Creator->Full_Name}}</a></span>
+                                            <span class="cm_author"><i class="feather icon-user"></i>By<a href="{{Route('editors.show',$article->Creator->slug)}}">{{$article->Creator->Full_Name}}</a></span>
                                             <span class="cm_date"><a href="#">{{$article->DateActu}}</a></span>
                                         </div>
                                     </div>
@@ -64,7 +64,7 @@
                                     <img src="{{$articles->first()->Avatar}}" alt=""/>
                                     <h4><a href="/news/{{$articles->first()->tag}}">{{$articles->first()->titre}}</a></h4>
                                     <div class="comon_meta clearfix">
-                                        <span class="cm_author"><i class="twi-user"></i>By<a href="{{Route('editors.show',$articles->first()->Creator->slug)}}">{{$articles->first()->Creator->Full_Name}}</a></span>
+                                        <span class="cm_author"><i class="feather icon-user"></i>By<a href="{{Route('editors.show',$articles->first()->Creator->slug)}}">{{$articles->first()->Creator->Full_Name}}</a></span>
                                         <span class="cm_date"><a href="#">{{$article->first()->DateActu}}</a></span>
                                         <a class="comments" href="#">23</a>
                                     </div>
