@@ -12,6 +12,8 @@ class ShowController extends Controller
 {
     public function show($slug){
 
+    	$start = microtime(true);
+
     	if($editor = Administrator::fetchBySlug($slug)){
 
 
@@ -19,6 +21,8 @@ class ShowController extends Controller
 
     			'editor' => $editor,
     			'categories' => Category::all(),
+    			'time' => microtime(true) - $start
+
     		]);
     	}
 

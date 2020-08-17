@@ -10,12 +10,17 @@ class ShowController extends Controller
 {
     public function show($slug){
 
+
+    	 $start = microtime(true);
+
     	if($category = Category::fetchBySlug($slug)){
 
     		return view('pages.categories.show',[
 
     			'categories' => Category::all(),
     			'category' => $category,
+    			'time' => microtime(true) - $start
+
 
     		]);
     	}
