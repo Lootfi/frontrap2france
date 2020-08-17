@@ -12,8 +12,12 @@ class ShowController extends Controller
     public function show($tag){
 
         $start = microtime(true);
+
+
     	if($article = Article::fetchByTag($tag)){
     		
+            return Article::fetchByTag($tag);
+            
     		return view('pages.news.show',[
 
     			'article' => $article,	
