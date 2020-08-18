@@ -78,7 +78,7 @@
              
           const loadTabs = (slug) => {
 
-            fetch(`/api/categories/${slug}/get`,{
+           return fetch(`/api/categories/${slug}/get`,{
             method: 'GET',
             headers :{
             
@@ -87,20 +87,21 @@
         },)
             .then(response => response.json())
             .then(data => {
-            
+                
                 return data
 
 
           })
         }
 
-        const FillTabWithContent = (pan) => {
+        const FillTabWithContent = async (pan) => {
 
-            var articles = loadTabs(pan.id)
+            var articles = await loadTabs(pan.id)
+            console.log(articles)
             var template = "";
             articles.forEach(article => {
 
-               var articleTemplate =  `<div class="row">
+               var articleTemplate =  `
                     <div class="col-lg-6 col-md-6">
                     <div class="tw1_list clearfix">
                             <div class="tw1l_thumb" style="width:155px; height:90px;">
@@ -119,13 +120,15 @@
                                                                                 </div>
                                                                             </div>
                                                                         </div>
-                 </div>
-                </div>`
+                 </div>`
                 template = `${template}${articleTemplate}`
 
             })
 
-            template.append(pan);
+            const row = document.createElement('div');
+            row.classList.add('row')
+            row.innerHTML = template;
+            pan.append(row);
             pan.setAttribute("hasContent","true")
         }
 
@@ -143,6 +146,7 @@
                 const pan = document.querySelector(tab.getAttribute("href"));
                 if(pan.getAttribute('hasContent') == "false"){
 
+                    FillTabWithContent(pan)
                     pan.setAttribute('hasContent',"true");
                     console.log(`${pan} added content`)
                 }
@@ -155,9 +159,6 @@
             })
         })
 
-
-
-          loadTabs('actu-rap')
          </script>
     </body>
 </html>
