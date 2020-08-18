@@ -42,7 +42,7 @@
                 <div class="tab-pane fade " id="{{$category->slug}}" role="tabpanel">
               @endif
                 <div class="row">
-                  @foreach($category->articles->latest()->take(4) as $article)
+                  @foreach($category->articles->take(4) as $article)
                  <div class="col-lg-6 col-md-6">
                     <div class="tw1_list clearfix">
                             <div class="tw1l_thumb" style="width:155px; height:90px;">
