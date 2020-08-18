@@ -1,14 +1,6 @@
-@extends('layouts.site')
-@section('meta-section')
 
-<title>{{$article->titre}}</title>
-<meta property="og:title" content="{{$article->title}}" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="{{Route('news.show',$article->tag)}}" />
-<meta property="og:image" content="{{$article->Avatar}}" />
 
-@endsection
-@section('main-section')
+
 <div id="wrapper">
     <div id="posts_wrapper">
     <div class="post-section" title="{{$article->titre}}" tag="{{$article->tag}}">
@@ -79,9 +71,6 @@
 </div>
        
 
-@endsection
-
-@section('page-script')
     <script>    
         const wrapper = document.querySelector('#wrapper');
         const posts_wrapper = document.querySelector('#posts_wrapper');
@@ -201,4 +190,3 @@
         
     </script>
 
-@endsection
