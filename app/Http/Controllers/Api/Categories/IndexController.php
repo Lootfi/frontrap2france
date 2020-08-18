@@ -32,7 +32,6 @@ class IndexController extends Controller
 
                 $category = Category::where('slug',$slug)->first();
 
-
                 $articles = DB::table('r2f_new_actualite_testing_copy AS articles')
                             ->join('r2f_new_actualite-categorie AS categorie','articles.idcat','=','categorie.id')
                             ->join('r2f_new_adminstrators AS creator','articles.admin_creator_id','=','creator.id')
@@ -41,6 +40,19 @@ class IndexController extends Controller
                              ->orderBy('articles.created_at','DESC')
                                 ->take(4)
                                 ->get();
+
+      $articles->map(function($item,$index){
+
+        if(now()->diffInSeconds($item->updated_at) < 60){
+
+            $item->image =  "/images/admin/articles/avatars/". $item->image; 
+
+       }else{
+
+            $item->image = "https://cd1.rap2france.com/public/medias/news/".$item->id."/660x330/mdpi/".$item->image ;
+
+       }
+}
 
                 return $articles;
         }
