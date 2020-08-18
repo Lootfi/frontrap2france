@@ -20,6 +20,7 @@ class ShowController extends Controller
     		return view('pages.news.show',[
 
     			'article' => $article,	
+    			'categories' => Category::all(),
                 'time' => microtime(true) - $start
 
     		]);
