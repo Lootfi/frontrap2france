@@ -73,5 +73,91 @@
 
          @yield('page-script')
          <noscript>Votre navigateur ne supporte pas Javascript</noscript>
+
+         <script>
+             
+          const loadTabs = (slug) => {
+
+            fetch(`/api/categories/${slug}/get`,{
+            method: 'GET',
+            headers :{
+            
+             'Content-Type': 'application/json',
+            },
+        },)
+            .then(response => response.json())
+            .then(data => {
+            
+                return data
+
+
+          })
+        }
+
+        const FillTabWithContent = (pan) => {
+
+            var articles = loadTabs(pan.id)
+            var template = "";
+            articles.forEach(article => {
+
+               var articleTemplate =  `<div class="row">
+                    <div class="col-lg-6 col-md-6">
+                    <div class="tw1_list clearfix">
+                            <div class="tw1l_thumb" style="width:155px; height:90px;">
+                                   <img loading="lazy" src="${article.image}" alt="">
+                                        <div class="tw1l_cats">
+                                        <a href="#" class="cats reds">${article.Category}</a>
+                                         </div>
+                                   </div>
+                                <div class="tw1_l_content">
+                                    
+                                        <h3><a href="#">${article.titre}</a></h3>
+                                   
+                                    <div class="comon_meta clearfix">
+                                <span class="cm_author"><i class="feather icon-user"></i>By<a href="#">${article.CreatorFullName}</a></span>
+                            <span class="cm_date"><a href="#">${article.created_at}</a></span>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                 </div>
+                </div>`
+                template = `${template}${articleTemplate}`
+
+            })
+
+            template.append(pan);
+            pan.setAttribute("hasContent","true")
+        }
+
+
+        FillTabWithContent(document.getElementById("actu-rap"))
+
+        const tabs = document.querySelectorAll('.tabLink')
+
+        const tabContent = document.querySelectorAll("tab-pane");
+
+        tabs.forEach(tab => {
+
+            tab.addEventListener('focus',() => {
+
+                const pan = document.querySelector(tab.getAttribute("href"));
+                if(pan.getAttribute('hasContent') == "false"){
+
+                    pan.setAttribute('hasContent',"true");
+                    console.log(`${pan} added content`)
+                }
+                else{
+
+                    console.log("already has Content")
+                }
+
+
+            })
+        })
+
+
+
+          loadTabs('actu-rap')
+         </script>
     </body>
 </html>

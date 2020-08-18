@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Category;
 use DB;
+use Carbon\Carbon;
 
 class IndexController extends Controller
 {
@@ -53,7 +54,7 @@ class IndexController extends Controller
 
        }
 
-       $item->created_at = Carbon::parse($item->created_at)->format('d.m.Y');
+       $item->created_at = Carbon::parse($item->created_at)->isoFormat('MMM Do YY');
 });
 
                 return $articles;

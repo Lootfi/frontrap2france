@@ -23,63 +23,34 @@
                                                 <div class="megamenu_2">
                                                     <div class="magro_tab_1">
                          <ul class="mtab_1 menu_tab nav nav-tabs" id="menu_post_tab">
-                        <li><a class="active" href="#actu-rap" data-toggle="tab">Actu Rap</a></li>
-                        <li><a href="#sortie-rap" data-toggle="tab">Sortie Rap</a></li>
-                        <li><a href="#clash" data-toggle="tab">Clash</a></li>
-                        <li><a href="#nouveau-talent" data-toggle="tab">Nouveau Talent</a></li>
-                        <li><a href="#gossips" data-toggle="tab">Gossips</a></li>  
+                        <li><a class="active tabLink" href="#actu-rap" data-toggle="tab" >Actu Rap</a></li>
+                        <li><a class="tabLink" href="#sortie-rap" data-toggle="tab">Sortie Rap</a></li>
+                        <li><a class="tabLink" href="#clash" data-toggle="tab">Clash</a></li>
+                        <li><a  class="tabLink" href="#nouveau-talent" data-toggle="tab">Nouveau Talent</a></li>
+                        <li><a  class="tabLink" href="#gossips" data-toggle="tab">Gossips</a></li>  
 
                                                             
                </ul>
             <div class="tab-content">
               
-                <div class="tab-pane show in active fade" id="actu-rap" role="tabpanel">
+                <div class="tab-pane show in active fade" hasContent= "false" id="actu-rap" role="tabpanel">
             
-                <div class="row">
-                    <div class="col-lg-6 col-md-6">
-                    <div class="tw1_list clearfix">
-                            <div class="tw1l_thumb" style="width:155px; height:90px;">
-                                   <img loading="lazy" src="#" alt="">
-                                        <div class="tw1l_cats">
-                                        <a href="#" class="cats reds">Actu Rap</a>
-                                                                                </div>
-                                                                            </div>
-                                <div class="tw1_l_content">
-                                    
-                                        <h3><a href="#">Title</a></h3>
-                                   
-                                    <div class="comon_meta clearfix">
-                                <span class="cm_author"><i class="feather icon-user"></i>By<a href="#">Karam Henni</a></span>
-                            <span class="cm_date"><a href="#">07 10 1997</a></span>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                 </div>
+                
                 </div>
-                </div>
-                <div class="tab-pane fade" id="sortie-rap" role="tabpanel">
+                <div class="tab-pane fade" id="sortie-rap" hasContent= "false" role="tabpanel">
             
-                <div class="row">
-                    Tab
+                
                 </div>
-                </div>
-                <div class="tab-pane fade" id="clash" role="tabpanel">
+                <div class="tab-pane fade" id="clash" hasContent= "false" role="tabpanel">
             
-                <div class="row">
-                    Tab
+               
                 </div>
-                </div>
-                <div class="tab-pane fade" id="nouveau-talent" role="tabpanel">
+                <div class="tab-pane fade" id="nouveau-talent" hasContent= "false" role="tabpanel">
             
-                <div class="row">
-                    Tab
+                
                 </div>
-                </div>
-                <div class="tab-pane fade" id="gossips" role="tabpanel">
+                <div class="tab-pane fade" id="gossips" hasContent= "false" role="tabpanel">
             
-                <div class="row">
-                    Tab
-                </div>
                 </div>
 
 
