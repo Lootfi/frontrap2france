@@ -12,6 +12,7 @@ class Category extends Model
      * @var string
      */
     protected $table = 'r2f_new_actualite-categorie';
+    public $primaryKey='id';
     
     /**
      * Indicates if the model should be timestamped.
@@ -40,6 +41,6 @@ class Category extends Model
 
     public function articles(){
 
-        return $this->hasMany('\App\Models\Article','idcat','id')->latest();
+        return $this->hasMany('\App\Models\Article','idcat','id');
     }
 }

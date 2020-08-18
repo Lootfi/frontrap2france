@@ -20,7 +20,7 @@ class Article extends Model
      * @var string
      */
     protected $table = 'r2f_new_actualite_testing_copy';
-    
+    public $primaryKey='id';
     /**
      * Indicates if the model should be timestamped.
      *
