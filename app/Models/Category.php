@@ -41,6 +41,6 @@ class Category extends Model
 
     public function articles(){
 
-        return $this->hasMany('\App\Models\Article','idcat','id');
+        return $this->hasMany('\App\Models\Article','idcat','id')->latest();
     }
 }

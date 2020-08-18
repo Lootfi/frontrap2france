@@ -1,13 +1,21 @@
- 
+@extends('layouts.site')
+@section('meta-section')
 
+<title>{{$article->titre}}</title>
+<meta property="og:title" content="{{$article->title}}" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="{{Route('news.show',$article->tag)}}" />
+<meta property="og:image" content="{{$article->Avatar}}" />
 
+@endsection
+@section('main-section')
 <div id="wrapper">
     <div id="posts_wrapper">
     <div class="post-section" title="{{$article->titre}}" tag="{{$article->tag}}">
-	@include('components.news.postHeader')
+    @include('components.news.postHeader')
     <div class="content-container">
  <section class="sp_1_section " >
-            <div class="container"> 
+            <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="sb_bg py-1">
@@ -69,8 +77,11 @@
 <div class="loader"></div>
 <div class="loading text-center"><img class="inline-block mx-auto " style="animation: rotation 2s infinite linear" src="https://cd1.rap2france.com/public/templates/template/images/loading_hover.png"/></div>
 </div>
-       
 
+
+@endsection
+
+@section('page-script')
     <script>    
         const wrapper = document.querySelector('#wrapper');
         const posts_wrapper = document.querySelector('#posts_wrapper');
@@ -78,20 +89,16 @@
         var section = document.querySelectorAll('.post-section');
         var loading = document.querySelector('.loading')
         var loader = document.querySelector('.loader');
-
         var data  = {
-
                     tags: [ primaryTag ]
         };
         var counter = 1;
-
         const loadPost = () =>  {
           fetch('/api/news/getMoreNews',{
             method: 'POST',
             headers :{
             
              'Content-Type': 'application/json',
-
             },
             body:JSON.stringify(data)},
             )
@@ -141,7 +148,6 @@
         </section>
 </div>
 `
-
         var container = document.createElement('div');
         container.classList.add('post-section')
         container.setAttribute("tag",article.tag)
@@ -153,40 +159,29 @@
         wrapper.append(loader);
         section = document.querySelectorAll('.post-section');
         section.forEach(sectionEl => {
-
                 sectionObserver.observe(sectionEl)
           })
-
 }).catch(error => {
-
             loading.remove()
 })
         }
-
         var LoadingObserver = new IntersectionObserver(function(entries){
-
             if (entries[0].isIntersecting === true) {
                 wrapper.removeChild(loader)
                 loadPost();           
                 wrapper.append(loading) 
             }
         },{threshold: [1] });
-
           LoadingObserver.observe(loader);
-
           var sectionObserver = new IntersectionObserver(function(entries){
-
                 entries.forEach(entry => {
-
                     window.history.pushState( null, "", `/news/${entry.target.getAttribute('tag')}` );
                     document.title = entry.target.getAttribute("title")
                     
                 })
-
              },{threshold : [0.3]});
-
         
-
         
     </script>
 
+@endsection 

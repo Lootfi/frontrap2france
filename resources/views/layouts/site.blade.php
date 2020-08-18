@@ -73,6 +73,5 @@
 
          @yield('page-script')
          <noscript>Votre navigateur ne supporte pas Javascript</noscript>
-
     </body>
 </html>

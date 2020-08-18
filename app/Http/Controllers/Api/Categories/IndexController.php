@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Api\Categories;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Category;
+use DB;
 
 class IndexController extends Controller
 {
@@ -23,5 +24,24 @@ class IndexController extends Controller
         			return response()->json("No articles");
         		}
         		return $articles;
+        }
+
+        public function getCategorie($slug){
+
+
+
+                $category = Category::where('slug',$slug)->first();
+
+
+                $articles = DB::table('r2f_new_actualite_testing_copy AS articles')
+                            ->join('r2f_new_actualite-categorie AS categorie','articles.idcat','=','categorie.id')
+                            ->join('r2f_new_adminstrators AS creator','articles.admin_creator_id','=','creator.id')
+                            ->select('articles.id','articles.titre','articles.image','articles.updated_at','articles.tag','articles.created_at','articles.status','categorie.nom as Category','creator.full_name as CreatorFullName','creator.email as CreatorEmail', 'articles.type')
+                             ->where('idcat',$category->id)
+                             ->orderBy('articles.created_at','DESC')
+                                ->take(4)
+                                ->get();
+
+                return $articles;
         }
 }
