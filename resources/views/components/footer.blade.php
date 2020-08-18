@@ -1,5 +1,5 @@
 <div class="px-4">
-<div class="row">
+<div class="row"> 
                     <div class="col-lg-12">
                         <div class="f_bar"></div>
                     </div> 

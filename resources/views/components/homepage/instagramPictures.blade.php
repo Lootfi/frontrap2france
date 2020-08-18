@@ -7,7 +7,7 @@
                 </div>
                 <div class="row">
                     <div class="col-lg-12 noPadding">
-                        <div class="my_instagram">
+                        <div class="my_instagram"> 
                             <div class="instagram_img">
                                 <a href="#"><img loading="lazy"  src="{{asset('assets/template/images/instagram/1.jpg')}}" alt=""/></a>
                             </div>

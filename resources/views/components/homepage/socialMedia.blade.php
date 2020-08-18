@@ -8,7 +8,7 @@
                                         <span>36.798</span> Fans
                                         <a href="#">Like</a>
                                     </div>
-                                </div>
+                                </div> 
                                 <div class="single_social fac">
                                     <a href="#"><i class="feather icon-facebook"></i></a>
                                     <div class="social_meta">

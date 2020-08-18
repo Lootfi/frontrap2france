@@ -5,7 +5,7 @@
                         <div class="featured_item_1 ">
                         <img  src="{{$featuredArticles->first()->Avatar}}" alt="" loading="lazy" />
                             <div class="fi1_content">
-                                <div class="fi1c_categories">
+                                <div class="fi1c_categories"> 
                                     <a href="{{Route('categories.show',$featuredArticles->first()->Category->slug)}}" class="cats blues2">{{$featuredArticles->first()->Category->nom}}</a>
                                 </div>
                                 <h2><a href="/news/{{$featuredArticles->first()->tag}}">{{$featuredArticles->first()->titre}}</a></h2>
