@@ -13,6 +13,7 @@ use App\Models\ArticleLastMonthAnalytic;
 use App\Models\ArticleTodayAnalytic;
 use App\Models\ArticleYesterdayAnalytic;
 use App\Models\ArticleWeekAnalytic;
+use Carbon\Carbon;
 
 class HomeController extends Controller
 {
@@ -22,7 +23,8 @@ class HomeController extends Controller
         return redirect(Route('home')); 
     }
 
-    public function show(){
+    public function show(){   
+
 
     $start = microtime(true);
     	$popular_hashtags = DB::table('r2f_new_actualités_hashtags')
