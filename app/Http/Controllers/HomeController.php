@@ -30,8 +30,8 @@ class HomeController extends Controller
     	$popular_hashtags = DB::table('r2f_new_actualités_hashtags')
                       ->join('r2f_new_actualité_hashtag', 'r2f_new_actualités_hashtags.hashtag_id', '=', 'r2f_new_actualité_hashtag.id')
                      ->select(DB::raw('count(*) as repetition, r2f_new_actualité_hashtag.nom'))
-                     ->groupBy('r2f_new_actualité_hashtag.nom')
-                     ->orderBy('repetition', 'desc')
+->groupBy('r2f_new_a                                          ->orderBy('repetition', 'desc')
+ctualité_hashtag.nom')
                      ->get();
 
          $featuredPosts = FeaturedArticle::featuredPosts()->get()->filter(function($item,$index){
@@ -57,6 +57,7 @@ class HomeController extends Controller
 
          $articles = Article::published()->latest()->take(5)->get();
 
+         return "hey";
          $time = microtime(true) - $start;
     	return view('pages.home',[
 
