@@ -10,7 +10,7 @@
                 </div>
             </div>
         </section>
-<section class="category_page_3 bg-white">
+<section class="category_page_3 bg-white"> 
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">

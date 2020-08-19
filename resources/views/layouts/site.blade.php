@@ -97,7 +97,6 @@
         const FillTabWithContent = async (pan) => {
 
             var articles = await loadTabs(pan.id)
-            console.log(articles)
             var template = "";
             articles.forEach(article => {
 
@@ -148,12 +147,8 @@
 
                     FillTabWithContent(pan)
                     pan.setAttribute('hasContent',"true");
-                    console.log(`${pan} added content`)
                 }
-                else{
-
-                    console.log("already has Content")
-                }
+                
 
 
             })

@@ -19,7 +19,7 @@ class HomeController extends Controller
 
     public function redirectToHome(){
 
-        return redirect(Route('home'));
+        return redirect(Route('home')); 
     }
 
     public function show(){

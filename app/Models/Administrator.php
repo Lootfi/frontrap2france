@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Administrator extends Model
+class Administrator extends Model 
 {
     protected $table = 'r2f_new_adminstrators';
     

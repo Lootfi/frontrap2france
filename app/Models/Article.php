@@ -9,7 +9,7 @@ use DB;
 use Spatie\Analytics\Period;
 use Laravel\Scout\Searchable;
 
-class Article extends Model
+class Article extends Model 
 {
         use Searchable;
 

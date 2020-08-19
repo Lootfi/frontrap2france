@@ -55,6 +55,9 @@ class IndexController extends Controller
        }
 
        $item->created_at = Carbon::parse($item->created_at)->isoFormat('MMM Do YY');
+
+
+      
 });
 
                 return $articles;

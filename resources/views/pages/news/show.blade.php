@@ -10,7 +10,7 @@
 @endsection
 @section('main-section')
 <div id="wrapper">
-    <div id="posts_wrapper">
+    <div id="posts_wrapper"> 
     <div class="post-section" title="{{$article->titre}}" tag="{{$article->tag}}">
     @include('components.news.postHeader')
     <div class="content-container">
@@ -104,24 +104,21 @@
             )
             .then(response => response.json())
             .then(data => {
-            var article = data
-            const template = 
-            
-            `
+            const article = data[0]
+            const template = `
             <section class="banner_01" style="position:relative; background:url('${article.Avatar}') no-repeat fixed center center / cover;">
             <div style="position: absolute; width: 100%; height: 100%; top: 0;left: 0;right: 0;bottom: 0;background-color: rgba(0,0,0,0.5);"></div>
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12 text-center">
                         <div class="banner_1_content">
-                            <a href="/categories/${article.Category.slug}" class="cats blues2">${article.Category.nom}</a>
+                            <a href="/categories/${article.CategorySlug}" class="cats blues2">${article.Category}</a>
                             <h1 class="title" style="color:white;" tag="${article.tag}">${article.titre}</h1>
                             <div class="post_banner_meta clearfix">
-                                <img src="${article.Creator.Avatar}" alt=""/>
-                                <span class="fi1cm_author">By <a href="#">${article.Creator.Full_Name}</a></span>
-                                <span class="fi1cm_date">-<a href="#"><i class="feather icon-clock"></i>${article.DateActu}</a></span>
+                                <span class="fi1cm_author">By <a href="/editors/${article.CreatorSlug}">${article.CreatorFullName}</a></span>
+                                <span class="fi1cm_date">-<a href="#"><i class="feather icon-clock"></i>${article.created_at}</a></span>
                             
-                                <a class="like" href="#"><i class="magro-view"></i>${article.ArticleViews}</a>
+                            
                             </div>
                         </div>
                     </div>
@@ -147,7 +144,9 @@
             </div>
         </section>
 </div>
-`
+`       
+
+        console.log(template)
         var container = document.createElement('div');
         container.classList.add('post-section')
         container.setAttribute("tag",article.tag)
@@ -179,7 +178,7 @@
                     document.title = entry.target.getAttribute("title")
                     
                 })
-             },{threshold : [0.3]});
+             },{threshold : [0.6]});
         
         
     </script>

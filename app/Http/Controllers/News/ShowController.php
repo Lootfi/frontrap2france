@@ -21,7 +21,7 @@ class ShowController extends Controller
 
     			'article' => $article,	
     			'categories' => Category::all(),
-                'time' => microtime(true) - $start
+                'time' => microtime(true) - $start 
 
     		]);
     	}
