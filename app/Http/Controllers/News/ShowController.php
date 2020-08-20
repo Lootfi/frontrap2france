@@ -25,7 +25,6 @@ class ShowController extends Controller
                    ->take(1)
                    ->get();
 
-        return $articles;
     	if($article = Article::fetchByTag($tag)){
 
     
