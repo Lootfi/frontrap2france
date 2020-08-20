@@ -31,7 +31,6 @@
         <section class="copyright">
             <div class="container">
                 <div class="row">
-                    <p>Executed In {{$time}} s</p>
                     <div class="col-lg-12 text-center">
                         <div class="copyies">© RAP2FRANCE. All rights reserved {{date('Y')}}. 
                             <a href="rap2france.com">RAP2FRANCE</a>

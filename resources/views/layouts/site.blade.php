@@ -22,6 +22,7 @@
         <link rel="stylesheet" type="text/css" href="https://cd1.rap2france.com/public/templates/template/css/ignore_for_wp.css"/>
         <link rel="stylesheet" type="text/css" href="https://cd1.rap2france.com/public/templates/template/css/theme.css"/>
         <link rel="stylesheet" type="text/css" href="https://cd1.rap2france.com/public/templates/template/css/responsive.css"/>
+        <link rel="stylesheet" type="text/css" href="https://cd1.rap2france.com/public/templates/template/css/skeleton.css"/>
         <meta property="fb:pages" content="42863617656" />
         
 
@@ -114,7 +115,7 @@
                                         <h3><a href="#">${article.titre}</a></h3>
                                    
                                     <div class="comon_meta clearfix">
-                                <span class="cm_author"><i class="feather icon-user"></i>By<a href="#">${article.CreatorFullName}</a></span>
+                                <span class="cm_author">< class="feather icon-user"></i>By<a href="#">${article.CrieatorFullName}</a></span>
                             <span class="cm_date"><a href="#">${article.created_at}</a></span>
                                                                                 </div>
                                                                             </div>
@@ -124,6 +125,7 @@
 
             })
 
+            pan.innerHTML = ""
             const row = document.createElement('div');
             row.classList.add('row')
             row.innerHTML = template;

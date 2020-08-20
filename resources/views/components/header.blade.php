@@ -34,23 +34,32 @@
             <div class="tab-content">
               
                 <div class="tab-pane show in active fade" hasContent= "false" id="actu-rap" role="tabpanel">
-            
+                
+                <div class="skeleton"></div>
                 
                 </div>
                 <div class="tab-pane fade" id="sortie-rap" hasContent= "false" role="tabpanel">
-            
+                
+                     <div class="skeleton"></div>
+
                 
                 </div>
                 <div class="tab-pane fade" id="clash" hasContent= "false" role="tabpanel">
             
+                     <div class="skeleton"></div>
+
                
                 </div>
                 <div class="tab-pane fade" id="nouveau-talent" hasContent= "false" role="tabpanel">
-            
+                
+                                <div class="skeleton"></div>
+
                 
                 </div>
                 <div class="tab-pane fade" id="gossips" hasContent= "false" role="tabpanel">
-            
+                
+                             <div class="skeleton"></div>
+
                 </div>
 
 
