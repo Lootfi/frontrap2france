@@ -13,8 +13,7 @@ class ShowController extends Controller
     public function show($tag){
 
         $start = microtime(true);
-        return 1;
-        return  Article::fetchByTag($tag);
+
         $articles = DB::table('r2f_new_actualite_testing_copy AS articles')
                    ->join('r2f_new_actualite-categorie AS categorie','articles.idcat','=','categorie.id')
                     ->join(DB::raw('r2f_new_adminstrators AS creator FORCE INDEX (PRIMARY)'),'articles.admin_creator_id','=','creator.id')
