@@ -14,12 +14,10 @@
         <link rel="stylesheet" type="text/css" href="https://cd1.rap2france.com/public/templates/template/css/bootstrap.css"/>
         <link rel="stylesheet" type="text/css" href="https://cd1.rap2france.com/public/templates/template/css/magro-icons.css"/>
         <link rel="stylesheet" type="text/css" href="https://cd1.rap2france.com/public/templates/template/css/iconfont.css">
-        <link rel="stylesheet" type="text/css" href="https://cd1.rap2france.com/public/templates/template/css/slick.css">
-        <link rel="stylesheet" type="text/css" href="https://cd1.rap2france.com/public/templates/template/css/owl.carousel.min.css"/>
-        <link rel="stylesheet" type="text/css" href="https://cd1.rap2france.com/public/templates/template/css/owl.theme.default.min.css"/>
-        <link rel="stylesheet" type="text/css" href="https://cd1.rap2france.com/public/templates/template/css/animate.css"/>
+       
+        
         <link rel="stylesheet" type="text/css" href="https://cd1.rap2france.com/public/templates/template/css/preset.css"/>
-        <link rel="stylesheet" type="text/css" href="https://cd1.rap2france.com/public/templates/template/css/ignore_for_wp.css"/>
+        
         <link rel="stylesheet" type="text/css" href="https://cd1.rap2france.com/public/templates/template/css/theme.css"/>
         <link rel="stylesheet" type="text/css" href="https://cd1.rap2france.com/public/templates/template/css/responsive.css"/>
         <link rel="stylesheet" type="text/css" href="https://cd1.rap2france.com/public/templates/template/css/skeleton.css"/>
@@ -50,33 +48,19 @@
         <!-- Bact To Top -->
 
         <!-- Include All JS -->
-        <script src="https://cd1.rap2france.com/public/templates/template/js/jquery.js"></script>
-        <script src="https://cd1.rap2france.com/public/templates/template/js/jquery-ui.js"></script>
+         <script src="https://cd1.rap2france.com/public/templates/template/js/jquery.js"></script>
+
         <script src="https://cd1.rap2france.com/public/templates/template/js/bootstrap.js"></script>
-        <script src="https://cd1.rap2france.com/public/templates/template/js/lightcase.js"></script>
-        <script src="https://cd1.rap2france.com/public/templates/template/js/jquery.plugin.min.js"></script>
-        <script src="https://cd1.rap2france.com/public/templates/template/js/jquery.countdown.min.js"></script>
-        <script src="https://cd1.rap2france.com/public/templates/template/js/jquery.appear.js"></script>
-        <script src="https://cd1.rap2france.com/public/templates/template/js/slick.js"></script>
-        <script src="https://cd1.rap2france.com/public/templates/template/js/jquery.shuffle.min.js"></script>
-        <script src="https://cd1.rap2france.com/public/templates/template/js/stickyfill.min.js"></script>
-        <script src="https://cd1.rap2france.com/public/templates/template/js/owl.carousel.min.js"></script>
-        <script src="https://cd1.rap2france.com/public/templates/template/js/theme.js"></script>
-        <script src="{{@asset('js/app.js')}}"></script>
+        @yield('page-script-include')
+
+         <script src="https://cd1.rap2france.com/public/templates/template/js/theme.js"></script>
+
+
+       
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-8897495-1"></script>
+
+
         <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'UA-8897495-1');
-        </script>
-
-         @yield('page-script')
-         <noscript>Votre navigateur ne supporte pas Javascript</noscript>
-
-         <script>
-             
           const loadTabs = (slug) => {
 
            return fetch(`/api/categories/${slug}/get`,{
@@ -107,15 +91,15 @@
                             <div class="tw1l_thumb" style="width:155px; height:90px;">
                                    <img loading="lazy" src="${article.image}" alt="">
                                         <div class="tw1l_cats">
-                                        <a href="#" class="cats reds">${article.Category}</a>
+                                        <a href="/categories/${article.CategorySlug}" class="cats reds">${article.Category}</a>
                                          </div>
                                    </div>
                                 <div class="tw1_l_content">
                                     
-                                        <h3><a href="#">${article.titre}</a></h3>
+                                        <h3><a href="/news/${article.tag}">${article.titre}</a></h3>
                                    
                                     <div class="comon_meta clearfix">
-                                <span class="cm_author">< class="feather icon-user"></i>By<a href="#">${article.CrieatorFullName}</a></span>
+                                <span class="cm_author"><i class="feather icon-user"></i>By<a href="/editors/${article.CreatorSlug}">${article.CreatorFullName}</a></span>
                             <span class="cm_date"><a href="#">${article.created_at}</a></span>
                                                                                 </div>
                                                                             </div>
@@ -139,6 +123,7 @@
         const tabs = document.querySelectorAll('.tabLink')
 
         const tabContent = document.querySelectorAll("tab-pane");
+        console.log(tabs);
 
         tabs.forEach(tab => {
 
@@ -157,5 +142,17 @@
         })
 
          </script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-8897495-1');
+        </script>
+        @yield('page-script')
+
+         <noscript>Votre navigateur ne supporte pas Javascript</noscript>
+
+         
     </body>
 </html>
