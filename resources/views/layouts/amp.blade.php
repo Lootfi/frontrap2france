@@ -101,7 +101,7 @@
       <article class="block ">
         <header class="" style="text-align: center;">
           <span style="text-decoration:none; text-align: center; display: block; padding:2rem; font-weight: 600;" class="ampstart-subtitle "><a href="{{Route('categories.show',$article->Category->slug)}}" style="text-decoration:none; color:#ECC94B; cursor: pointer;">{{$article->Category->nom}}</a></span>
-          <h1 class="mb1 ">{{$article->titre}}</h1>
+          <h3 class="mb1 ">{{$article->titre}}</h3>
           <address class="ampstart-byline clearfix mb4 h5">
             <time class="ampstart-byline-pubdate block bold my1" datetime="{{$article->dateactu}}">{{$article->DateActu}}</time>
           </address>
