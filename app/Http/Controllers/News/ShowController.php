@@ -8,11 +8,12 @@ use App\Models\Category;
 use DB;
 use Carbon\Carbon;
 use App\Models\Article;
+use App\Models\ArticleWeekAnalytic;
+use App\Models\ArticleMonthAnalytic;
 class ShowController extends Controller
 {
     public function show($tag){
 
-        $start = microtime(true);
 
         $articles = DB::table('r2f_new_actualite_testing_copy AS articles')
                    ->join('r2f_new_actualite-categorie AS categorie','articles.idcat','=','categorie.id')
@@ -25,6 +26,13 @@ class ShowController extends Controller
                    ->take(1)
                    ->get();
 
+        $popular_hashtags = DB::table('r2f_new_actualités_hashtags')
+                      ->join('r2f_new_actualité_hashtag', 'r2f_new_actualités_hashtags.hashtag_id', '=', 'r2f_new_actualité_hashtag.id')
+                     ->select(DB::raw('count(*) as repetition, r2f_new_actualité_hashtag.nom'))
+                     ->groupBy('r2f_new_actualité_hashtag.nom')
+                     ->orderBy('repetition', 'desc')
+                     ->get();
+
     	if($article = Article::fetchByTag($tag)){
 
     
@@ -32,7 +40,9 @@ class ShowController extends Controller
 
     			'article' => $article,	
     			'categories' => Category::all(),
-                'time' => microtime(true) - $start 
+          'popular_hashtags'=>$popular_hashtags,
+          'topWeek' => ArticleWeekAnalytic::OrderBy('views','DESC')->take(4)->get(),
+          'topMonth' => ArticleMonthAnalytic::OrderBy('views','DESC')->take(4)->get(),
 
     		]);
     	}

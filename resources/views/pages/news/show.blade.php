@@ -63,6 +63,88 @@
                                                 <a href="#"><img loading="lazy"  src="{{asset('assets/template/images/home1/ad2.jpg')}}" alt=""></a>
                                             </div>
                                         </aside>
+                                        <aside class="widget popular_post_2">
+                                            <h3 class="widget_title"><span>Plus Populaire</span></h3>
+                                            <div class="magrotab_popular">
+                                                <ul class="nav nav-tabs" id="widget_tab">
+                                                    <li><a class="active" href="#pp_post_1" data-toggle="tab">Semaine</a></li>
+                                                    <li><a href="#pp_post_2" data-toggle="tab">Mois</a></li>
+                                                </ul>
+                                                <div class="clearfix"></div>
+                                                <div class="tab-content">
+                                                    <div class="tab-pane fade show in active" id="pp_post_1" role="tabpanel">
+                                                        <div class="mp_post_feature clearfix">
+                                                            <div class="mp_post_thumb">
+                                                                <div style="position: absolute; width: 100%; height: 100%; top: 0;left: 0;right: 0;bottom: 0;background-color: rgba(0,0,0,0.5);"></div>
+                                                                <img src="{{$topWeek->first()->article->getAvatar(300,180)}}" alt="">
+                                                                <span>1</span>
+                                                            </div>
+                                                            <div class="mp_post_content">
+                                                                <a href="#" class="cats blues2">{{$topWeek->first()->article->Category->nom}}</a>
+                                                                <h4><a href="#">{{$topWeek->first()->article->titre}}</a></h4>
+                                                            </div>
+                                                        </div>
+                                                    @foreach($topWeek->slice(1)->take(3) as $article)
+                                                        <div class="mp_post clearfix">
+                                                            <div class="mp_post_thumb">
+                                                                <img src="{{$article->article->getAvatar(240,145)}}" alt="">
+                                                                <span>2</span>
+                                                                <a href="#" class="cats reds">Tech</a>
+                                                            </div>
+                                                            <div class="mp_post_content" style="padding-top: 0px;">
+                                                                <h4><a href="#">Ceases New York City Fresh Grocery Business</a></h4>
+                                                                <span class="cm_author"><i class="twi-user"></i>By <a href="#">Admin Staff</a></span>
+                                                            </div>
+                                                        </div>
+                                                        @endforeach
+                                                    </div>
+                                                    <div class="tab-pane fade" id="pp_post_2" role="tabpanel">
+                                                   <div class="mp_post_feature clearfix">
+                                                            <div class="mp_post_thumb">
+                                                                <div style="position: absolute; width: 100%; height: 100%; top: 0;left: 0;right: 0;bottom: 0;background-color: rgba(0,0,0,0.5);"></div>
+                                                                <img src="{{$topMonth->first()->article->getAvatar(300,180)}}" alt="">
+                                                                <span>1</span>
+                                                            </div>
+                                                            <div class="mp_post_content">
+                                                                <a href="#" class="cats blues2">{{$topMonth->first()->article->Category->nom}}</a>
+                                                                <h4><a href="#">{{$topMonth->first()->article->titre}}</a></h4>
+                                                            </div>
+                                                        </div>
+                                                    @foreach($topMonth->slice(1)->take(3) as $article)
+                                                        <div class="mp_post clearfix">
+                                                            <div class="mp_post_thumb">
+                                                                <img src="{{$article->article->getAvatar(240,145)}}" alt="">
+                                                                <span>2</span>
+                                                                <a href="#" class="cats reds">Tech</a>
+                                                            </div>
+                                                            <div class="mp_post_content" style="padding-top: 0px;">
+                                                                <h4><a href="#">Ceases New York City Fresh Grocery Business</a></h4>
+                                                                <span class="cm_author"><i class="twi-user"></i>By <a href="#">Admin Staff</a></span>
+                                                            </div>
+                                                        </div>
+                                                        @endforeach    
+                                                        
+                                                   </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </aside>
+                                        <aside class="widget mag_cat_widget">
+                            <h3 class="widget_title"><span>Top Hashtags</span></h3>
+
+                            @foreach($popular_hashtags->take(5) as $hashtag)
+                            <div class="mcw_content">   
+                                <div class="mcwc_items">
+                                    <a href="#">
+                                        <img loading="lazy" src="{{asset('assets/template/images/widget/cat/1.jpg')}}" alt="">
+                                        <span class="mcwc_name">{{$hashtag->nom}}</span>
+                                        <span class="mcwc_count">{{$hashtag->repetition}}</span>
+                                    </a>
+                                </div>
+                                
+                            </div>
+                            @endforeach
+                        </aside>
                                     </div>
                      </div>
                 </div>
@@ -132,7 +214,7 @@
                     <div class="col-lg-12">
                         <div class="sb_bg py-0">
                             <div class="row pt-4">
-                                <div class="col-lg-8 col-md-7">
+                                <div class="col-lg-12 col-md-12">
                                     <div class="single_blog">
                                         ${article.contenu}
                                     </div>
