@@ -123,7 +123,6 @@
         const tabs = document.querySelectorAll('.tabLink')
 
         const tabContent = document.querySelectorAll("tab-pane");
-        console.log(tabs);
 
         tabs.forEach(tab => {
 

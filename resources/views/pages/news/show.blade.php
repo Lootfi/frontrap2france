@@ -146,7 +146,6 @@
 </div>
 `       
 
-        console.log(template)
         var container = document.createElement('div');
         container.classList.add('post-section')
         container.setAttribute("tag",article.tag)
@@ -178,7 +177,9 @@
                     document.title = entry.target.getAttribute("title")
                     
                 })
-             },{threshold : [0.6]});
+             },{threshold : [0.3]});
+
+        
         
         
     </script>
