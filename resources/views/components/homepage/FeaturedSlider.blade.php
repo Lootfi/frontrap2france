@@ -1,5 +1,5 @@
 <!-- Featured Carousel Section -->
-        <section class="feature_section_1" style="width:100px 0;">
+        <section class="feature_section_1" >
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
