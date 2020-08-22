@@ -1,5 +1,5 @@
 <!-- Featured Carousel Section -->
-        <section class="feature_section_1" >
+        <section class="feature_section_1" style="padding:10px;">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
@@ -13,7 +13,7 @@
                         <h2><a href="#">{{$article->titre}}</a></h2>
                                             <p>
                            {!! substr(html_entity_decode($article->contenutext, ENT_QUOTES, 'UTF-8'),0,100) !!} ...                  </p>
-                                            <a href="/news/{{$article->tag}}" class="read_more">Read More</a>
+                                            <a href="/news/{{$article->tag}}" class="read_more">Continuer</a>
                                         </div>
                                     </div>
                                     <div class="col-lg-5 col-md-5 noPaddingRight">
