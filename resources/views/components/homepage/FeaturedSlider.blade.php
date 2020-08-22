@@ -1,5 +1,5 @@
 <!-- Featured Carousel Section -->
-        <section class="feature_section_1">
+        <section class="feature_section_1" style="width:100px 0;">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
@@ -16,9 +16,7 @@
                                             <a href="/news/{{$article->tag}}" class="read_more">Read More</a>
                                         </div>
                                     </div>
-                                    <div class="col-lg-3 col-md-3 noPaddingRight">
-                                    </div>
-                                    <div class="col-lg-3 col-md-3">
+                                    <div class="col-lg-6 col-md-6 noPaddingRight">
                                         <div class="feature_img">
                                             <img loading="lazy"  src="{{$article->getAvatar(290,380)}}" alt="">
                                         </div>
