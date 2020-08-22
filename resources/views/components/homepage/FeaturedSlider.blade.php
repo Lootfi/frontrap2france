@@ -16,7 +16,7 @@
                                             <a href="/news/{{$article->tag}}" class="read_more">Read More</a>
                                         </div>
                                     </div>
-                                    <div class="col-lg-6 col-md-6 noPaddingRight">
+                                    <div class="col-lg-5 col-md-5 noPaddingRight">
                                         <div class="feature_img">
                                             <img loading="lazy"  src="{{$article->getAvatar(290,380)}}" alt="">
                                         </div>
