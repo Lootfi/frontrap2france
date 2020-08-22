@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Api\Categories;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\Category;
+use App\Models\Category; 
 use DB;
 use Carbon\Carbon;
 

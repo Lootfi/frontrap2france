@@ -11,7 +11,7 @@ class InformationController extends Controller
     public function terms(){
                 $start = microtime(true);
 
-    	return view('pages.informations.terms',
+    	return view('pages.informations.terms', 
     		[
 
     		'categories' => Category::all(),

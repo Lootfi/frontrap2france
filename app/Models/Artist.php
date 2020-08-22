@@ -10,7 +10,7 @@ class Artist extends Model
      * The table associated with the model.
      *
      * @var string
-     */
+     */ 
     protected $table = 'r2f_new_actualite-artistes';
     
     /**

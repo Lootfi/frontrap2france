@@ -54,7 +54,7 @@
   <body>
     <!-- Start Navbar -->
   <header class=" ampstart-headerbar fixed flex justify-start items-center top-0 left-0 right-0 pl-2 pr-4 ">
-    <div role="button" aria-label="open sidebar" on="tap:header-sidebar.toggle" tabindex="0" class="ampstart-navbar-trigger  pr2  " style="position: absolute;">☰
+    <div role="button" aria-label="open sidebar" on="tap:header-sidebar.toggle" tabindex="0" class="ampstart-navbar-trigger  pr2  " style="position: absolute; left:10px;">☰
     </div>
         <amp-img src="{{@asset('assets/logos/R2F-logo-b.png')}}" width="80" height="61.3" layout="fixed" class="my0 mx-auto " alt="The Blog"></amp-img>
   </header>
@@ -100,11 +100,13 @@
      <main id="content" role="main" class="">
       <article class="block ">
         <header class="" style="text-align: center;">
+          <div style=" padding-right:1rem; padding-left:1rem;">
           <span style="text-decoration:none; text-align: center; display: block; padding:2rem; font-weight: 600;" class="ampstart-subtitle "><a href="{{Route('categories.show',$article->Category->slug)}}" style="text-decoration:none; color:#ECC94B; cursor: pointer;">{{$article->Category->nom}}</a></span>
-          <h3 class="mb1 ">{{$article->titre}}</h3>
+          <h1 class="mb1 " style="font-size: 25px; line-height: 2.5rem">{{$article->titre}}</h1>
           <address class="ampstart-byline clearfix mb4 h5">
             <time class="ampstart-byline-pubdate block bold my1" datetime="{{$article->dateactu}}">{{$article->DateActu}}</time>
           </address>
+        </div>
           <amp-img src="{{$article->Avatar}}" width="1280" height="853" layout="responsive" alt="The final spritzer" class="mb-4 mx-3"></amp-img>
 
         </header>

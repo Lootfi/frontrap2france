@@ -11,7 +11,7 @@ class Hashtag extends Model
      *
      * @var string
      */
-    protected $table = 'r2f_new_actualité_hashtag';
+    protected $table = 'r2f_new_actualité_hashtag'; 
     
     /**
      * Indicates if the model should be timestamped.

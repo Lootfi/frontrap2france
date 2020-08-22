@@ -72,7 +72,7 @@ class Article extends Model
 
     public function getDateActuAttribute(){
 
-        return Carbon::parse($this->created_at)->isoFormat('MMM Do YY');
+        return Carbon::parse($this->created_at)->isoFormat('Do MMM YYYY');
     }
 
 
