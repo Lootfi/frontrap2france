@@ -11,16 +11,16 @@
         
         <meta name="keywords" content="paroles clips rap français mp3 son biographies rappeur vidéos album tracklist pochette photos booba rohff medine sinik diam's 113 kery james mafia K1 fry ntm assassin la rumeur mc solaar lacrim booba rohff gradur maitre gims black m">
         <!-- Include All CSS -->
-        <link rel="stylesheet" type="text/css" href="https://img.rap2france.com/public/templates/template/css/bootstrap.css"/>
-        <link rel="stylesheet" type="text/css" href="https://img.rap2france.com/public/templates/template/css/magro-icons.css"/>
-        <link rel="stylesheet" type="text/css" href="https://img.rap2france.com/public/templates/template/css/iconfont.css">
+        <link rel="stylesheet" type="text/css" href="https://cd1.rap2france.com/public/templates/template/css/bootstrap.css"/>
+        <link rel="stylesheet" type="text/css" href="https://cd1.rap2france.com/public/templates/template/css/magro-icons.css"/>
+        <link rel="stylesheet" type="text/css" href="https://cd1.rap2france.com/public/templates/template/css/iconfont.css">
        
         
-        <link rel="stylesheet" type="text/css" href="https://img.rap2france.com/public/templates/template/css/preset.css"/>
+        <link rel="stylesheet" type="text/css" href="https://cd1.rap2france.com/public/templates/template/css/preset.css"/>
         
-        <link rel="stylesheet" type="text/css" href="https://img.rap2france.com/public/templates/template/css/theme.css"/>
-        <link rel="stylesheet" type="text/css" href="https://img.rap2france.com/public/templates/template/css/responsive.css"/>
-        <link rel="stylesheet" type="text/css" href="https://img.rap2france.com/public/templates/template/css/skeleton.css"/>
+        <link rel="stylesheet" type="text/css" href="https://cd1.rap2france.com/public/templates/template/css/theme.css"/>
+        <link rel="stylesheet" type="text/css" href="https://cd1.rap2france.com/public/templates/template/css/responsive.css"/>
+        <link rel="stylesheet" type="text/css" href="https://cd1.rap2france.com/public/templates/template/css/skeleton.css"/>
         <meta property="fb:pages" content="42863617656" />
         
 
@@ -48,12 +48,12 @@
         <!-- Bact To Top -->
 
         <!-- Include All JS -->
-         <script src="https://img.rap2france.com/public/templates/template/js/jquery.js"></script>
+         <script src="https://cd1.rap2france.com/public/templates/template/js/jquery.js"></script>
 
-        <script src="https://img.rap2france.com/public/templates/template/js/bootstrap.js"></script>
+        <script src="https://cd1.rap2france.com/public/templates/template/js/bootstrap.js"></script>
         @yield('page-script-include')
 
-         <script src="https://img.rap2france.com/public/templates/template/js/theme.js"></script>
+         <script src="https://cd1.rap2france.com/public/templates/template/js/theme.js"></script>
 
 
        

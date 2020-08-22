@@ -5,11 +5,11 @@
  <meta property="og:title" content="RAP 2 FRANCE" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="{{env('APP_URL')}}" />
-<link rel="stylesheet" type="text/css" href="https://img.rap2france.com/public/templates/template/css/animate.css"/>
-<link rel="stylesheet" type="text/css" href="https://img.rap2france.com/public/templates/template/css/owl.carousel.min.css"/>
-<link rel="stylesheet" type="text/css" href="https://img.rap2france.com/public/templates/template/css/owl.theme.default.min.css"/>
- <link rel="stylesheet" type="text/css" href="https://img.rap2france.com/public/templates/template/css/slick.css">
- <link rel="stylesheet" type="text/css" href="https://img.rap2france.com/public/templates/template/css/ignore_for_wp.css"/>
+<link rel="stylesheet" type="text/css" href="https://cd1.rap2france.com/public/templates/template/css/animate.css"/>
+<link rel="stylesheet" type="text/css" href="https://cd1.rap2france.com/public/templates/template/css/owl.carousel.min.css"/>
+<link rel="stylesheet" type="text/css" href="https://cd1.rap2france.com/public/templates/template/css/owl.theme.default.min.css"/>
+ <link rel="stylesheet" type="text/css" href="https://cd1.rap2france.com/public/templates/template/css/slick.css">
+ <link rel="stylesheet" type="text/css" href="https://cd1.rap2france.com/public/templates/template/css/ignore_for_wp.css"/>
 
 @endsection
 @section('main-section') 
@@ -30,10 +30,10 @@
 
 @section('page-script-include')
 
-        <script src="https://img.rap2france.com/public/templates/template/js/lightcase.js"></script>
-<script src="https://img.rap2france.com/public/templates/template/js/stickyfill.min.js"></script>
-	        <script src="https://img.rap2france.com/public/templates/template/js/slick.js"></script>
-<script src="https://img.rap2france.com/public/templates/template/js/stickyfill.min.js"></script>
-	 <script src="https://img.rap2france.com/public/templates/template/js/owl.carousel.min.js"></script>
+        <script src="https://cd1.rap2france.com/public/templates/template/js/lightcase.js"></script>
+<script src="https://cd1.rap2france.com/public/templates/template/js/stickyfill.min.js"></script>
+	        <script src="https://cd1.rap2france.com/public/templates/template/js/slick.js"></script>
+<script src="https://cd1.rap2france.com/public/templates/template/js/stickyfill.min.js"></script>
+	 <script src="https://cd1.rap2france.com/public/templates/template/js/owl.carousel.min.js"></script>
 
 @endsection

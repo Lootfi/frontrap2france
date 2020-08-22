@@ -83,9 +83,10 @@
                                 <div class="col-lg-3">
                                     <div class="header_01_settings">
                                         <div class="social_01 clearfix">
-                                            <a href="#"><i class="feather icon-facebook"></i></a>
-                                            <a href="#"><i class="feather icon-twitter"></i></a>
-                                            <a href="#"><i class="feather icon-youtube"></i></a>
+                                            <a href="https://web.facebook.com/Rap2FranceOfficiel/" target="_blank"><i class="feather icon-facebook"></i></a>
+                                            <a href="https://twitter.com/rap2france" target="_blank"><i class="feather icon-twitter"></i></a>
+                                            <a href="https://www.instagram.com/rap2france/" target="_blank"><i class="feather icon-instagram"></i></a>
+                                            <a href="https://www.youtube.com/c/rap2france" target="_blank"><i class="feather icon-youtube"></i></a>
                                         </div>
                                         <div class="search_btn relative">
                                              <a href="javascript:void(0);"><i class="feather icon-search"></i></a>

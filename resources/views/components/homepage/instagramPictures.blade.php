@@ -7,22 +7,13 @@
                 </div>
                 <div class="row">
                     <div class="col-lg-12 noPadding">
-                        <div class="my_instagram"> 
-                            <div class="instagram_img">
-                                <a href="#"><img loading="lazy"  src="{{asset('assets/template/images/instagram/1.jpg')}}" alt=""/></a>
+                        <div class="my_instagram" > 
+                            @foreach($instagram_images as $image)
+                            <div class="instagram_img" style="height:270px;">
+                                <a href="https://www.instagram.com/p/{{$image->shortcode}}/" target="_blank"><img style="height:100%;" loading="lazy"  src="{{$image->image_src}}" alt=""/></a>
                             </div>
-                            <div class="instagram_img">
-                                <a href="#"><img loading="lazy" src="{{asset('assets/template/images/instagram/2.jpg')}}" alt=""/></a>
-                            </div>
-                            <div class="instagram_img">
-                                <a href="#"><img loading="lazy" src="{{asset('assets/template/images/instagram/3.jpg')}}" alt=""/></a>
-                            </div>
-                            <div class="instagram_img">
-                                <a href="#"><img loading="lazy" src="{{asset('assets/template/images/instagram/4.jpg')}}" alt=""/></a>
-                            </div>
-                            <div class="instagram_img">
-                                <a href="#"><img loading="lazy" src="{{asset('assets/template/images/instagram/5.jpg')}}" alt=""/></a>
-                            </div>
+                            
+                            @endforeach
                         </div>
                     </div>
                 </div>

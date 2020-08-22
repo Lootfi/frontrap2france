@@ -16,6 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/','HomeController@show')->name('home');
 Route::get('/search','HomeController@search')->name('search');
 
+
 Route::group(['prefix' => 'news' , 'namespace'=> 'News'],function(){ 
 
 	Route::get('/{tag}','ShowController@show')->name('news.show');
