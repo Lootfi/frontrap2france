@@ -7,7 +7,7 @@ use Carbon\Carbon;
 use Analytics;
 use DB;
 use Spatie\Analytics\Period;
-use Laravel\Scout\Searchable;
+use Laravel\Scout\Searchable; 
 
 class Article extends Model 
 {
@@ -20,7 +20,7 @@ class Article extends Model
      * @var string
      */
     protected $table = 'r2f_new_actualite_testing_copy';
-    public $primaryKey='id';
+    public $primaryKey='id'; 
     /**
      * Indicates if the model should be timestamped.
      *
@@ -43,7 +43,7 @@ class Article extends Model
        'updated_at' => 'datetime:Y-m-d',
        'dateactu' =>'datetime:Y-m-d',
        'contenuJson' => 'array'
-    ];
+    ]; 
     
 
     public function getArtistsAttribute(){

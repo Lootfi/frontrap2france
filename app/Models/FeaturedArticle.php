@@ -19,7 +19,7 @@ class FeaturedArticle extends Model
      * @var bool
      */
     public $timestamps = false;
-
+ 
 
     public static function featuredPosts(){
 

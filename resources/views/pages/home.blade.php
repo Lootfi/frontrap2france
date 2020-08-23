@@ -16,7 +16,7 @@
 	 
 	@if($featuredArticles->count() > 0)
 	@include('components.homepage.featuredPosts')
-	@endif
+	@endif 
 	@include('components.ad')
 	@include('components.homepage.topWeek')
 	@include('components.homepage.streetPosts')

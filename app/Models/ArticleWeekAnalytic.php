@@ -22,6 +22,6 @@ class ArticleWeekAnalytic extends Model
 
     public function article(){
 
-        return $this->hasOne('\App\Models\Article','id','actualite_id');
+        return $this->hasOne('\App\Models\Article','id','actualite_id'); 
     }
 }

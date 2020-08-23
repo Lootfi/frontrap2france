@@ -11,7 +11,7 @@ class AdministratorDetail extends Model
      *
      * @var string
      */
-    protected $table = 'r2f_new_administrator_details';
+    protected $table = 'r2f_new_administrator_details'; 
     
     /**
      * Indicates if the model should be timestamped.

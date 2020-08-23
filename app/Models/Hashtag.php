@@ -22,7 +22,7 @@ class Hashtag extends Model
 
     public function articles()
 
-    {
+    { 
 
         return $this->belongsToMany(\App\Models\Article::class, 'r2f_new_actualités_hashtags');
 

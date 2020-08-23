@@ -8,13 +8,13 @@
                                     <div class="logo_01">
                                         <a href="index-2.html"><img src="{{@asset('assets/logos/logo.png')}}" loading="lazy" alt="Rap2France"/></a>
                                     </div>
-                                </div>
+                                </div> 
                                 <div class="col-lg-6 noPaddingLeft">
                                     <nav class="main_menu mobile_menu">
                                         <div class="mobileMenuBar">
                                             <a href="javascript: void(0);"><span>Menu</span><i class="feather icon-menu"></i></a>
                                         </div>
-                                        <ul class="clearfix">
+                                        <ul class="clearfix"> 
                                             <li class="current-menu-item  mg_menu">
                                                 <a href="{{Route('home')}}">Accueil</a>
                                             </li>

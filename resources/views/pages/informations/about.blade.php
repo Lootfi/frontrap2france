@@ -2,7 +2,7 @@
 @section('meta-section')
         
         <title>À propos - RAP2FRANCE </title>
- <meta property="og:title" content="termes et conditions" />
+ <meta property="og:title" content="termes et conditions" /> 
 <meta property="og:type" content="page" />
 <meta property="og:url" content="{{env('APP_URL')}}" />
 

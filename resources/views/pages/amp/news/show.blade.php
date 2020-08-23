@@ -66,7 +66,7 @@
 		@if($block['type'] == "image")
 		
 		@if($block['data']['file']) 
-		<figure class="block">
+		<figure class="block"> 
 		      <amp-img src="{{$block['data']['file']['url']}}" layout="fill"></amp-img>
 		      <figcaption>{{strip_tags($block['data']['caption'])}}</figcaption>
    		 </figure>

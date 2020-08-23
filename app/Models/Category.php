@@ -15,7 +15,7 @@ class Category extends Model
     public $primaryKey='id';
     
     /**
-     * Indicates if the model should be timestamped.
+     * Indicates if the model should be timestamped. 
      *
      * @var bool
      */

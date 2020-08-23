@@ -20,7 +20,7 @@ class Administrator extends Model
      *
      * @var array
      */
-    protected $appends = ['Details','StatusName','Avatar'];
+    protected $appends = ['Details','StatusName','Avatar']; 
 
      /**
      * The attributes that should be hidden for arrays.
@@ -60,7 +60,7 @@ class Administrator extends Model
 
     public function getAvatarAttribute(){
 
-        $detail = \App\Models\AdministratorDetail::where('admin_id',$this->id)->first();
+        $detail = \App\Models\AdministratorDetail::where('admin_id',$this->id)->first(); 
 
 
        if(now()->diffInSeconds($this->updated_at) < 60){

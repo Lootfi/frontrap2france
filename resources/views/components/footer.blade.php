@@ -10,7 +10,7 @@
                             <div class="about_magro">
                                 <img loading="lazy"  src="{{asset('assets/logos/logo-footer.png')}}" alt="Rap2France">
                                 <p>
-                                    Rap 2 france est un site 
+                                    Rap 2 france est un site  
                                 </p>
                                 <h4>Contactez nous :  <span>rap2france@gmail.com</span></h4>
                             </div>

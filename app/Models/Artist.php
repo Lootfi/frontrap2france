@@ -11,7 +11,7 @@ class Artist extends Model
      *
      * @var string
      */ 
-    protected $table = 'r2f_new_actualite-artistes';
+    protected $table = 'r2f_new_actualite-artistes'; 
     
     /**
      * Indicates if the model should be timestamped.

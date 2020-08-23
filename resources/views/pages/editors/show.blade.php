@@ -1,7 +1,7 @@
 	@extends('layouts.site')
 
 @section('main-section')
-
+ 
 <div class="bg-white py-4 px-2 m-4">
 	
 
