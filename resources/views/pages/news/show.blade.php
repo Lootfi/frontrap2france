@@ -8,7 +8,7 @@
 <meta property="og:image" content="{{$article->Avatar}}" />
 
 @endsection
-@section('main-section')
+@section('main-section') 
 <div id="wrapper">
     <div id="posts_wrapper"> 
     <div class="post-section" title="{{$article->titre}}" tag="{{$article->tag}}">
@@ -19,7 +19,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="sb_bg py-1">
-                            <div class="row pt-4">
+                            <div class="row pt-5">
                                 <div class="col-lg-8 col-md-7">
                                     <div class="single_blog ">
                                         @if($article->type == 1)
@@ -38,21 +38,28 @@
                                                     <a href="#"><i class="feather icon-twitter"></i></a>
                                                     <div class="social_meta">
                                                         <span>36.798</span> Fans
-                                                        <a href="#">Like</a>
+                                                        <a href="#">J'aime</a>
                                                     </div>
                                                 </div>
                                                 <div class="single_social fac">
                                                     <a href="#"><i class="feather icon-facebook"></i></a>
                                                     <div class="social_meta">
-                                                        <span>145.519</span> Followers
-                                                        <a href="#">Follow</a>
+                                                        <span>145.519</span> Abonnés
+                                                        <a href="#">S'abonner</a>
+                                                    </div>
+                                                </div>
+                                                <div class="single_social insta">
+                                                    <a href="#"><i class="feather icon-instagram"></i></a>
+                                                    <div class="social_meta">
+                                                        <span>980</span> Abonnés 
+                                                        <a href="#">S'Abonner</a>
                                                     </div>
                                                 </div>
                                                 <div class="single_social you">
                                                     <a href="#"><i class="feather icon-youtube"></i></a>
                                                     <div class="social_meta">
-                                                        <span>980</span> Subscribers
-                                                        <a href="#">Subscribe</a>
+                                                        <span>980</span> Abonnés 
+                                                        <a href="#">S'Abonner</a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -212,7 +219,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="sb_bg py-0">
-                            <div class="row pt-4">
+                            <div class="row pt-5">
                                 <div class="col-lg-12 col-md-12">
                                     <div class="single_blog">
                                         ${article.contenu}

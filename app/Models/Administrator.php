@@ -84,13 +84,13 @@ class Administrator extends Model
     {
         return [];
     }   
-
+ 
     public function getAuthPassword() {
     return $this->password;
 }  
 
     public function articles(){
-
+            
         return $this->hasMany('\App\Models\Article','admin_creator_id','id');
     
 

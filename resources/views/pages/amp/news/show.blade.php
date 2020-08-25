@@ -7,7 +7,7 @@
 
 @endsection
 @section('main-section')
-<div class="main">
+<div class="main"> 
 
 
 @if($article->contenuFormat['type'] == "raw")

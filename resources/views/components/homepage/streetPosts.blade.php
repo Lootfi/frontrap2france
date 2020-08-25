@@ -36,7 +36,7 @@
                             <div class="single_tw2_list">
                                 <img loading="lazy" src="{{$article->Avatar}}" alt=""/>
                                 <div class="tw2_list_content">
-                                    <a href="#" class="cats reds">{{$article->Category->nom}}</a>
+                                    <a href="/categories/{{$article->Category->slug}}" class="cats reds">{{$article->Category->nom}}</a>
                                     <div class="list_meta_con">
                                         <h3><a href="/news/{{$article->tag}}">{{$article->titre}}</a></h3>
                                         <div class="comon_meta clearfix">

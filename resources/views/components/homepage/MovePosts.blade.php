@@ -7,7 +7,7 @@
                         <div class="tw3_list clearfix">
                             <div class="tw3_thumb" style="width:155px;">
                                 <img loading="lazy" src="{{$article->getAvatar(155,90)}}" alt="">
-                            </div>
+                            </div> 
                             <div class="tw_3_content">
                                 <a href="{{Route('categories.show',$article->Category->slug)}}" class="cats reds">Move</a>
                                 <h3><a href="{{Route('news.show',$article->tag)}}">{{$article->titre}}</a></h3>

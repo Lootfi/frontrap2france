@@ -5,9 +5,9 @@
 <div class="bg-white py-4 px-2 m-4">
 	
 
-	<div class="flex items-center justify-around ">
+	<div class="row " style="align-items:center"> 
 
-		<div class="col-lg-3">
+		<div class="col-lg-3" style="text-align:center">
 			<img class="inline-block rounded-full object-cover " style="width:200px; height:200px;" src="{{$editor->Avatar}}" loading="lazy" ></div>
 		<div class="col-lg-8">
 		<p><span class="font-bold" style="color:#F5A815">Nom :</span> 	{{$editor->Full_Name}}</p>
@@ -20,7 +20,7 @@
 
 		<hr class="w-3/4 mx-auto  bg-black text-black" />
 
-		<h2 class="text-2xl my-2" >Les Articles</h2>
+		<h2 class="text-2xl my-5" >Les Articles</h2>
 		<div id="wrapper">
 		<div class="row my-2">
 			@foreach($editor->articles()->latest()->take(12)->get() as $article)

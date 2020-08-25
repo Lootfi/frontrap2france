@@ -1600,8 +1600,12 @@ a.cats.pinks2 {
     padding: 9px 0;
 }
 .single_social.you > a{
-    font-size: 15px;
-    letter-spacing: -4px;
+    font-size: 17px;
+    letter-spacing: -2px;
+}
+.single_social.insta > a{
+    font-size: 17px;
+    letter-spacing: -1.5px;
 }
 .single_social > a:after{
     position: absolute;
@@ -1671,6 +1675,15 @@ a.cats.pinks2 {
 }
 .single_social.you > a:after{
     background: #D72523;
+}
+.single_social.insta .social_meta{
+    background: linear-gradient(90deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+}
+.single_social.insta > a{
+    background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+}
+.single_social.insta > a:after{
+    background: linear-gradient(90deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
 }
 .widget.mag_social_widget{
     margin: 0 0 38px;

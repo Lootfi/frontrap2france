@@ -46,7 +46,7 @@
 
                                     <div class="single_md_item">
                                         <img src="{{$article->Avatar}}" alt=""/>
-                                        <a href="#">{{$article->titre}}</a>
+                                        <a href="/news/{{$article->tag}}">{{$article->titre}}</a>
                                     </div>
                                    </div>
 
@@ -66,7 +66,6 @@
                                     <div class="comon_meta clearfix">
                                         <span class="cm_author"><i class="feather icon-user"></i>By<a href="{{Route('editors.show',$articles->first()->Creator->slug)}}">{{$articles->first()->Creator->Full_Name}}</a></span>
                                         <span class="cm_date"><a href="#">{{$article->first()->DateActu}}</a></span>
-                                        <a class="comments" href="#">23</a>
                                     </div>
                                     <p>
                                         {!! substr(html_entity_decode($articles->first()->contenutext, ENT_QUOTES, 'UTF-8'),0,100) !!} ...

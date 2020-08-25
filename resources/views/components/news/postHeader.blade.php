@@ -4,7 +4,7 @@
             <div class="container" style="z-index: 3;">
                 <div class="row"> 
                     <div class="col-lg-12 text-center">
-                        <div class="banner_1_content relative"> 
+                        <div class="banner_1_content relative">          
                             
                             <a href="{{Route('categories.show',$article->Category->slug)}}" class="cats blues2">{{$article->Category->nom}}</a>
                             <h1 class="title" style="color:white;" tag="{{$article->tag}}">{{$article->titre}}</h1>

@@ -22,7 +22,7 @@ class ShowController extends Controller
                    ->where('articles.status',1)
                    ->where('articles.updated_at','<',Carbon::now()->subMinutes(1)->toDateTimeString())
                    ->whereNotIn('articles.tag',[$tag])
-                   ->orderBy('articles.created_at','DESC')
+                   ->orderBy('articles.created_at','DESC') 
                    ->take(1)
                    ->get();
 

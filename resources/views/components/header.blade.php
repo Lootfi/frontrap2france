@@ -36,7 +36,7 @@
                 <div class="tab-pane show in active fade" hasContent= "false" id="actu-rap" role="tabpanel">
                 
                 <div class="skeleton"></div>
-                
+                 
                 </div>
                 <div class="tab-pane fade" id="sortie-rap" hasContent= "false" role="tabpanel">
                 

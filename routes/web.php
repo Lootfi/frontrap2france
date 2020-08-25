@@ -22,7 +22,7 @@ Route::group(['prefix' => 'news' , 'namespace'=> 'News'],function(){
 	Route::get('/{tag}','ShowController@show')->name('news.show');
 
 });
-
+ 
 
 Route::group(['prefix' => 'editors', 'namespace' => 'Editors'],function(){
 
