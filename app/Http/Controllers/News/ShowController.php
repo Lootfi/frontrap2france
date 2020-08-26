@@ -39,7 +39,6 @@ class ShowController extends Controller
                             ->limit(1)
                             ->get();
 
-          return $socialstatistics;
     	if($article = Article::fetchByTag($tag)){
 
     
@@ -50,6 +49,7 @@ class ShowController extends Controller
           'popular_hashtags'=>$popular_hashtags,
           'topWeek' => ArticleWeekAnalytic::OrderBy('views','DESC')->take(4)->get(),
           'topMonth' => ArticleMonthAnalytic::OrderBy('views','DESC')->take(4)->get(),
+          'socialstatistics' => $socialstatistics[0]
 
     		]);
     	}

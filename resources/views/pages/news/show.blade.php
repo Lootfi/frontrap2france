@@ -37,28 +37,28 @@
                                                 <div class="single_social twi">
                                                     <a href="#"><i class="feather icon-twitter"></i></a>
                                                     <div class="social_meta">
-                                                        <span>36.798</span> Fans
+                                                        <span>{{$socialstatistics->twitter}}</span> Fans
                                                         <a href="#">J'aime</a>
                                                     </div>
                                                 </div>
                                                 <div class="single_social fac">
                                                     <a href="#"><i class="feather icon-facebook"></i></a>
                                                     <div class="social_meta">
-                                                        <span>145.519</span> Abonnés
+                                                        <span>{{$socialstatistics->facebook}}</span> Abonnés
                                                         <a href="#">S'abonner</a>
                                                     </div>
                                                 </div>
                                                 <div class="single_social insta">
                                                     <a href="#"><i class="feather icon-instagram"></i></a>
                                                     <div class="social_meta">
-                                                        <span>980</span> Abonnés 
+                                                        <span>{{$socialstatistics->instagram}}</span> Abonnés 
                                                         <a href="#">S'Abonner</a>
                                                     </div>
                                                 </div>
                                                 <div class="single_social you">
                                                     <a href="#"><i class="feather icon-youtube"></i></a>
                                                     <div class="social_meta">
-                                                        <span>980</span> Abonnés 
+                                                        <span>{{$socialstatistics->youtube}}</span> Abonnés 
                                                         <a href="#">S'Abonner</a>
                                                     </div>
                                                 </div>
