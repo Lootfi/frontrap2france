@@ -7,9 +7,9 @@
 
 	<div class="row " style="align-items:center"> 
 
-		<div class="col-lg-3" style="text-align:center">
-			<img class="inline-block rounded-full object-cover " style="width:200px; height:auto;" src="{{$editor->Avatar}}" loading="lazy" ></div>
-		<div class="col-lg-8">
+		<div class="col-lg-5" style="text-align:center">
+			<img class="inline-block rounded-full object-cover " style="width:500px; height:auto;" src="{{$editor->Avatar}}" loading="lazy" ></div>
+		<div class="col-lg-5">
 		<p><span class="font-bold" style="color:#F5A815">Nom :</span> 	{{$editor->Full_Name}}</p>
 		<p><span class="font-bold" style="color:#F5A815">E-mail professionnel :</span> {{$editor->email}} </p>
 		<p><span class="font-bold" style="color:#F5A815">Description :</span> This is a description</p>

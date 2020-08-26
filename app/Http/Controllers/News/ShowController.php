@@ -33,6 +33,13 @@ class ShowController extends Controller
                      ->orderBy('repetition', 'desc')
                      ->get();
 
+
+        $socialstatistics = DB::table('r2f_new_social_count')
+                            ->select('*')
+                            ->limit(1)
+                            ->get();
+
+          return $socialstatistics;
     	if($article = Article::fetchByTag($tag)){
 
     
