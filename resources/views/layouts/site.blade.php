@@ -18,7 +18,7 @@
         
         <link rel="stylesheet" type="text/css" href="https://cd1.rap2france.com/public/templates/template/css/preset.css"/>
         
-        <link rel="stylesheet" type="text/css" href="{{asset('assets/template/css/theme.css')}}"/>
+        <link rel="stylesheet" type="text/css" href="https://img.rap2france.com/public/templates/template/css/theme.css"/>
         <link rel="stylesheet" type="text/css" href="https://cd1.rap2france.com/public/templates/template/css/responsive.css"/>
         <link rel="stylesheet" type="text/css" href="https://cd1.rap2france.com/public/templates/template/css/skeleton.css"/>
         <meta property="fb:pages" content="42863617656" />
@@ -29,7 +29,7 @@
         <link rel="icon"  type="image/png" href="https://cd1.rap2france.com/public/templates/default/assets/images/icone/57.jpg">
         <!-- Favicon Icon -->
     </head>
-    <body style="background:black" >
+    <body class="body_with_bg" >
         <!-- Preloading -->
         <div class="preloader text-center">
             <div class="la-ball-scale-multiple la-2x">

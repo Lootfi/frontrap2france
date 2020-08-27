@@ -43,4 +43,15 @@ class InformationController extends Controller
 
     	]);
     }
+
+    public function contact(){
+        $start = microtime(true);
+
+        return view('pages.informations.contact',[
+
+            'categories' => Category::all(),
+           'time' => microtime(true) - $start
+
+        ]);
+    }
 }

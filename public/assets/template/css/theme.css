@@ -79,8 +79,8 @@ License URI:
 /---------------------------------------------------------*/
 /*----- 1.1 Header Css ------*/
 .body_with_bg{
-    background: url(../images/bg/1.jpg) no-repeat top center;
-    padding-top: 71px;
+    background: url(../images/bg/jodie-walton-thm-jF3JR3w-unsplash.jpg) no-repeat top center;
+    padding-top: 31px;
 }
 .header_bar{
     background: #424242;
@@ -180,7 +180,7 @@ License URI:
 .main_menu{
     position: relative;
     text-align: left;
-    padding-top: 55px;
+    padding-top: 35px;
 }
 .main_menu > ul{
     list-style: none;
@@ -440,7 +440,6 @@ License URI:
     position: relative;
     display: flex;
     justify-content: flex-end;
-    padding-top: 36px;
 }
 .social_01{
     position: relative;

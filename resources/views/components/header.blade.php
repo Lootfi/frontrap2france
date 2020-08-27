@@ -3,10 +3,10 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="header_01_inner">
-                            <div class="row items-center">
+                            <div class="row align-items-center">
                                 <div class="col-lg-3">
                                     <div class="logo_01">
-                                        <a href="index-2.html"><img src="{{@asset('assets/logos/logo.png')}}" loading="lazy" alt="Rap2France"/></a>
+                                        <a href="{{Route('home')}}"><img src="{{@asset('assets/logos/logo.png')}}" loading="lazy" alt="Rap2France"/></a>
                                     </div>
                                 </div> 
                                 <div class="col-lg-6 noPaddingLeft">

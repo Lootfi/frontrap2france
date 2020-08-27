@@ -9,7 +9,7 @@
 
 @endsection
 @section('main-section') 
-<div id="wrapper">
+<div id="wrapper" style="background: black;">
     <div id="posts_wrapper"> 
     <div class="post-section" title="{{$article->titre}}" tag="{{$article->tag}}">
     @include('components.news.postHeader')
