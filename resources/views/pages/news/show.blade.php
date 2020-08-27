@@ -2,7 +2,7 @@
 @section('meta-section')
 
 <title>{{$article->titre}}</title>
-<meta property="og:title" content="{{$article->title}}" />
+<meta property="og:title" content="{{$article->title}}" /> 
 <meta property="og:type" content="article" /> 
 <meta property="og:url" content="{{Route('news.show',$article->tag)}}" />
 <meta property="og:image" content="{{$article->Avatar}}" />

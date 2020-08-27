@@ -21,6 +21,7 @@
         "laravel/tinker": "^2.0",
         "mitnick/laravel-security": "^1.0",
         "pgrimaud/instagram-user-feed": "^6.4",
+        "raiym/instagram-php-scraper": "^0.9.13",
         "spatie/laravel-analytics": "^3.10",
         "spatie/laravel-sitemap": "^5.7"
     },

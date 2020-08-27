@@ -12,7 +12,7 @@ use App\Models\ArticleMonthAnalytic;
 use App\Models\ArticleLastMonthAnalytic;
 use App\Models\ArticleTodayAnalytic;
 use App\Models\ArticleYesterdayAnalytic;
-use App\Models\ArticleWeekAnalytic;
+use App\Models\ArticleWeekAnalytic;     
 use Carbon\Carbon;
 use App\Models\InstagramPicture;
 use Instagram\Api;
@@ -73,7 +73,7 @@ class HomeController extends Controller
             'topWeek' => ArticleWeekAnalytic::OrderBy('views','DESC')->take(4)->get(),
             'topMonth' => ArticleMonthAnalytic::OrderBy('views','DESC')->take(4)->get(),
             'topLastMonth' => ArticleLastMonthAnalytic::OrderBy('views','DESC')->take(4)->get(),
-            'instagram_images' => InstagramPicture::OrderBy('created_at','DESC')->take(5)->get(),
+            'instagram_images' => InstagramPicture::OrderBy('posted_at','DESC')->take(5)->get(),
     	]);
     }
 

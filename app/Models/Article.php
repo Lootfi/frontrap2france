@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Carbon\Carbon;
 use Analytics;
-use DB;
+use DB; 
 use Spatie\Analytics\Period;
 use Laravel\Scout\Searchable; 
 

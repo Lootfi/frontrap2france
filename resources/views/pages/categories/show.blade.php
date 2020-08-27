@@ -6,7 +6,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="breadcrumb"><a href="{{Route('home')}}">Accueil</a>><a href="{{Route('categories.show',$category->slug)}}">{{$category->nom}}</a></div>
-                    </div>
+                    </div> 
                 </div>
             </div>
         </section>

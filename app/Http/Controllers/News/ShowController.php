@@ -10,11 +10,12 @@ use Carbon\Carbon;
 use App\Models\Article;
 use App\Models\ArticleWeekAnalytic;
 use App\Models\ArticleMonthAnalytic;
-class ShowController extends Controller
+class ShowController extends Controller 
 {
     public function show($tag){
 
 
+        
         $articles = DB::table('r2f_new_actualite_testing_copy AS articles')
                    ->join('r2f_new_actualite-categorie AS categorie','articles.idcat','=','categorie.id')
                     ->join(DB::raw('r2f_new_adminstrators AS creator FORCE INDEX (PRIMARY)'),'articles.admin_creator_id','=','creator.id')
