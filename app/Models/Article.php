@@ -70,6 +70,7 @@ class Article extends Model
     }
 
 
+
     public function getDateActuAttribute(){
 
         return Carbon::parse($this->created_at)->isoFormat('Do MMM YYYY');
@@ -215,7 +216,7 @@ return 0;
 
                 $embed =  base64_decode($embedEl[2][0]);
                 $embed = html_entity_decode($embed, ENT_QUOTES, 'UTF-8');
-                $embed = sprintf('<div class="my-4 mx-auto "  data-html-snippet="true">%s</div>', $embed);
+                $embed = sprintf('<div class="my-4 mx-auto w-full h-full"   data-html-snippet="true">%s</div>', $embed);
                 array_push($embedIframes,$embed);
 
             }

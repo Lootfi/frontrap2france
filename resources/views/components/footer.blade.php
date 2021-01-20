@@ -1,3 +1,23 @@
+
+
+<section class="copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <div class="copyies">© RAP2FRANCE. All rights reserved {{date('Y')}}.
+                            <a href="https://rap2france.com/">rap2france.com</a>
+                        </div>
+                        <div class="f_menu clearfix">
+                            <a href="{{Route('terms_conditions')}}">Termes et conditions</a>
+                            <a href="{{Route('privacy')}}">Confidentialité</a>
+                            <a href="{{Route('about')}}">à-propos</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+</section>
+<!--
+
 <div class="px-4" style="background:black">
 <div class="row"> 
                     <div class="col-lg-12">
@@ -12,7 +32,7 @@
                                 <p>
                                     Rap 2 france est un site  
                                 </p>
-                                <h4 style="line-height:1.5">Contactez nous <a href="{{Route('contact')}}">ici</a>  ou sur notre boite mail:  <span>rap2france@gmail.com</span></h4>
+                                <h4 style="line-height:1.5"> <a href="{{Route('contact')}}">Contactez nous ici</a> ou sur notre boite mail:  <span>rap2france@gmail.com</span></h4>
                             </div>
                         </aside> 
                     </div>
@@ -21,7 +41,7 @@
             <div class="container ">
                 <ul class="list-inline text-white" >
                             <li class="list-inline-item"><a style="color:#cccccc;" href="{{Route('terms_conditions')}}">Termes et conditions</a></li>
-                            <li class="list-inline-item"><a  style="color:#cccccc;" href="{{Route('privacy')}}">Privacy</a></li>
+                            <li class="list-inline-item"><a  style="color:#cccccc;" href="{{Route('privacy')}}">Confidentialité</a></li>
                             <li class="list-inline-item"><a  style="color:#cccccc;" href="{{Route('about')}}">À propos</a></li>
                     </div>
                     <div class=" text-center">
@@ -36,3 +56,5 @@
         </div>
         
     </div>
+
+-->

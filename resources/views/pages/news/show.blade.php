@@ -20,8 +20,8 @@
                     <div class="col-lg-12">
                         <div class="sb_bg py-1">
                             <div class="row pt-5">
-                                <div class="col-lg-8 col-md-7">
-                                    <div class="single_blog ">
+                                   <div class="col-lg-8 col-md-7">
+                                 <div class="single_blog ">
                                         @if($article->type == 1)
                                         {!! html_entity_decode($article->ContenuFormat['contenu'], ENT_QUOTES, 'UTF-8') !!} 
                                         @else
@@ -34,13 +34,6 @@
                                         <aside class="widget mag_social_widget">
                                             <h3 class="widget_title"><span>Restez Connecté!</span></h3>
                                             <div class="social_area">
-                                                <div class="single_social twi">
-                                                    <a href="#"><i class="feather icon-twitter"></i></a>
-                                                    <div class="social_meta">
-                                                        <span>{{$socialstatistics->twitter}}</span> Fans
-                                                        <a href="#">J'aime</a>
-                                                    </div>
-                                                </div>
                                                 <div class="single_social fac">
                                                     <a href="#"><i class="feather icon-facebook"></i></a>
                                                     <div class="social_meta">

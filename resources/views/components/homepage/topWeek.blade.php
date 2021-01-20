@@ -1,4 +1,4 @@
-  <section class="comon_section bg_white clearfix sm-pt-4">
+  <section class="comon_section bg_white clearfix sm-pt-4"> 
             <div class="container">
                 <div class="row cus_top_week_column clearfix">
                     <div class="col-lg-8 clearfix">
@@ -23,10 +23,6 @@
                                                 </div>
                                                 <div class="tw1_details">
                                                     <h2><a href="{{Route('news.show',$topToday->first()->article->tag)}}">{{$topToday->first()->article->titre}}</a></h2>
-                                                    <div class="comon_meta clearfix">
-                                                        <span class="cm_author"><i class="twi-user"></i>Par<a href="{{Route('editors.show',$topToday->first()->article->Creator->slug)}}">{{$topToday->first()->article->Creator->Full_Name}}</a></span>
-                                                        <span class="cm_date"><a href="#">{{$topToday->first()->article->DateActu}}</a></span>
-                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -41,10 +37,6 @@
                                                 </div>
                                                 <div class="tw1_l_content">
                                                     <h3><a href="{{Route('news.show',$article->article->tag)}}">{{$article->article->titre}}</a></h3>
-                                                    <div class="comon_meta clearfix">
-                                                        <span class="cm_author"><i class="twi-user"></i>By<a href="{{Route('editors.show',$article->article->Creator->slug)}}">{{$article->article->Creator->Full_Name}}</a></span>
-                                                        <span class="cm_date"><a href="#">{{$article->article->DateActu}}</a></span>
-                                                    </div>
                                                 </div>
                                             </div>
                                             @endforeach
@@ -63,10 +55,6 @@
                                                 </div>
                                                 <div class="tw1_details">
                                                     <h2><a href="{{Route('news.show',$topYesterday->first()->article->tag)}}">{{$topYesterday->first()->article->titre}}</a></h2>
-                                                    <div class="comon_meta clearfix">
-                                                        <span class="cm_author"><i class="twi-user"></i>Par<a href="{{Route('editors.show',$topYesterday->first()->article->Creator->slug)}}">{{$topYesterday->first()->article->Creator->Full_Name}}</a></span>
-                                                        <span class="cm_date"><a href="#">{{$topYesterday->first()->article->DateActu}}</a></span>
-                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -81,10 +69,7 @@
                                                 </div>
                                                 <div class="tw1_l_content">
                                                     <h3><a href="{{Route('news.show',$article->article->tag)}}">{{$article->article->titre}}</a></h3>
-                                                    <div class="comon_meta clearfix">
-                                                        <span class="cm_author"><i class="twi-user"></i>By<a href="{{Route('editors.show',$article->article->Creator->slug)}}">{{$article->article->Creator->Full_Name}}</a></span>
-                                                        <span class="cm_date"><a href="#">{{$article->article->DateActu}}</a></span>
-                                                    </div>
+                                                
                                                 </div>
                                             </div>
                                             @endforeach
@@ -103,10 +88,7 @@
                                                 </div>
                                                 <div class="tw1_details">
                                                     <h2><a href="{{Route('news.show',$topWeek->first()->article->tag)}}">{{$topWeek->first()->article->titre}}</a></h2>
-                                                    <div class="comon_meta clearfix">
-                                                        <span class="cm_author"><i class="twi-user"></i>Par<a href="{{Route('editors.show',$topWeek->first()->article->Creator->slug)}}">{{$topWeek->first()->article->Creator->Full_Name}}</a></span>
-                                                        <span class="cm_date"><a href="#">{{$topWeek->first()->article->DateActu}}</a></span>
-                                                    </div>
+                                                    
                                                 </div>
                                             </div>
                                         </div>
@@ -121,10 +103,7 @@
                                                 </div>
                                                 <div class="tw1_l_content">
                                                     <h3><a href="{{Route('news.show',$article->article->tag)}}">{{$article->article->titre}}</a></h3>
-                                                    <div class="comon_meta clearfix">
-                                                        <span class="cm_author"><i class="twi-user"></i>By<a href="{{Route('editors.show',$article->article->Creator->slug)}}">{{$article->article->Creator->Full_Name}}</a></span>
-                                                        <span class="cm_date"><a href="#">{{$article->article->DateActu}}</a></span>
-                                                    </div>
+                                                    
                                                 </div>
                                             </div>
                                             @endforeach
@@ -143,10 +122,6 @@
                                                 </div>
                                                 <div class="tw1_details">
                                                     <h2><a href="{{Route('news.show',$topMonth->first()->article->tag)}}">{{$topMonth->first()->article->titre}}</a></h2>
-                                                    <div class="comon_meta clearfix">
-                                                        <span class="cm_author"><i class="twi-user"></i>Par<a href="{{Route('editors.show',$topMonth->first()->article->Creator->slug)}}">{{$topMonth->first()->article->Creator->Full_Name}}</a></span>
-                                                        <span class="cm_date"><a href="#">{{$topMonth->first()->article->DateActu}}</a></span>
-                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -161,10 +136,6 @@
                                                 </div>
                                                 <div class="tw1_l_content">
                                                     <h3><a href="{{Route('news.show',$article->article->tag)}}">{{$article->article->titre}}</a></h3>
-                                                    <div class="comon_meta clearfix">
-                                                        <span class="cm_author"><i class="twi-user"></i>By<a href="{{Route('editors.show',$article->article->Creator->slug)}}">{{$article->article->Creator->Full_Name}}</a></span>
-                                                        <span class="cm_date"><a href="#">{{$article->article->DateActu}}</a></span>
-                                                    </div>
                                                 </div>
                                             </div>
                                             @endforeach

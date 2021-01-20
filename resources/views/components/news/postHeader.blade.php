@@ -12,7 +12,6 @@
                                 <img loading="lazy" src="{{$article->Creator->Avatar}}" alt=""/>
                                 <span class="fi1cm_author">By <a href="{{Route('editors.show',$article->Creator->slug)}}">{{$article->Creator->Full_Name}}</a></span>
                                 <span class="fi1cm_date">-<a href="#"><i class="feather icon-clock"></i>{{$article->DateActu}}</a></span>
-                                <a class="like" href="#"><i class="magro-view"></i>{{$article->ArticleViews}}</a>
                             </div>
                         </div>
                     </div>

@@ -699,6 +699,11 @@ License URI:
 /--------------------------------------------------------------------------------------*/
 @media (min-width: 768px) and (max-width: 991px){
 
+    iframe{
+
+        height:100% !important;
+        width:100% !important;
+    }
     .top_bar_02 .container{
         padding-left: 0;
         padding-right: 0;
@@ -1366,6 +1371,11 @@ License URI:
 @media (max-width: 991px){
 
 
+    iframe{
+
+        height:100% !important;
+        width:100% !important;
+    }
 
     .banner_01{
         background-position: left center;

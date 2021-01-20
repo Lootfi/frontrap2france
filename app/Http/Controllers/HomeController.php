@@ -73,7 +73,7 @@ class HomeController extends Controller
             'topWeek' => ArticleWeekAnalytic::OrderBy('views','DESC')->take(4)->get(),
             'topMonth' => ArticleMonthAnalytic::OrderBy('views','DESC')->take(4)->get(),
             'topLastMonth' => ArticleLastMonthAnalytic::OrderBy('views','DESC')->take(4)->get(),
-            'instagram_images' => InstagramPicture::OrderBy('posted_at','DESC')->take(5)->get(),
+           // 'instagram_images' => InstagramPicture::OrderBy('posted_at','DESC')->take(5)->get(),
     	]);
     }
 

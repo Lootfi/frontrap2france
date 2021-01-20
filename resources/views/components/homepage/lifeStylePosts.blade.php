@@ -15,10 +15,6 @@
                                     </div>
                                     <div class="tw1_details">
                                         <h2><a href="/news/{{$article->tag}}">{{$article->titre}}</a></h2>
-                                        <div class="comon_meta clearfix">
-                                            <span class="cm_author"><i class="feather icon-user"></i>By<a href="{{Route('editors.show',$article->Creator->slug)}}">{{$article->Creator->Full_Name}}</a></span>
-                                            <span class="cm_date"><a href="#">{{$article->DateActu}}</a></span>
-                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -63,10 +59,6 @@
                                 <div class="lr_feature_post">
                                     <img src="{{$articles->first()->Avatar}}" alt=""/>
                                     <h4><a href="/news/{{$articles->first()->tag}}">{{$articles->first()->titre}}</a></h4>
-                                    <div class="comon_meta clearfix">
-                                        <span class="cm_author"><i class="feather icon-user"></i>By<a href="{{Route('editors.show',$articles->first()->Creator->slug)}}">{{$articles->first()->Creator->Full_Name}}</a></span>
-                                        <span class="cm_date"><a href="#">{{$article->first()->DateActu}}</a></span>
-                                    </div>
                                     <p>
                                         {!! substr(html_entity_decode($articles->first()->contenutext, ENT_QUOTES, 'UTF-8'),0,100) !!} ...
                                     </p>
@@ -75,7 +67,6 @@
                                 <div class="lr_sp">
                                     <img src="{{$article->Avatar}}" alt=""/>
                                     <h5><a href="/news/{{$article->tag}}">{{$article->titre}}</a></h5>
-                                    <span><a href="#">{{$article->DateActu}}</a></span>
                                 </div>
                                 @endforeach
                             </div>

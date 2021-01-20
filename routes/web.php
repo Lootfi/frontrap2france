@@ -39,5 +39,5 @@ Route::group(['prefix' => 'categories','namespace' => 'Categories'],function(){
 
 Route::get('/termes-et-conditions','InformationController@terms')->name('terms_conditions');
 Route::get('/confidentialité','InformationController@privacy')->name('privacy');
-Route::get('/à-propos','InformationController@about')->name('about');
+Route::get('/a-propos','InformationController@about')->name('about');
 Route::get('/contact','InformationController@Contact')->name('contact');

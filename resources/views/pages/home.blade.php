@@ -24,7 +24,6 @@
 	@include('components.homepage.FeaturedSlider')
 	@include('components.homepage.CinePosts')
 	@include('components.homepage.MovePosts')
-	@include('components.homepage.instagramPictures')
 	@include('components.homepage.footer')
 @endsection
 
