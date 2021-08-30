@@ -23,19 +23,24 @@
 		<h2 class="text-2xl my-5" >Les Articles</h2>
 		<div id="wrapper">
 		<div class="row my-2">
-			@foreach($editor->articles()->latest()->take(12)->get() as $article)
+            {{-- {{dd($articles)}} --}}
+			@foreach($articles as $article)
+            @if ($article->tag)
+                
                     <div class="col-lg-4 col-md-6">
                         <div class="tw3_list clearfix">
                             <div class="tw3_thumb">
                                 <img src="{{$article->Avatar}}" alt="" loading="lazy" >
                             </div>
                             <div class="tw_3_content">
-                                <a href="{{Route('categories.show',$article->Category->slug)}}" class="cats reds">{{$article->Category->nom}}</a>
-                                <h3><a href="{{Route('news.show',$article->tag)}}">{{$article->titre}}</a></h3>
+                                <a href="{{route('categories.show',$article->Category->slug)}}" class="cats reds">{{$article->Category->nom}}</a>
+                                <h3><a href="{{route('news.show',$article->tag)}}">{{$article->titre}}</a></h3>
                             </div>
                         </div>
                         
                     </div>
+            @endif
+
                     @endforeach
 		</div>
 	</div>

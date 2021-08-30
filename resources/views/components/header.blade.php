@@ -1,110 +1,224 @@
-<header class="header_01">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="header_01_inner">
-                            <div class="row align-items-center">
-                                <div class="col-lg-3">
-                                    <div class="logo_01">
-                                        <a href="{{Route('home')}}"><img src="{{@asset('assets/logos/logo.png')}}" loading="lazy" alt="Rap2France"/></a>
-                                    </div>
-                                </div> 
-                                <div class="col-lg-6 noPaddingLeft">
-                                    <nav class="main_menu mobile_menu">
-                                        <div class="mobileMenuBar">
-                                            <a href="javascript: void(0);"><span>Menu</span><i class="feather icon-menu"></i></a>
+<!-- Side Nav -->
+<nav id="sidebar">
+    <div id="dismiss">
+        <i class="fas fa-arrow-left"></i>
+    </div>
+    <div class="sidebar-header">
+        <a href="#"></a>
+    </div>
+    <ul class="r2f-side-nav list-unstyled components p-3">
+        <li class="r2f-border-bottom">
+            <a class="active" href="#">Home</a>
+        </li>
+        <li class="r2f-border-bottom">
+            <div class="accordion accordion-flush" id="accordionNav">
+                <div>
+                    <a class="r2f-has-dropdown position-relative" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseNav" id="flush-headingNav">Features</a>
+                    <div id="flush-collapseNav" class="collapse">
+                        <ul class="list-unstyled ps-3">
+                            <li>
+                                <a href="#">Unique Demos</a>
+                            </li>
+                            <li>
+                                <a href="#">Post Style</a>
+                            </li>
+                            <li>
+                                <div class="accordion accordion-flush" id="accordionSubNav">
+                                    <div class="">
+                                        <a class="r2f-has-dropdown position-relative" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSub" id="flush-headingSub">Sub Features</a>
+                                        <div id="flush-collapseSub" class="collapse">
+                                            <ul class="list-unstyled ps-3">
+                                                <li>
+                                                    <a href="#">Unique Demos</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Post Style</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Header Style</a>
+                                                </li>
+                                            </ul>
                                         </div>
-                                        <ul class="clearfix"> 
-                                            <li class="current-menu-item  mg_menu">
-                                                <a href="{{Route('home')}}">Accueil</a>
-                                            </li>
-                                            <li class="menu-item-has-children mg_menu">
-                                                <a href="#" id="tabOpener">Actualité</a>
-                                                <div class="megamenu_2">
-                                                    <div class="magro_tab_1">
-                         <ul class="mtab_1 menu_tab nav nav-tabs" id="menu_post_tab">
-                        <li><a class="active tabLink" href="#actu-rap" data-toggle="tab" >Actu Rap</a></li>
-                        <li><a class="tabLink" href="#sortie-rap" data-toggle="tab">Sortie Rap</a></li>
-                        <li><a class="tabLink" href="#clash" data-toggle="tab">Clash</a></li>
-                        <li><a  class="tabLink" href="#nouveau-talent" data-toggle="tab">Nouveau Talent</a></li>
-                        <li><a  class="tabLink" href="#gossips" data-toggle="tab">Gossips</a></li>  
-
-                                                            
-               </ul>
-            <div class="tab-content">
-              
-                <div class="tab-pane show in active fade" hasContent= "false" id="actu-rap" role="tabpanel">
-                
-                <div class="skeleton"></div>
-                 
-                </div>
-                <div class="tab-pane fade" id="sortie-rap" hasContent= "false" role="tabpanel">
-                
-                     <div class="skeleton"></div>
-
-                
-                </div>
-                <div class="tab-pane fade" id="clash" hasContent= "false" role="tabpanel">
-            
-                     <div class="skeleton"></div>
-
-               
-                </div>
-                <div class="tab-pane fade" id="nouveau-talent" hasContent= "false" role="tabpanel">
-                
-                                <div class="skeleton"></div>
-
-                
-                </div>
-                <div class="tab-pane fade" id="gossips" hasContent= "false" role="tabpanel">
-                
-                             <div class="skeleton"></div>
-
-                </div>
-
-
-             </div>
-        </div>
-        </div>
-                                            </li>
-                                            <li class="menu-item-has-children">
-                                                <a href="#">Gallery</a>
-                                                <ul class="sub-menu">
-                                                    <li><a href="gallery_1.html">Clips</a></li>
-                                                    <li><a href="gallery_2.html">Sons</a></li>
-                                                    <li><a href="gallery_2.html">Videos</a></li>
-
-                                                </ul>
-                                            </li>
-                                          
-                                        </ul>
-                                    </nav>
+                                    </div>
                                 </div>
-                                <div class="col-lg-3">
-                                    <div class="header_01_settings">
-                                        <div class="social_01 clearfix">
-                                            <a href="https://web.facebook.com/Rap2FranceOfficiel/" target="_blank"><i class="feather icon-facebook"></i></a>
-                                            <a href="https://twitter.com/rap2france" target="_blank"><i class="feather icon-twitter"></i></a>
-                                            <a href="https://www.instagram.com/rap2france/" target="_blank"><i class="feather icon-instagram"></i></a>
-                                            <a href="https://www.youtube.com/c/rap2france" target="_blank"><i class="feather icon-youtube"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li class="r2f-border-bottom">
+            <a href="#">Portfolio</a>
+        </li>
+        <li class="r2f-border-bottom">
+            <a href="#">Contact</a>
+        </li>
+    </ul>
+    <div class="p-3 d-none d-lg-block">
+        <div class="r2f-siderbar-form p-3">
+            <form action="" method="">
+                <h2 class="h3 text-center">Subscribe to Updates</h2>
+                <p class="text-center py-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                <div class="pb-3">
+                    <input type="email" class="rounded w-100 p-2 " id="">
+                </div>
+                <div class="pb-3">
+                    <input type="submit" class="r2f-btn-global rounded w-100 py-2 fw-bold" name="" value="Subscribe">
+                </div>
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="">
+                    <label class="form-check-label text-muted" for="">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</label>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="rft-social-icons pb-3">
+        <ul class="m-0 p-0 d-flex list-unstyled justify-content-center">
+            <li class="nav-item">
+                <a class="d-flex align-items-center justify-content-center" href="#"><i class="fab fa-facebook-f"></i></a>
+            </li>
+            <li class="nav-item">
+                <a class="d-flex align-items-center justify-content-center" href="#"><i class="fab fa-twitter"></i></a>
+            </li>
+            <li class="nav-item">
+                <a class="d-flex align-items-center justify-content-center" href="#"><i class="fab fa-instagram"></i></a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<!-- Top Nav  -->
+<nav class="r2f-nav-2 py-3 d-none d-lg-block">
+    <div class="container">
+        <div class="row w-100">
+            <div class="rft-social-icons col d-flex align-items-center">
+                <ul class="m-0 p-0 d-flex list-unstyled">
+                    <li class="nav-item">
+                        <a class="d-flex align-items-center justify-content-center" href="#"><i class="fab fa-facebook-f"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="d-flex align-items-center justify-content-center" href="#"><i class="fab fa-twitter"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="d-flex align-items-center justify-content-center" href="#"><i class="fab fa-instagram"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="d-flex align-items-center justify-content-center" href="#"><i class="fab fa-pinterest-p"></i></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="r2f-logo r2f-logo-main col">
+                <a class="mx-auto" href="#"></a>
+            </div>
+            <div class="col pt-2 col d-flex align-items-center justify-content-end">
+                <button class="r2f-btn-search btn"></button>
+            </div>
+        </div>
+    </div>
+</nav>
+<nav id="nav-sticky" class="r2f-nav-3 sticky-top navbar navbar-expand-lg navbar-dark bg-dark pb-0 d-none d-lg-block">
+    <div class="container pe-0">
+        <div class="row w-100 position-relative">
+            <div class="col-auto pt-1">
+                <button type="button" id="sidebarCollapse" class="r2f-toggle btn"></button>
+            </div>
+            <div class="col d-flex justify-content-center">
+                <ul class="list-unstyled m-0 p-0 d-flex">
+                    <li class="pe-2 pt-2 pb-3">
+                        <a class="active r2r-nav-link" href="#">Accueil</a>
+                    </li>
+                    <li class="r2f-dropdown pe-3 pt-2 pb-3">
+                        <a class="r2f-dropdown-icon r2r-nav-link position-relative" href="#">Rap Fr <i class="fas fa-chevron-down"></i></a>
+                        <div class="r2f-mega-menu position-absolute text-white">
+                            <div class="row">
+                                <div class="r2f-mega-menu-cat col-2 border-end pe-3">
+                                    <ul class="m-0 pt-1 ps-4 list-unstyled">
+                                        <li>
+                                            <a class="py-2 ps-0" href="#">Mobiles</a>
+                                        </li>
+                                        <li>
+                                            <a class="py-2 ps-0" href="#">Lifestyle</a>
+                                        </li>
+                                        <li>
+                                            <a class="py-2 ps-0" href="#">Health</a>
+                                        </li>
+                                        <li>
+                                            <a class="py-2 ps-0" href="#">View All</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col ps-3 pe-5">
+                                    <div class="row">
+                                        <div class="col">
+                                            <div class="r2f-mega-menu-post pt-3">
+                                                <a href="#">
+                                                    <img class="img-fluid mb-2" src="images/consert-img.jpg">
+                                                    <h2 class="h6 fw-bold">Bose Line of Products on the Show: Showroom Open in Dubai</h2>
+                                                </a>
+                                                <p class="text-muted">Jan 14, 2021</p>
+                                            </div>
                                         </div>
-                                        <div class="search_btn relative">
-                                             <a href="javascript:void(0);"><i class="feather icon-search"></i></a>
-                                            <form id="cse-search-box" class="searchForms" action="/search" role="search">
-                                            <label style="display:none;" for="search-input"></label>
-                                            <input type="search" value="{{request()->get('q')}}" id="search-input" class="search-field" name="q" placeholder="Recherche" autocomplete="off" data-bind="textInput:keyword"> <input type="hidden" name="cx" value="partner-pub-2176698891774775:9098524048" />
-                                            <input type="hidden" name="cof" value="FORID:10" />
-                                            <input type="hidden" name="ie" value="UTF-8" />
-                                            <input type="submit" style="display:none;" class="hidden" />
-                                            </form>
-                                    </div>
-                                        
-                                       
+                                        <div class="col">
+                                            <div class="r2f-mega-menu-post pt-3">
+                                                <a href="#">
+                                                    <img class="img-fluid mb-2" src="images/consert-img.jpg">
+                                                    <h2 class="h6 fw-bold">Bose Line of Products on the Show: Showroom Open in Dubai</h2>
+                                                </a>
+                                                <p class="text-muted">Jan 14, 2021</p>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="r2f-mega-menu-post pt-3">
+                                                <a href="#">
+                                                    <img class="img-fluid mb-2" src="images/consert-img.jpg">
+                                                    <h2 class="h6 fw-bold">Bose Line of Products on the Show: Showroom Open in Dubai</h2>
+                                                </a>
+                                                <p class="text-muted">Jan 14, 2021</p>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="r2f-mega-menu-post pt-3">
+                                                <a href="#">
+                                                    <img class="img-fluid mb-2" src="images/consert-img.jpg">
+                                                    <h2 class="h6 fw-bold">Bose Line of Products on the Show: Showroom Open in Dubai</h2>
+                                                </a>
+                                                <p class="text-muted">Jan 14, 2021</p>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
+                    </li>
+                    <li class="pe-2 pt-2 pb-3">
+                        <a class="r2r-nav-link" href="#">La Street</a>
+                    </li>
+                    <li class="pe-2 pt-2 pb-3">
+                        <a class="r2r-nav-link" href="#">Lifestyle</a>
+                    </li>
+                    <li class="pe-2 pt-2 pb-3">
+                        <a class="r2r-nav-link" href="#">Cine/Series</a>
+                    </li>
+                    <li class="py-2">
+                        <a class="r2r-nav-link" href="#">Sport</a>
+                    </li>
+                </ul>
             </div>
-        </header>
+        </div>
+    </div>
+</nav>
+<!-- Mobile Nav -->
+<nav id="nav-sticky-mobile" class="r2f-mobile-nav sticky-top navbar-dark bg-dark d-lg-none">
+    <div class="container">
+        <div class="row">
+            <div class="col-auto d-flex align-items-center">
+                <button type="button" id="sidebarCollapse2" class="r2f-toggle btn"></button>
+            </div>
+            <div class="r2f-logo col py-2">
+                <a class="mx-auto" href="#"></a>
+            </div>
+            <div class="col-auto d-flex align-items-center justify-content-end">
+                <button class="r2f-btn-search btn"></button>
+            </div>
+        </div>
+    </div>
+</nav>

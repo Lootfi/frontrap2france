@@ -1,6 +1,6 @@
 <?php
 
-use Illuminate\Support\Facades\Route; 
+use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,8 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::group(['prefix' => 'news' , 'namespace'=> 'News'],function(){
+Route::group(['prefix' => 'news', 'namespace' => 'News'], function () {
 
-	Route::get('/{tag}','ShowController@show')->name('news.amp.show');
-
+	Route::get('/{tag}', 'ShowController@show')->name('news.amp.show');
 });

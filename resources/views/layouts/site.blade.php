@@ -16,12 +16,18 @@
         <link rel="stylesheet" type="text/css" href="https://cd1.rap2france.com/public/templates/template/css/iconfont.css">
        
         
-        <link rel="stylesheet" type="text/css" href="https://cd1.rap2france.com/public/templates/template/css/preset.css"/>
+        {{-- <link rel="stylesheet" type="text/css" href="https://cd1.rap2france.com/public/templates/template/css/preset.css"/> --}}
         
-        <link rel="stylesheet" type="text/css" href="https://cd1.rap2france.com/public/templates/template/css/theme.css"/>
-        <link rel="stylesheet" type="text/css" href="{{asset('assets/template/css/responsive.css')}}"/>
-        <link rel="stylesheet" type="text/css" href="https://cd1.rap2france.com/public/templates/template/css/skeleton.css"/>
+        {{-- <link rel="stylesheet" type="text/css" href="https://cd1.rap2france.com/public/templates/template/css/theme.css"/> --}}
+        {{-- <link rel="stylesheet" type="text/css" href="{{asset('assets/template/css/responsive.css')}}"/> --}}
+        {{-- <link rel="stylesheet" type="text/css" href="https://cd1.rap2france.com/public/templates/template/css/skeleton.css"/> --}}
         <meta property="fb:pages" content="42863617656" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet"> 
+        <link rel="stylesheet" href="{{asset('css/main.css')}}">
         
 
 
@@ -29,7 +35,7 @@
         <link rel="icon"  type="image/png" href="https://cd1.rap2france.com/public/templates/default/assets/images/icone/57.jpg">
         <!-- Favicon Icon -->
     </head>
-    <body style="background:black;" >
+    <body>
         <!-- Preloading -->
         <div class="preloader text-center">
             <div class="la-ball-scale-multiple la-2x">
@@ -43,9 +49,9 @@
         @yield('main-section')
         @include('components.footer')
 
-        <!-- Bact To Top -->
+        {{-- <!-- Bact To Top -->
         <a href="#" id="backtotop"><i class="feather icon-chevrons-up "></i></a>
-        <!-- Bact To Top -->
+        <!-- Bact To Top --> --}}
 
         <!-- Include All JS -->
          <script src="https://cd1.rap2france.com/public/templates/template/js/jquery.js"></script>
