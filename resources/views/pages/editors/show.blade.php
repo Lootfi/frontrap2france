@@ -1,5 +1,5 @@
-	@extends('layouts.site')
-
+@extends('layouts.site')
+<title>{{$editor->Full_Name}}</title>
 @section('main-section')
  
 <div class="bg-white py-4 px-2 m-4">
@@ -24,7 +24,7 @@
 		<div id="wrapper">
 		<div class="row my-2">
             {{-- {{dd($articles)}} --}}
-			@foreach($articles as $article)
+			{{-- @foreach($articles as $article)
             @if ($article->tag)
                 
                     <div class="col-lg-4 col-md-6">
@@ -41,7 +41,20 @@
                     </div>
             @endif
 
-                    @endforeach
+                    @endforeach --}}
+                    <div id="data-wrapper">
+                        <!-- Results -->
+                    </div>
+                    <div class="auto-load text-center">
+                        <svg version="1.1" id="L9" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            x="0px" y="0px" height="60" viewBox="0 0 100 100" enable-background="new 0 0 0 0" xml:space="preserve">
+                            <path fill="#000"
+                                d="M73,50c0-12.7-10.3-23-23-23S27,37.3,27,50 M30.9,50c0-10.5,8.5-19.1,19.1-19.1S69.1,39.5,69.1,50">
+                                <animateTransform attributeName="transform" attributeType="XML" type="rotate" dur="1s"
+                                    from="0 50 50" to="360 50 50" repeatCount="indefinite" />
+                            </path>
+                        </svg>
+                    </div>
 		</div>
 	</div>
 		<div class="row">
@@ -61,6 +74,43 @@
 @section('page-script')
 
 <script>
+    var ENDPOINT = "{{ url('/') }}";
+    var page = 1;
+    infinteLoadMore(page);
+
+    $(window).scroll(function () {
+        if ($(window).scrollTop() + $(window).height() >= $(document).height()) {
+            console.log("scrolling")
+            page++;
+            infinteLoadMore(page);
+        }
+    });
+
+    function infinteLoadMore(page) {
+        $.ajax({
+                url: "/editors/{!!$editor->slug!!}" + "?page=" + page,
+                datatype: "html",
+                type: "get",
+                beforeSend: function () {
+                    $('.auto-load').show();
+                }
+            })
+            .done(function (response) {
+                if (response.length == 0) {
+                    $('.auto-load').html("We don't have more data to display :(");
+                    return;
+                }
+                $('.auto-load').hide();
+                $("#data-wrapper").append(response);
+            })
+            .fail(function (jqXHR, ajaxOptions, thrownError) {
+                console.log('Server error occured');
+            });
+    }
+
+</script>
+
+{{-- <script>
         const loadMore = document.querySelector('#loadMore')
         const wrapper = document.querySelector('#wrapper')
         var dataTotal = loadMore.getAttribute('dataTotal')
@@ -131,6 +181,6 @@
         }
 
 
-    </script>
+    </script> --}}
 
 @endsection

@@ -6,10 +6,10 @@
 <meta property="og:type" content="article" /> 
 <meta property="og:url" content="{{Route('news.show',$article->tag)}}" />
 <meta property="og:image" content="{{$article->Avatar}}" />
-
+<link rel="stylesheet" href="{{asset('css/news.css')}}">
 @endsection
 @section('main-section') 
-<div id="wrapper" style="background: black;">
+{{-- <div id="wrapper" style="background: black;">
     <div id="posts_wrapper"> 
     <div class="post-section" title="{{$article->titre}}" tag="{{$article->tag}}">
     @include('components.news.postHeader')
@@ -157,13 +157,111 @@
 </div>
 <div class="loader"></div>
 <div class="loading text-center"><img class="inline-block mx-auto " style="animation: rotation 2s infinite linear" src="https://cd1.rap2france.com/public/templates/template/images/loading_hover.png"/></div>
-</div>
+</div> --}}
 
+<main class="pb-5 content">
+    <div class="container">
+        <div class="r2f-post-content">
+            <!-- Post Headline -->
+            <h1 class="fw-bold mt-3 titlenews titleactu">{{$article->titre}}
+            </h1>
+            {{-- <p class="fs-5 text-muted titlenews">Having not yet visited Sector 10, follow these steps for a free
+                upgrade.</p> --}}
+            <!-- Post Author -->
+            <div class="r2f-author align-items-center pb-2">
+                <img src="{{$article->Creator->Avatar}}" class="img-fluid rounded-circle mr-3">
+                <p class="text-muted m-0 metainfos">
+                    <span>Par</span>
+                    <a href="#" class="text-dark">{{$article->Creator->Full_Name}}</a>
+                    <span> - {{$article->DateActu}}</span>
+                    <span class="r2f-post-meta p-0"><a href="{{Route('categories.show',$article->Category->slug)}}" class="r2f-post-meta-design">{{$article->Category->nom}}</a></span>
+                </p>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 border-end pr-4">
+                    <div class="r2f-post-content-wrap">
+                        <!-- Post Content Start -->
+                        <div class="img-principal pb-4">
+                            <img src="{{$article->Avatar}}" class="img-fluid w-100">
+                        </div>
+                       
+                        <div class="single_blog">
+                            @if($article->type == 1)
+                            {!! html_entity_decode($article->ContenuFormat['contenu'], ENT_QUOTES, 'UTF-8') !!}
+                            @else
+                             {!! html_entity_decode($article->contenu, ENT_QUOTES, 'UTF-8') !!}
+                            @endif
+                        </div>
+                        <!-- END Post Content -->
+                        <div class="border-top border-bottom py-3 mb-2"></div>
+                    </div>
+                </div>
+                <div class="col-md-4 ps-lg-4">
+                    <div class="r2r-news-right">
+                        <!--<div class="pb-5 justify-content-center">
+                        <div class="adactive">
+                            <a href="#">
+                                <img src="https://via.placeholder.com/300x600?text=Ad+Image" class="img-fluid">
+                            </a>
+                        </div>
+                    </div>-->
+                        <div class="pb-2">
+                            <!--<h2 class="h6 text-uppercase bg-dark text-white mb-4 px-3 py-2">Don't miss</h2>-->
+                            @foreach($topWeek->slice(1)->take(3) as $article)
+                            <div class="r2f-post-wrap">
+                                <div class="position-relative">
+                                    <img src="{{$article->article->Avatar}}" class="img-fluid">
+                                    <p class="r2f-post-meta position-absolute m-0 p-0 text-uppercase "><a
+                                            href="#" class="r2f-post-meta-fashion">{{$article->article->Category->nom}}</a></p>
+                                </div>
+                                <div class="pt-3 mb-4 titlenews">
+                                    <h3 class="h4"><a href="#">{{$article->article->titre}}</a>
+                                    </h3>
+                                </div>
+                            </div>
+                            @endforeach
+                            
+                        </div>
+                        <div class="r2f-form-wrap p-2">
+                            <form class="p-5 border bg-white" action="" method="">
+                                <p class="h4 fw-bold text-uppercase pb-4 text-dark text-center">Get the best
+                                    viral stories straight into your inbox</p>
+                                <div class="pb-3">
+                                    <input type="email" class="w-100 p-2 text-center border text-dark" id=""
+                                        placeholder="Your email address">
+                                </div>
+                                <div class="pb-3">
+                                    <input type="submit" class="r2f-btn-global rounded w-100 py-2 fw-bold"
+                                        name="" value="Subscribe">
+                                </div>
+                                <div class="form-check text-center">
+                                    <input type="checkbox" class="form-check-input" id="">
+                                    <label class="form-check-label text-muted" for="">Lorem ipsum dolor sit
+                                        amet, consectetur adipisicing elit.</label>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="pt-4 justify-content-center" id="adstick">
+                            <div class="adactive">
+                                <a href="#">
+                                    <img src="https://via.placeholder.com/300x600?text=Ad+Image"
+                                        class="img-fluid">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
 
 @endsection
 
 @section('page-script')
-    <script>    
+
+
+    {{-- <script>    
         const wrapper = document.querySelector('#wrapper');
         const posts_wrapper = document.querySelector('#posts_wrapper');
         const primaryTag = document.querySelector('.title').getAttribute('tag');
@@ -263,6 +361,10 @@
         
         
         
-    </script>
-
+    </script> --}}
+    <script type="text/javascript">
+		var sidebar = new StickySidebar('.bloc-sticky', {
+			topSpacing: 20
+		});
+	</script>
 @endsection 

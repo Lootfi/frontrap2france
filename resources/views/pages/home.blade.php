@@ -44,7 +44,5 @@
 	        <script src="https://cd1.rap2france.com/public/templates/template/js/slick.js"></script>
 <script src="https://cd1.rap2france.com/public/templates/template/js/stickyfill.min.js"></script>
 	 <script src="https://cd1.rap2france.com/public/templates/template/js/owl.carousel.min.js"></script> --}}
-	 <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
-	 <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
-	 <script src="{{asset('js/main.js')}}"></script>
+	 
 @endsection

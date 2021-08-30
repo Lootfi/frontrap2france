@@ -154,8 +154,10 @@
 
         gtag('config', 'UA-8897495-1');
         </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+        <script src="{{asset('js/main.js')}}"></script>
         @yield('page-script')
-
          <noscript>Votre navigateur ne supporte pas Javascript</noscript>
 
          
