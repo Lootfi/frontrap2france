@@ -18,7 +18,7 @@
         
         {{-- <link rel="stylesheet" type="text/css" href="https://cd1.rap2france.com/public/templates/template/css/preset.css"/> --}}
         
-        {{-- <link rel="stylesheet" type="text/css" href="https://cd1.rap2france.com/public/templates/template/css/theme.css"/> --}}
+        <link rel="stylesheet" type="text/css" href="https://cd1.rap2france.com/public/templates/template/css/theme.css"/>
         {{-- <link rel="stylesheet" type="text/css" href="{{asset('assets/template/css/responsive.css')}}"/> --}}
         {{-- <link rel="stylesheet" type="text/css" href="https://cd1.rap2france.com/public/templates/template/css/skeleton.css"/> --}}
         <meta property="fb:pages" content="42863617656" />
@@ -36,7 +36,7 @@
         <!-- Favicon Icon -->
     </head>
     <body>
-        <!-- Preloading -->
+        {{-- <!-- Preloading -->
         <div class="preloader text-center">
             <div class="la-ball-scale-multiple la-2x">
                 <div></div>
@@ -44,29 +44,42 @@
                 <div></div>
             </div>
         </div>
-        <!-- Preloading -->
+        <!-- Preloading --> --}}
         @include('components.header')
         @yield('main-section')
         @include('components.footer')
 
+        <div class="overlay"></div>
         {{-- <!-- Bact To Top -->
+
         <a href="#" id="backtotop"><i class="feather icon-chevrons-up "></i></a>
         <!-- Bact To Top --> --}}
 
         <!-- Include All JS -->
-         <script src="https://cd1.rap2france.com/public/templates/template/js/jquery.js"></script>
+         {{-- <script src="https://cd1.rap2france.com/public/templates/template/js/jquery.js"></script> --}}
 
-        <script src="https://cd1.rap2france.com/public/templates/template/js/bootstrap.js"></script>
+        {{-- <script src="https://cd1.rap2france.com/public/templates/template/js/bootstrap.js"></script> --}}
+	<!-- JS -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+    {{-- <script src="https://cd1.rap2france.com/public/templates/template/js/theme.js"></script>  --}}
+    <script src="{{asset('assets/template/js/theme.js')}}"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-8897495-1"></script>
+	
         @yield('page-script-include')
 
-         <script src="https://cd1.rap2france.com/public/templates/template/js/theme.js"></script>
 
 
        
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-8897495-1"></script>
 
 
         <script>
+            $(".search_btn a").on("click", function(e) {
+        e.preventDefault();
+        $(".search_btn").toggleClass("active");
+    });
           const loadTabs = (slug) => {
 
            return fetch(`/api/categories/${slug}/get`,{
@@ -154,8 +167,6 @@
 
         gtag('config', 'UA-8897495-1');
         </script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
         <script src="{{asset('js/main.js')}}"></script>
         @yield('page-script')
          <noscript>Votre navigateur ne supporte pas Javascript</noscript>

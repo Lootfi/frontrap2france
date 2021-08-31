@@ -3,46 +3,18 @@
     <div class="row">
         <div class="r2f-left-col col-lg-8">
             <div class="row">
+                @foreach ($sortieRapArticles as $article)
                 <div class="col-lg-6">
                     <div class="r2f-post-wrap">
                         <div class="position-relative">
-                            <a href="#"><img src="{{asset('assets/images/news/6.jpg')}}" class="img-fluid"></a>
+                            <a href="/news/{{$article->tag}}"><img src="{{$article->Avatar}}" class="img-fluid"></a>
                         </div>
                         <div class="p-3 p-md-2">
-                            <h3 class="h4"><a href="#">Discovering Sydney’s See Attractions line</a></h3>
+                            <h3 class="h4"><a href="/news/{{$article->tag}}">{{$article->titre}}</a></h3>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6">
-                    <div class="r2f-post-wrap">
-                        <div class="position-relative">
-                            <a href="#"><img src="{{asset('assets/images/news/1.jpg')}}" class="img-fluid"></a>
-                        </div>
-                        <div class="p-3 p-md-2">
-                            <h3 class="h4"><a href="#">Discovering Sydney’s See Attractions line</a></h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="r2f-post-wrap">
-                        <div class="position-relative">
-                            <a href="#"><img src="{{asset('assets/images/news/2.jpg')}}" class="img-fluid"></a>
-                        </div>
-                        <div class="p-3 p-md-2">
-                            <h3 class="h4"><a href="#">Discovering Sydney’s See Attractions line</a></h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="r2f-post-wrap">
-                        <div class="position-relative">
-                            <a href="#"><img src="{{asset('assets/images/news/3.jpg')}}" class="img-fluid"></a>
-                        </div>
-                        <div class="p-3 p-md-2">
-                            <h3 class="h4"><a href="#">Discovering Sydney’s See Attractions line</a></h3>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
         <div class="col-lg-4 align-items-center">

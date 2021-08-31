@@ -93,25 +93,37 @@
             <div class="rft-social-icons col d-flex align-items-center">
                 <ul class="m-0 p-0 d-flex list-unstyled">
                     <li class="nav-item">
-                        <a class="d-flex align-items-center justify-content-center" href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a class="d-flex align-items-center justify-content-center" href="https://web.facebook.com/Rap2FranceOfficiel/"><i class="fab fa-facebook-f"></i></a>
                     </li>
                     <li class="nav-item">
-                        <a class="d-flex align-items-center justify-content-center" href="#"><i class="fab fa-twitter"></i></a>
+                        <a class="d-flex align-items-center justify-content-center" href="https://twitter.com/rap2france"><i class="fab fa-twitter"></i></a>
                     </li>
                     <li class="nav-item">
-                        <a class="d-flex align-items-center justify-content-center" href="#"><i class="fab fa-instagram"></i></a>
+                        <a class="d-flex align-items-center justify-content-center" href="https://www.instagram.com/rap2france/"><i class="fab fa-instagram"></i></a>
                     </li>
                     <li class="nav-item">
-                        <a class="d-flex align-items-center justify-content-center" href="#"><i class="fab fa-pinterest-p"></i></a>
+                        <a class="d-flex align-items-center justify-content-center" href="https://www.youtube.com/c/rap2france"><i class="fab fa-youtube"></i></a>
                     </li>
                 </ul>
             </div>
             <div class="r2f-logo r2f-logo-main col">
                 <a class="mx-auto" href="{{url('/')}}"></a>
             </div>
-            <div class="col pt-2 col d-flex align-items-center justify-content-end">
-                <button class="r2f-btn-search btn"></button>
-            </div>
+            <div class="col-lg-3">
+                <div class="header_01_settings">
+                    <div class="search_btn relative">
+                         <a href="javascript:void(0);"><i class="feather icon-search"></i></a>
+                        <form id="cse-search-box" class="searchForms" action="/search" role="search">
+                        <label style="display:none;" for="search-input"></label>
+                        <input type="search" value="{{request()->get('q')}}" id="search-input" class="search-field" name="q" placeholder="Recherche" autocomplete="off" data-bind="textInput:keyword"> <input type="hidden" name="cx" value="partner-pub-2176698891774775:9098524048" />
+                        <input type="hidden" name="cof" value="FORID:10" />
+                        <input type="hidden" name="ie" value="UTF-8" />
+                        <input type="submit" style="display:none;" class="hidden" />
+                        </form>
+                </div>
+                    
+                   
+                </div>
         </div>
     </div>
 </nav>
@@ -151,7 +163,7 @@
                                         <div class="col">
                                             <div class="r2f-mega-menu-post pt-3">
                                                 <a href="#">
-                                                    <img class="img-fluid mb-2" src="images/consert-img.jpg">
+                                                    <img class="img-fluid mb-2" src="{{asset('assets/images/consert-img.jpg')}}">
                                                     <h2 class="h6 fw-bold">Bose Line of Products on the Show: Showroom Open in Dubai</h2>
                                                 </a>
                                                 <p class="text-muted">Jan 14, 2021</p>
@@ -160,7 +172,7 @@
                                         <div class="col">
                                             <div class="r2f-mega-menu-post pt-3">
                                                 <a href="#">
-                                                    <img class="img-fluid mb-2" src="images/consert-img.jpg">
+                                                    <img class="img-fluid mb-2" src="{{asset('assets/images/consert-img.jpg')}}">
                                                     <h2 class="h6 fw-bold">Bose Line of Products on the Show: Showroom Open in Dubai</h2>
                                                 </a>
                                                 <p class="text-muted">Jan 14, 2021</p>
@@ -169,7 +181,7 @@
                                         <div class="col">
                                             <div class="r2f-mega-menu-post pt-3">
                                                 <a href="#">
-                                                    <img class="img-fluid mb-2" src="images/consert-img.jpg">
+                                                    <img class="img-fluid mb-2" src="{{asset('assets/images/consert-img.jpg')}}">
                                                     <h2 class="h6 fw-bold">Bose Line of Products on the Show: Showroom Open in Dubai</h2>
                                                 </a>
                                                 <p class="text-muted">Jan 14, 2021</p>
@@ -178,7 +190,7 @@
                                         <div class="col">
                                             <div class="r2f-mega-menu-post pt-3">
                                                 <a href="#">
-                                                    <img class="img-fluid mb-2" src="images/consert-img.jpg">
+                                                    <img class="img-fluid mb-2" src="{{asset('assets/images/consert-img.jpg')}}">
                                                     <h2 class="h6 fw-bold">Bose Line of Products on the Show: Showroom Open in Dubai</h2>
                                                 </a>
                                                 <p class="text-muted">Jan 14, 2021</p>

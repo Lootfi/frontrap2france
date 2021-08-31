@@ -5,7 +5,7 @@
                         <h2 class="sec_titles"><i></i>C'est la Street</h2>
                     </div>
                 </div>
-                <div class="row">
+                {{-- <div class="row">
                     @foreach($categories->where('slug','street')->first()->articles()->latest()->take(2) as $article)
                     <div class="col-lg-6">
                         <div class="tw2_list clearfix">
@@ -22,7 +22,7 @@
                     </div>
                     
                     @endforeach
-                </div>
+                </div> --}}
                 <div class="row">
                     
                     <div class="col-lg-12">
@@ -41,7 +41,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="row">
+                {{-- <div class="row">
                     @foreach($categories->where('slug','street')->first()->articles()->latest()->get()->slice(2)->take(2) as $article)
                     <div class="col-lg-6">
                         <div class="tw2_list clearfix">
@@ -58,7 +58,7 @@
                     </div>
                     
                     @endforeach
-                </div>
+                </div> --}}
     
             </div>
         </section>

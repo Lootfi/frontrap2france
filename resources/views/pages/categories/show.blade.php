@@ -1,5 +1,7 @@
 @extends('layouts.site')
-
+@section('meta-section')
+    <title>{{$category->nom}}</title>
+@endsection
 @section('main-section')
 <section class="banner_02">
             <div class="container">

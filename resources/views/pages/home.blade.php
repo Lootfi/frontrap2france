@@ -27,7 +27,7 @@
 	@include('components.homepage.CinePosts')
 	@include('components.homepage.MovePosts') 
 	@include('components.homepage.footer')--}}
-
+	
 	@include('components.home.one')
 	@include('components.home.two')
 	@include('components.home.three')
