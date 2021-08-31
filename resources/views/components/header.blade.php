@@ -107,7 +107,7 @@
                 </ul>
             </div>
             <div class="r2f-logo r2f-logo-main col">
-                <a class="mx-auto" href="#"></a>
+                <a class="mx-auto" href="{{url('/')}}"></a>
             </div>
             <div class="col pt-2 col d-flex align-items-center justify-content-end">
                 <button class="r2f-btn-search btn"></button>

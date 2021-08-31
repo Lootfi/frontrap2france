@@ -172,7 +172,7 @@
                 <img src="{{$article->Creator->Avatar}}" class="img-fluid rounded-circle mr-3">
                 <p class="text-muted m-0 metainfos">
                     <span>Par</span>
-                    <a href="#" class="text-dark">{{$article->Creator->Full_Name}}</a>
+                    <a href="{{Route('editors.show',$article->Creator->slug)}}" class="text-dark">{{$article->Creator->Full_Name}}</a>
                     <span> - {{$article->DateActu}}</span>
                     <span class="r2f-post-meta p-0"><a href="{{Route('categories.show',$article->Category->slug)}}" class="r2f-post-meta-design">{{$article->Category->nom}}</a></span>
                 </p>
