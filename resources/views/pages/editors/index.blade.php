@@ -6,7 +6,7 @@
 <main>
     <div class="container py-5">
         <div class="row">
-            <div class="col-md-8 border-end pr-4" id="authors-parent">
+            <div class="col-md-8 border-end pe-4" id="authors-parent">
                 <div class="r2r-author-left-part">
                     <h1>Nos Auteurs</h1>
                     <p class="mb-5">Voice une liste de touts nos auteurs.</p>
@@ -21,16 +21,16 @@
                                 <div class="d-flex justify-content-between pb-2">
                                     <h2 class="h6 fw-bold">{{$author->Full_Name}}</h2>
                                     <ul class="list-unstyled m-0 d-flex">
-                                        <li class="pr-3">
+                                        <li class="pe-3">
                                             <a href="/editors/{{$author->slug}}"><i class="fas fa-home"></i></a>
                                         </li>
-                                        <li class="pr-3">
+                                        <li class="pe-3">
                                             <a href="{{$author->Details->facebook}}"><i class="fab fa-facebook-f"></i></a>
                                         </li>
-                                        <li class="pr-3">
+                                        <li class="pe-3">
                                             <a href="{{$author->Details->twitter}}"><i class="fab fa-twitter"></i></a>
                                         </li>
-                                        <li class="pr-3">
+                                        <li class="pe-3">
                                             <a href="{{$author->Details->pinterest}}"><i class="fab fa-pinterest-p"></i></a>
                                         </li>
                                         <li>

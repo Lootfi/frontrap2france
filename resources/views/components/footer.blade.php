@@ -24,11 +24,11 @@
 			</div>
 			<div class="r2f-footer-menu pb-4">
 				<ul class="m-0 p-0 d-flex list-unstyled justify-content-center">
-					<li class="pr-3"><a href="/">Accueil</a></li>
-					<li class="pr-3"><a href="/categories/sortie-rap">RAP FR</a></li>
-					<li class="pr-3"><a href="/categories/street">La Street</a></li>
-					<li class="pr-3"><a href="/categories/lifestyle">Lifestyle</a></li>
-					<li class="pr-3"><a href="/a-propos">A propos</a></li>
+					<li class="pe-3"><a href="/">Accueil</a></li>
+					<li class="pe-3"><a href="/categories/sortie-rap">RAP FR</a></li>
+					<li class="pe-3"><a href="/categories/street">La Street</a></li>
+					<li class="pe-3"><a href="/categories/lifestyle">Lifestyle</a></li>
+					<li class="pe-3"><a href="/a-propos">A propos</a></li>
 					<li><a href="/contact">Nous contacter</a></li>
 				</ul>
 			</div>

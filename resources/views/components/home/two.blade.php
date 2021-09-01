@@ -1,7 +1,7 @@
 <div class="container r2f-section-two r2f-section-gap">
     <div class="row">
         <div class="col-lg-8">
-            <h2 class="r2f-border-left mb-3 pl-2 fw-bold">C'est Chaud !</h2>
+            <h2 class="r2f-border-left mb-3 ps-2 fw-bold">C'est Chaud !</h2>
             <div class="r2f-tab-wrap">
                 <ul class="nav justify-content-lg-end pb-1" id="topPosts">
                     <li class="nav-item pe-2">
@@ -21,7 +21,7 @@
                                 <div class="r2f-post-wrap">
                                     <div class="position-relative">
                                         <a href="/news/{{$topToday->first()->article->tag}}"><img src="{{$topToday->first()->article->Avatar}}" class="img-fluid"></a>
-                                        <p class="r2f-post-meta position-absolute m-0 pl-4"><a href="/categories/{{$topToday->first()->article->Category->slug}}" class="r2f-post-meta-design">{{$topToday->first()->article->Category->nom}}</a></p>
+                                        <p class="r2f-post-meta position-absolute m-0 ps-4"><a href="/categories/{{$topToday->first()->article->Category->slug}}" class="r2f-post-meta-design">{{$topToday->first()->article->Category->nom}}</a></p>
                                     </div>
                                     <div class="p-3 p-md-2">
                                         <h3 class="h4"><a href="/news/{{$topToday->first()->article->tag}}">{{$topToday->first()->article->titre}}</a></h3>
@@ -31,10 +31,10 @@
                             <div class="r2f-post-sm col-md-6">
                                 @foreach($topToday->slice(1)->take(3) as $article)
                                 <div class="r2f-post-wrap row pb-4">
-                                    <div class="col-4 p-0">
+                                    <div class="col-4">
                                         <div class="position-relative">
                                             <a href="/news/{{$article->article->tag}}"><img src="{{$article->article->getAvatar(155,90)}}" class="img-fluid"></a>
-                                            <p class="r2f-post-meta position-absolute m-0 pl-4"><a href="/categories/{{$article->article->Category->slug}}" class="r2f-post-meta-tech">{{$article->article->Category->nom}}</a></p>
+                                            <p class="r2f-post-meta position-absolute m-0 ps-4"><a href="/categories/{{$article->article->Category->slug}}" class="r2f-post-meta-tech">{{$article->article->Category->nom}}</a></p>
                                         </div>
                                     </div>
                                     <div class="col">
@@ -51,7 +51,7 @@
                                 <div class="r2f-post-wrap">
                                     <div class="position-relative">
                                         <a href="/news/{{$topWeek->first()->article->tag}}"><img src="{{$topWeek->first()->article->Avatar}}" class="img-fluid"></a>
-                                        <p class="r2f-post-meta position-absolute m-0 pl-4"><a href="/categories/{{$topWeek->first()->article->Category->slug}}" class="r2f-post-meta-design">{{$topWeek->first()->article->Category->nom}}</a></p>
+                                        <p class="r2f-post-meta position-absolute m-0 ps-4"><a href="/categories/{{$topWeek->first()->article->Category->slug}}" class="r2f-post-meta-design">{{$topWeek->first()->article->Category->nom}}</a></p>
                                     </div>
                                     <div class="p-3 p-md-2">
                                         <h3 class="h4"><a href="/news/{{$topWeek->first()->article->tag}}">{{$topWeek->first()->article->titre}}</a></h3>
@@ -61,10 +61,10 @@
                             <div class="r2f-post-sm col-md-6">
                                 @foreach($topWeek->slice(1)->take(3) as $article)
                                 <div class="r2f-post-wrap row pb-4">
-                                    <div class="col-4 p-0">
+                                    <div class="col-4">
                                         <div class="position-relative">
                                             <a href="/news/{{$article->article->tag}}"><img src="{{$article->article->getAvatar(155,90)}}" class="img-fluid"></a>
-                                            <p class="r2f-post-meta position-absolute m-0 pl-4"><a href="/categories/{{$article->article->Category->slug}}" class="r2f-post-meta-tech">{{$article->article->Category->nom}}</a></p>
+                                            <p class="r2f-post-meta position-absolute m-0 ps-4"><a href="/categories/{{$article->article->Category->slug}}" class="r2f-post-meta-tech">{{$article->article->Category->nom}}</a></p>
                                         </div>
                                     </div>
                                     <div class="col">
@@ -81,7 +81,7 @@
                                 <div class="r2f-post-wrap">
                                     <div class="position-relative">
                                         <a href="/news/{{$topMonth->first()->article->tag}}"><img src="{{$topMonth->first()->article->Avatar}}" class="img-fluid"></a>
-                                        <p class="r2f-post-meta position-absolute m-0 pl-4"><a href="/categories/{{$topMonth->first()->article->Category->slug}}" class="r2f-post-meta-design">{{$topMonth->first()->article->Category->nom}}</a></p>
+                                        <p class="r2f-post-meta position-absolute m-0 ps-4"><a href="/categories/{{$topMonth->first()->article->Category->slug}}" class="r2f-post-meta-design">{{$topMonth->first()->article->Category->nom}}</a></p>
                                     </div>
                                     <div class="p-3 p-md-2">
                                         <h3 class="h4"><a href="/news/{{$topMonth->first()->article->tag}}">{{$topMonth->first()->article->titre}}</a></h3>
@@ -91,10 +91,10 @@
                             <div class="r2f-post-sm col-md-6">
                                 @foreach($topMonth->slice(1)->take(3) as $article)
                                 <div class="r2f-post-wrap row pb-4">
-                                    <div class="col-4 p-0">
+                                    <div class="col-4">
                                         <div class="position-relative">
                                             <a href="/news/{{$article->article->tag}}"><img src="{{$article->article->getAvatar(155,90)}}" class="img-fluid"></a>
-                                            <p class="r2f-post-meta position-absolute m-0 pl-4"><a href="/categories/{{$article->article->Category->slug}}" class="r2f-post-meta-tech">{{$article->article->Category->nom}}</a></p>
+                                            <p class="r2f-post-meta position-absolute m-0 ps-4"><a href="/categories/{{$article->article->Category->slug}}" class="r2f-post-meta-tech">{{$article->article->Category->nom}}</a></p>
                                         </div>
                                     </div>
                                     <div class="col">
@@ -111,7 +111,7 @@
                                 <div class="r2f-post-wrap">
                                     <div class="position-relative">
                                         <a href="#"><img src="{{asset('assets/images/news/3.jpg')}}" class="img-fluid"></a>
-                                        <p class="r2f-post-meta position-absolute m-0 pl-4"><a href="#" class="r2f-post-meta-design">Design</a></p>
+                                        <p class="r2f-post-meta position-absolute m-0 ps-4"><a href="#" class="r2f-post-meta-design">Design</a></p>
                                     </div>
                                     <div class="p-3 p-md-2">
                                         <h3 class="h4"><a href="#">Booba : son buste est dévoilé dans une exposition inédite</a></h3>
@@ -123,7 +123,7 @@
                                     <div class="col-4">
                                         <div class="position-relative">
                                             <a href="#"><img src="{{asset('assets/images/news/4.jpg')}}" class="img-fluid"></a>
-                                            <p class="r2f-post-meta position-absolute m-0 pl-4"><a href="#" class="r2f-post-meta-tech">Tech</a></p>
+                                            <p class="r2f-post-meta position-absolute m-0 ps-4"><a href="#" class="r2f-post-meta-tech">Tech</a></p>
                                         </div>
                                     </div>
                                     <div class="col">
@@ -134,7 +134,7 @@
                                     <div class="col-4">
                                         <div class="position-relative">
                                             <a href="#"><img src="{{asset('assets/images/news/5.jpg')}}" class="img-fluid"></a>
-                                            <p class="r2f-post-meta position-absolute m-0 pl-4"><a href="#" class="r2f-post-meta-live">Live</a></p>
+                                            <p class="r2f-post-meta position-absolute m-0 ps-4"><a href="#" class="r2f-post-meta-live">Live</a></p>
                                         </div>
                                     </div>
                                     <div class="col">
@@ -145,7 +145,7 @@
                                     <div class="col-4">
                                         <div class="position-relative">
                                             <a href="#"><img src="{{asset('assets/images/news/6.jpg')}}" class="img-fluid"></a>
-                                            <p class="r2f-post-meta position-absolute m-0 pl-4"><a href="#" class="r2f-post-meta-sports">Sports</a></p>
+                                            <p class="r2f-post-meta position-absolute m-0 ps-4"><a href="#" class="r2f-post-meta-sports">Sports</a></p>
                                         </div>
                                     </div>
                                     <div class="col">

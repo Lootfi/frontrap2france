@@ -8,21 +8,24 @@
     </div>
     <ul class="r2f-side-nav list-unstyled components p-3">
         <li class="r2f-border-bottom">
-            <a class="active" href="#">Home</a>
+            <a class="active" href="/">Accueil</a>
         </li>
         <li class="r2f-border-bottom">
             <div class="accordion accordion-flush" id="accordionNav">
                 <div>
-                    <a class="r2f-has-dropdown position-relative" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseNav" id="flush-headingNav">Features</a>
+                    <a class="r2f-has-dropdown position-relative" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseNav" id="flush-headingNav">Gallery</a>
                     <div id="flush-collapseNav" class="collapse">
                         <ul class="list-unstyled ps-3">
                             <li>
-                                <a href="#">Unique Demos</a>
+                                <a href="#">Clips</a>
                             </li>
                             <li>
-                                <a href="#">Post Style</a>
+                                <a href="#">Sons</a>
                             </li>
                             <li>
+                                <a href="#">Videos</a>
+                            </li>
+                            {{-- <li>
                                 <div class="accordion accordion-flush" id="accordionSubNav">
                                     <div class="">
                                         <a class="r2f-has-dropdown position-relative" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSub" id="flush-headingSub">Sub Features</a>
@@ -41,17 +44,17 @@
                                         </div>
                                     </div>
                                 </div>
-                            </li>
+                            </li> --}}
                         </ul>
                     </div>
                 </div>
             </div>
         </li>
-        <li class="r2f-border-bottom">
+        {{-- <li class="r2f-border-bottom">
             <a href="#">Portfolio</a>
-        </li>
+        </li> --}}
         <li class="r2f-border-bottom">
-            <a href="#">Contact</a>
+            <a href="/contact">Contact</a>
         </li>
     </ul>
     <div class="p-3 d-none d-lg-block">
@@ -75,13 +78,13 @@
     <div class="rft-social-icons pb-3">
         <ul class="m-0 p-0 d-flex list-unstyled justify-content-center">
             <li class="nav-item">
-                <a class="d-flex align-items-center justify-content-center" href="#"><i class="fab fa-facebook-f"></i></a>
+                <a class="d-flex align-items-center justify-content-center" href="https://web.facebook.com/Rap2FranceOfficiel/"><i class="fab fa-facebook-f"></i></a>
             </li>
             <li class="nav-item">
-                <a class="d-flex align-items-center justify-content-center" href="#"><i class="fab fa-twitter"></i></a>
+                <a class="d-flex align-items-center justify-content-center" href="https://twitter.com/rap2france"><i class="fab fa-twitter"></i></a>
             </li>
             <li class="nav-item">
-                <a class="d-flex align-items-center justify-content-center" href="#"><i class="fab fa-instagram"></i></a>
+                <a class="d-flex align-items-center justify-content-center" href="https://www.instagram.com/rap2france/"><i class="fab fa-instagram"></i></a>
             </li>
         </ul>
     </div>
@@ -144,58 +147,31 @@
                             <div class="row">
                                 <div class="r2f-mega-menu-cat col-2 border-end pe-3">
                                     <ul class="m-0 pt-1 ps-4 list-unstyled">
+                                        @foreach (App\Models\Category::all()->take(3) as $category)
                                         <li>
-                                            <a class="py-2 ps-0" href="#">Mobiles</a>
+                                            <a class="py-2 ps-0" href="/categories/{{$category->slug}}">{{$category->nom}}</a>
                                         </li>
-                                        <li>
-                                            <a class="py-2 ps-0" href="#">Lifestyle</a>
-                                        </li>
-                                        <li>
-                                            <a class="py-2 ps-0" href="#">Health</a>
-                                        </li>
-                                        <li>
-                                            <a class="py-2 ps-0" href="#">View All</a>
-                                        </li>
+                                        @endforeach
+                                        {{-- <li>
+                                            <a class="py-2 ps-0" href="/categories">View All</a>
+                                        </li> --}}
                                     </ul>
                                 </div>
                                 <div class="col ps-3 pe-5">
                                     <div class="row">
+                                        @foreach (App\Models\Category::where('slug', 'sortie-rap')->first()->articles()->latest()->take(4)->get() as $article)
+
                                         <div class="col">
                                             <div class="r2f-mega-menu-post pt-3">
-                                                <a href="#">
-                                                    <img class="img-fluid mb-2" src="{{asset('assets/images/consert-img.jpg')}}">
-                                                    <h2 class="h6 fw-bold">Bose Line of Products on the Show: Showroom Open in Dubai</h2>
+                                                <a href="/news/{{$article->tag}}">
+                                                    <img class="img-fluid mb-2" src="{{$article->Avatar}}">
+                                                    <h2 class="h6 fw-bold">{{$article->titre}}</h2>
                                                 </a>
-                                                <p class="text-muted">Jan 14, 2021</p>
+                                                <p class="text-muted">{{$article->dateActu}}</p>
                                             </div>
                                         </div>
-                                        <div class="col">
-                                            <div class="r2f-mega-menu-post pt-3">
-                                                <a href="#">
-                                                    <img class="img-fluid mb-2" src="{{asset('assets/images/consert-img.jpg')}}">
-                                                    <h2 class="h6 fw-bold">Bose Line of Products on the Show: Showroom Open in Dubai</h2>
-                                                </a>
-                                                <p class="text-muted">Jan 14, 2021</p>
-                                            </div>
-                                        </div>
-                                        <div class="col">
-                                            <div class="r2f-mega-menu-post pt-3">
-                                                <a href="#">
-                                                    <img class="img-fluid mb-2" src="{{asset('assets/images/consert-img.jpg')}}">
-                                                    <h2 class="h6 fw-bold">Bose Line of Products on the Show: Showroom Open in Dubai</h2>
-                                                </a>
-                                                <p class="text-muted">Jan 14, 2021</p>
-                                            </div>
-                                        </div>
-                                        <div class="col">
-                                            <div class="r2f-mega-menu-post pt-3">
-                                                <a href="#">
-                                                    <img class="img-fluid mb-2" src="{{asset('assets/images/consert-img.jpg')}}">
-                                                    <h2 class="h6 fw-bold">Bose Line of Products on the Show: Showroom Open in Dubai</h2>
-                                                </a>
-                                                <p class="text-muted">Jan 14, 2021</p>
-                                            </div>
-                                        </div>
+                                        @endforeach
+
                                     </div>
                                 </div>
                             </div>

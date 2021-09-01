@@ -178,7 +178,7 @@
                 </p>
             </div>
             <div class="row">
-                <div class="col-lg-8 border-end pr-4">
+                <div class="col-lg-8 border-end pe-4">
                     <div class="r2f-post-content-wrap">
                         <!-- Post Content Start -->
                         <div class="img-principal pb-4">
