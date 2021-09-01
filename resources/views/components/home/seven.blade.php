@@ -6,12 +6,12 @@
             <div class="r2f-post-wrap row pb-3">
                 <div class="col-5">
                     <div class="img-wrap">
-                        <a href="/news/{{$article->tag}}"><img src="{{$article->Avatar}}" class="img-fluid"></a>
+                        <a title="{{$article->titre}}" href="/news/{{$article->tag}}"><img src="{{$article->Avatar}}" class="img-fluid"></a>
                     </div>
                 </div>
                 <div class="d-flex align-items-center col">
                     <div>
-                        <h3 class="h5 mb-0"><a href="/news/{{$article->tag}}">{{$article->titre}}</a></h3>
+                        <h3 class="h5 mb-0"><a title="{{$article->titre}}" class="r2f-ellipsis" href="/news/{{$article->tag}}">{{$article->titre}}</a></h3>
                     </div>
                 </div>
             </div>
@@ -24,12 +24,12 @@
             <div class="r2f-post-wrap row pb-3">
                 <div class="col-5">
                     <div class="img-wrap">
-                        <a href="/news/{{$article->tag}}"><img src="{{$article->Avatar}}" class="img-fluid"></a>
+                        <a title="{{$article->titre}}" href="/news/{{$article->tag}}"><img src="{{$article->Avatar}}" class="img-fluid"></a>
                     </div>
                 </div>
                 <div class="d-flex align-items-center col">
                     <div>
-                        <h3 class="h5 mb-0"><a href="/news/{{$article->tag}}">{{$article->titre}}</a></h3>
+                        <h3 class="h5 mb-0"><a title="{{$article->titre}}" class="r2f-ellipsis" href="/news/{{$article->tag}}">{{$article->titre}}</a></h3>
                     </div>
                 </div>
             </div>
@@ -43,12 +43,12 @@
                 <div class="r2f-post-wrap row pb-3">
                     <div class="col-5">
                         <div class="img-wrap">
-                            <a href="/news/{{$article->tag}}"><img src="{{$article->Avatar}}" class="img-fluid"></a>
+                            <a title="{{$article->titre}}" href="/news/{{$article->tag}}"><img src="{{$article->Avatar}}" class="img-fluid"></a>
                         </div>
                     </div>
                     <div class="d-flex align-items-center col">
                         <div>
-                            <h3 class="h5 mb-0"><a href="/news/{{$article->tag}}">{{$article->titre}}</a></h3>
+                            <h3 class="h5 mb-0"><a class="r2f-ellipsis" title="{{$article->titre}}" href="/news/{{$article->tag}}">{{$article->titre}}</a></h3>
                         </div>
                     </div>
                 </div>
