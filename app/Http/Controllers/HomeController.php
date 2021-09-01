@@ -18,8 +18,6 @@ use App\Models\InstagramPicture;
 use Instagram\Api;
 use Symfony\Component\Cache\Adapter\FilesystemAdapter;
 
-
-
 class HomeController extends Controller
 {
 
@@ -32,13 +30,12 @@ class HomeController extends Controller
     public function show()
     {
 
-
-        $popular_hashtags = DB::table('r2f_new_actualités_hashtags')
-            ->join('r2f_new_actualité_hashtag', 'r2f_new_actualités_hashtags.hashtag_id', '=', 'r2f_new_actualité_hashtag.id')
-            ->select(DB::raw('count(*) as repetition, r2f_new_actualité_hashtag.nom'))
-            ->groupBy('r2f_new_actualité_hashtag.nom')
-            ->orderBy('repetition', 'desc')
-            ->get();
+        // $popular_hashtags = DB::table('r2f_new_actualités_hashtags')
+        //     ->join('r2f_new_actualité_hashtag', 'r2f_new_actualités_hashtags.hashtag_id', '=', 'r2f_new_actualité_hashtag.id')
+        //     ->select(DB::raw('count(*) as repetition, r2f_new_actualité_hashtag.nom'))
+        //     ->groupBy('r2f_new_actualité_hashtag.nom')
+        //     ->orderBy('repetition', 'desc')
+        //     ->get();
 
         $featuredPosts = FeaturedArticle::featuredPosts()->get()->filter(function ($item, $index) {
 
@@ -79,12 +76,12 @@ class HomeController extends Controller
             'artEtCultureArticles' => $artEtCultureArticles,
             'featuredArticles' => $featuredPosts,
             'tags' => Hashtag::all(),
-            'popular_hashtags' => $popular_hashtags,
+            // 'popular_hashtags' => $popular_hashtags,
             'topToday' => ArticleTodayAnalytic::OrderBy('views', 'DESC')->take(4)->get(),
-            'topYesterday' => ArticleYesterdayAnalytic::OrderBy('views', 'DESC')->take(4)->get(),
+            // 'topYesterday' => ArticleYesterdayAnalytic::OrderBy('views', 'DESC')->take(4)->get(),
             'topWeek' => ArticleWeekAnalytic::OrderBy('views', 'DESC')->take(4)->get(),
             'topMonth' => ArticleMonthAnalytic::OrderBy('views', 'DESC')->take(4)->get(),
-            'topLastMonth' => ArticleLastMonthAnalytic::OrderBy('views', 'DESC')->take(4)->get(),
+            // 'topLastMonth' => ArticleLastMonthAnalytic::OrderBy('views', 'DESC')->take(4)->get(),
             // 'instagram_images' => InstagramPicture::OrderBy('posted_at','DESC')->take(5)->get(),
         ]);
     }

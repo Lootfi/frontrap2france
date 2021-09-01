@@ -5,152 +5,158 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Carbon\Carbon;
 use Analytics;
-use DB; 
+use DB;
 use Spatie\Analytics\Period;
-use Laravel\Scout\Searchable; 
+use Laravel\Scout\Searchable;
 
-class Article extends Model 
+class Article extends Model
 {
-        use Searchable;
+    use Searchable;
 
-        
+
     /**
      * The table associated with the model.
      *
      * @var string
      */
     protected $table = 'r2f_new_actualite_testing_copy';
-    public $primaryKey='id'; 
+    public $primaryKey = 'id';
     /**
      * Indicates if the model should be timestamped.
      *
      * @var bool
      */
     public $timestamps = false;
-     /**
+    /**
      * The attributes that should be hidden for arrays.
      *
      * @var array
      */
-    protected $hidden = ['contenutext','contenuJson','id','idcat','admin_creator_id'];
+    protected $hidden = ['contenutext', 'contenuJson', 'id', 'idcat', 'admin_creator_id'];
     /**
-    * The attributes that should be cast.
-    *
-    * @var array
-    */
+     * The attributes that should be cast.
+     *
+     * @var array
+     */
     protected $casts = [
-       'created_at' => 'datetime:Y-m-d',
-       'updated_at' => 'datetime:Y-m-d',
-       'dateactu' =>'datetime:Y-m-d',
-       'contenuJson' => 'array'
-    ]; 
-    
+        'created_at' => 'datetime:Y-m-d',
+        'updated_at' => 'datetime:Y-m-d',
+        'dateactu' => 'datetime:Y-m-d',
+        'contenuJson' => 'array'
+    ];
 
-    public function getArtistsAttribute(){
+
+    public function getArtistsAttribute()
+    {
 
         return $this->artists()->orderBy('rank')->get();
     }
 
-    public function getIsFeaturedAttribute(){
+    public function getIsFeaturedAttribute()
+    {
 
-        if($featured = \App\Models\FeaturedArticle::where('article_id',$this->id)->first()){
+        if ($featured = \App\Models\FeaturedArticle::where('article_id', $this->id)->first()) {
 
             return ['article' => $this, 'date_start' => $featured->date_start, 'date_end' => $featured->date_end];
-
-        }else{
+        } else {
 
             return null;
-
         }
     }
 
-    public static function published(){
+    public static function published()
+    {
 
-        return self::where('status',1)->where('updated_at','<',Carbon::now()->subMinutes(1)->toDateTimeString());
+        return self::where('status', 1)->where('updated_at', '<', Carbon::now()->subMinutes(1)->toDateTimeString());
     }
 
 
 
-    public function getDateActuAttribute(){
+    public function getDateActuAttribute()
+    {
 
         return Carbon::parse($this->created_at)->isoFormat('Do MMM YYYY');
     }
 
 
-    public function getCreatorAttribute(){
+    public function getCreatorAttribute()
+    {
 
 
-    	return \App\Models\Administrator::findOrFail($this->admin_creator_id);
+        return \App\Models\Administrator::findOrFail($this->admin_creator_id);
     }
 
-    public function getCategoryAttribute(){
+    public function getCategoryAttribute()
+    {
 
         return \App\Models\Category::findOrFail($this->idcat);
     }
-    
-    public function getAvatarAttribute(){
+
+    public function getAvatarAttribute()
+    {
 
 
-        if(now()->diffInSeconds($this->updated_at) < 60){
+        if (now()->diffInSeconds($this->updated_at) < 60) {
 
-                    return "/images/admin/articles/avatars/". $this->image; 
-               }
+            return "/images/admin/articles/avatars/" . $this->image;
+        }
 
-        return "https://cd1.rap2france.com/public/medias/news/".$this->id."/660x330/mdpi/".$this->image;
-
+        return "https://cd1.rap2france.com/public/medias/news/" . $this->id . "/660x330/mdpi/" . $this->image;
     }
 
-    public function getArticleViewsAttribute(){
-    
+    public function getArticleViewsAttribute()
+    {
 
-    $pageViews =  Analytics::performQuery(
-    Period::years(5),
-    'ga:pageviews',
-    [
-        'metrics' => 'ga:sessions, ga:pageviews',
-        'dimensions' => 'ga:pagePath',
-        'filters' => "ga:pagePath==".$this->url
-    ]
-    );
-    if(json_decode(json_encode($pageViews),true)['rows']){
-    return json_decode(json_encode($pageViews),true)['rows'][0][2];
-}
-return 0;
 
+        $pageViews =  Analytics::performQuery(
+            Period::years(5),
+            'ga:pageviews',
+            [
+                'metrics' => 'ga:sessions, ga:pageviews',
+                'dimensions' => 'ga:pagePath',
+                'filters' => "ga:pagePath==/news/" . $this->tag
+            ]
+        );
+        if (json_decode(json_encode($pageViews), true)['rows']) {
+            return json_decode(json_encode($pageViews), true)['rows'][0][2];
+        }
+        return 0;
     }
 
-    public function getAvatar($width,$height){
+    public function getAvatar($width, $height)
+    {
 
-         if(now()->diffInSeconds($this->updated_at) < 60){
+        if (now()->diffInSeconds($this->updated_at) < 60) {
 
-                            return "/images/admin/articles/avatars/". $this->image; 
-                       }
+            return "/images/admin/articles/avatars/" . $this->image;
+        }
 
-        return "https://cd1.rap2france.com/public/medias/news/".$this->id."/".$width."x".$height."/mdpi/".$this->image;
+        return "https://cd1.rap2france.com/public/medias/news/" . $this->id . "/" . $width . "x" . $height . "/mdpi/" . $this->image;
     }
-    public function getContenuFormatAttribute(){
+    public function getContenuFormatAttribute()
+    {
 
-        if($this->type == 1 ){
+        if ($this->type == 1) {
 
             return ['type' => "raw", 'contenu' => $this->FormattedContent($this)];
-       
-        }else{
+        } else {
 
-            return ['type' => "json" , 'contenu' => $this->contenuJSON];
+            return ['type' => "json", 'contenu' => $this->contenuJSON];
         }
     }
 
-    
 
-    public function getHashtagsAttribute(){
+
+    public function getHashtagsAttribute()
+    {
 
         return $this->hashtags()->get();
-
     }
 
-    public static function fetchByTag($tag){
+    public static function fetchByTag($tag)
+    {
 
-        return self::where('tag',$tag)->first();
+        return self::where('tag', $tag)->first();
     }
 
 
@@ -159,8 +165,7 @@ return 0;
     {
 
         return $this->belongsToMany(\App\Models\Artist::class, 'r2f_new_article_artist')
-                    ->withPivot('rank');
-
+            ->withPivot('rank');
     }
 
     public function hashtags()
@@ -168,68 +173,60 @@ return 0;
     {
 
         return $this->belongsToMany(\App\Models\Hashtag::class, 'r2f_new_actualités_hashtags');
-
     }
-      public function FormattedContent($article){
+    public function FormattedContent($article)
+    {
 
         $article->contenu = html_entity_decode($article->contenu, ENT_QUOTES, 'UTF-8');
 
         $imageIds = [];
         preg_match_all('#(<p>)?\s*(<div[^>]*data-img-buddy[^>]*>[^>]*<\/div>)\s*(<\/p>)?#mx', $article->contenu, $ImageAttributes);
         $attributes = [];
-        foreach($ImageAttributes[0] as $key => $Image) {
+        foreach ($ImageAttributes[0] as $key => $Image) {
 
 
-                preg_match_all('#data-img-buddy-(.*)\s*=\s*"(.*)"#isxmU', $Image, $Resultattributes);
+            preg_match_all('#data-img-buddy-(.*)\s*=\s*"(.*)"#isxmU', $Image, $Resultattributes);
 
-                    array_push($attributes,$Resultattributes);
-                }
+            array_push($attributes, $Resultattributes);
+        }
 
-            $images = [];
+        $images = [];
 
-            foreach($attributes as $attribute){
+        foreach ($attributes as $attribute) {
 
-                preg_match('/data-img-buddy-id="([^"]+)"/',$attribute[0][0],$m);
+            preg_match('/data-img-buddy-id="([^"]+)"/', $attribute[0][0], $m);
 
-                $articleImage = \App\Models\ImageArticle::findOrFail($m[1]);
-                $imgUrl = "https://img.rap2france.com/public/medias/news/image/".$m[1]."/raw/mdpi/".$articleImage->image;
-                $imageHtml =  "<img src=\"".$imgUrl."\" width=\"100%\" alt=\"".$article->titre."\" style=\"margin-bottom:15px;\"/>";
+            $articleImage = \App\Models\ImageArticle::findOrFail($m[1]);
+            $imgUrl = "https://img.rap2france.com/public/medias/news/image/" . $m[1] . "/raw/mdpi/" . $articleImage->image;
+            $imageHtml =  "<img src=\"" . $imgUrl . "\" width=\"100%\" alt=\"" . $article->titre . "\" style=\"margin-bottom:15px;\"/>";
 
-                array_push($images, $imageHtml);
-            
-            }
+            array_push($images, $imageHtml);
+        }
 
-            foreach($images as $key => $image){
-                $article->contenu = str_replace($ImageAttributes[0][$key], $image, $article->contenu);
+        foreach ($images as $key => $image) {
+            $article->contenu = str_replace($ImageAttributes[0][$key], $image, $article->contenu);
+        }
 
-            }
-
-            preg_match_all('#<div[^>]*data-html-snippet[^>]*>[^>]*</div>#mxiU', $article->contenu, $Embeds);
-            $embedsArray = [];
-            foreach($Embeds[0] as $key => $embed){
-                preg_match_all('#data-html-snippet-(.*)\s*=\s*"(.*)"#isxmU', $embed, $resultSnippet);
+        preg_match_all('#<div[^>]*data-html-snippet[^>]*>[^>]*</div>#mxiU', $article->contenu, $Embeds);
+        $embedsArray = [];
+        foreach ($Embeds[0] as $key => $embed) {
+            preg_match_all('#data-html-snippet-(.*)\s*=\s*"(.*)"#isxmU', $embed, $resultSnippet);
             array_push($embedsArray, $resultSnippet);
-            } 
+        }
 
-            $embedIframes = [];
-            foreach($embedsArray as $embedEl){
+        $embedIframes = [];
+        foreach ($embedsArray as $embedEl) {
 
-                $embed =  base64_decode($embedEl[2][0]);
-                $embed = html_entity_decode($embed, ENT_QUOTES, 'UTF-8');
-                $embed = sprintf('<div class="my-4 mx-auto w-full h-full"   data-html-snippet="true">%s</div>', $embed);
-                array_push($embedIframes,$embed);
-
-            }
-            foreach($embedIframes as $key => $iframe){
+            $embed =  base64_decode($embedEl[2][0]);
+            $embed = html_entity_decode($embed, ENT_QUOTES, 'UTF-8');
+            $embed = sprintf('<div class="my-4 mx-auto w-full h-full"   data-html-snippet="true">%s</div>', $embed);
+            array_push($embedIframes, $embed);
+        }
+        foreach ($embedIframes as $key => $iframe) {
 
             $article->contenu = str_replace($Embeds[0][$key], $iframe, $article->contenu);
+        }
 
-
-            }
-
-            return $article->contenu;
-
-
-
+        return $article->contenu;
     }
 }
