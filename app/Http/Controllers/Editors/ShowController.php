@@ -53,6 +53,9 @@ class ShowController extends Controller
 
 	public function index()
 	{
-		return view('pages.editors.index');
+		$auteurs = Administrator::all();
+		return view('pages.editors.index', [
+			'authors' => $auteurs
+		]);
 	}
 }

@@ -8,77 +8,43 @@
         <div class="row">
             <div class="col-md-8 border-end pr-4" id="authors-parent">
                 <div class="r2r-author-left-part">
-                    <h1>Our Authors</h1>
-                    <p class="mb-5">Here’s a list of all of our authors.</p>
+                    <h1>Nos Auteurs</h1>
+                    <p class="mb-5">Voice une liste de touts nos auteurs.</p>
                     <!-- About Author -->
+                    @foreach ($authors as $author)   
                     <div class="border-bottom pb-5 mb-5">
                         <div class="row">
                             <div class="col-3 col-md-2">
-                                <img src="{{asset('assets/images/bella-doe.jpg')}}" class="img-fluid rounded-circle">
-                            </div>
+                                <img src="{{$author->Avatar}}" class="avatar-big rounded-circle">
+                            </div>                         
                             <div class="r2f-author-title col">
                                 <div class="d-flex justify-content-between pb-2">
-                                    <h2 class="h6 fw-bold">Shane Doe</h2>
+                                    <h2 class="h6 fw-bold">{{$author->Full_Name}}</h2>
                                     <ul class="list-unstyled m-0 d-flex">
                                         <li class="pr-3">
-                                            <a href="#"><i class="fas fa-home"></i></a>
+                                            <a href="/editors/{{$author->slug}}"><i class="fas fa-home"></i></a>
                                         </li>
                                         <li class="pr-3">
-                                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                            <a href="{{$author->Details->facebook}}"><i class="fab fa-facebook-f"></i></a>
                                         </li>
                                         <li class="pr-3">
-                                            <a href="#"><i class="fab fa-twitter"></i></a>
+                                            <a href="{{$author->Details->twitter}}"><i class="fab fa-twitter"></i></a>
                                         </li>
                                         <li class="pr-3">
-                                            <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                                            <a href="{{$author->Details->pinterest}}"><i class="fab fa-pinterest-p"></i></a>
                                         </li>
                                         <li>
-                                            <a href="#"><i class="fab fa-instagram"></i></a>
+                                            <a href="{{$author->Details->instagram}}"><i class="fab fa-instagram"></i></a>
                                         </li>
                                     </ul>
                                 </div>
-                                <p>I am an Example Writer. Lorem ipsum dolor sit amet, consectetur adipisicing
-                                    elit, sed do eiusmod tempor incididunt labored et dolore magna aliqua. Ut
-                                    enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                                    aliquip ex ea commodo consequat.</p>
-                                <a href="#" class="r2f-btn-global text-uppercase py-2 px-3 rounded">50
+                                <p>{{$author->Details->biography}}</p>
+                                <a href="/editors/{{$author->slug}}#articles" class="r2f-btn-global text-uppercase py-2 px-3 rounded">{{$author->articles()->count()}}
                                     Articles</a>
                             </div>
                         </div>
                     </div>
-                    <div>
-                        <div class="row">
-                            <div class="col-3 col-md-2">
-                                <img src="{{asset('assets/images/jane-doe.jpg')}}" class="img-fluid rounded-circle">
-                            </div>
-                            <div class="r2f-author-title col">
-                                <div class="d-flex justify-content-between pb-2">
-                                    <h2 class="h6 fw-bold">Shane Doe</h2>
-                                    <ul class="list-unstyled m-0 d-flex">
-                                        <li class="pr-3">
-                                            <a href="#"><i class="fas fa-home"></i></a>
-                                        </li>
-                                        <li class="pr-3">
-                                            <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                        </li>
-                                        <li class="pr-3">
-                                            <a href="#"><i class="fab fa-twitter"></i></a>
-                                        </li>
-                                        <li class="pr-3">
-                                            <a href="#"><i class="fab fa-pinterest-p"></i></a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><i class="fab fa-instagram"></i></a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <p class="m-0">I am an Example Writer. Lorem ipsum dolor sit amet, consectetur
-                                    adipisicing elit, sed do eiusmod tempor incididunt labored et dolore magna
-                                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                                    nisi ut aliquip ex ea commodo consequat.</p>
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
             <div class="col-md-4 ps-lg-4">
