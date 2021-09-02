@@ -8,24 +8,15 @@
     </div>
     <ul class="r2f-side-nav list-unstyled components p-3">
         <li class="r2f-border-bottom">
-            <a class="active" href="/">Accueil</a>
+            <a class="{{ request()->routeIs('home') ? 'active' : '' }}" href="/">Accueil</a>
         </li>
-        <li class="r2f-border-bottom">
+        {{-- <li class="r2f-border-bottom">
             <div class="accordion accordion-flush" id="accordionNav">
                 <div>
                     <a class="r2f-has-dropdown position-relative" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseNav" id="flush-headingNav">Gallery</a>
                     <div id="flush-collapseNav" class="collapse">
                         <ul class="list-unstyled ps-3">
                             <li>
-                                <a href="#">Clips</a>
-                            </li>
-                            <li>
-                                <a href="#">Sons</a>
-                            </li>
-                            <li>
-                                <a href="#">Videos</a>
-                            </li>
-                            {{-- <li>
                                 <div class="accordion accordion-flush" id="accordionSubNav">
                                     <div class="">
                                         <a class="r2f-has-dropdown position-relative" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSub" id="flush-headingSub">Sub Features</a>
@@ -44,17 +35,17 @@
                                         </div>
                                     </div>
                                 </div>
-                            </li> --}}
+                            </li>
                         </ul>
                     </div>
                 </div>
             </div>
-        </li>
+        </li> --}}
         {{-- <li class="r2f-border-bottom">
             <a href="#">Portfolio</a>
         </li> --}}
         <li class="r2f-border-bottom">
-            <a href="/contact">Contact</a>
+            <a class="{{ request()->routeIs('contact') ? 'active' : '' }}" href="/contact">Contact</a>
         </li>
     </ul>
     <div class="p-3 d-none d-lg-block">
@@ -139,7 +130,7 @@
             <div class="col d-flex justify-content-center">
                 <ul class="list-unstyled m-0 p-0 d-flex">
                     <li class="pe-2 pt-2 pb-3">
-                        <a class="active r2r-nav-link" href="#">Accueil</a>
+                        <a class="active r2r-nav-link" href="/">Accueil</a>
                     </li>
                     <li class="r2f-dropdown pe-3 pt-2 pb-3">
                         <a class="r2f-dropdown-icon r2r-nav-link position-relative" href="#">Rap Fr <i class="fas fa-chevron-down"></i></a>
@@ -163,9 +154,9 @@
 
                                         <div class="col">
                                             <div class="r2f-mega-menu-post pt-3">
-                                                <a href="/news/{{$article->tag}}">
+                                                <a title="{{$article->titre}}" href="/news/{{$article->tag}}">
                                                     <img class="img-fluid mb-2" src="{{$article->Avatar}}">
-                                                    <h2 class="h6 fw-bold">{{$article->titre}}</h2>
+                                                    <h2 class="h6 fw-bold r2f-ellipsis">{{$article->titre}}</h2>
                                                 </a>
                                                 <p class="text-muted">{{$article->dateActu}}</p>
                                             </div>
@@ -178,16 +169,16 @@
                         </div>
                     </li>
                     <li class="pe-2 pt-2 pb-3">
-                        <a class="r2r-nav-link" href="#">La Street</a>
+                        <a class="r2r-nav-link" href="/categories/live">Live</a>
                     </li>
                     <li class="pe-2 pt-2 pb-3">
-                        <a class="r2r-nav-link" href="#">Lifestyle</a>
+                        <a class="r2r-nav-link" href="/categories/lifestyle">Lifestyle</a>
                     </li>
                     <li class="pe-2 pt-2 pb-3">
-                        <a class="r2r-nav-link" href="#">Cine/Series</a>
+                        <a class="r2r-nav-link" href="/categories/ciné">Cine/Series</a>
                     </li>
                     <li class="py-2">
-                        <a class="r2r-nav-link" href="#">Sport</a>
+                        <a class="r2r-nav-link" href="/categories/art-et-culture">Art et Culture</a>
                     </li>
                 </ul>
             </div>
