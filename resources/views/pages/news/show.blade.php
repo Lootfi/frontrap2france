@@ -163,7 +163,7 @@
     <div class="container" >
         <div class="r2f-post-content"> 
             <div class="row" id="wrapper">
-                <div class="col-lg-8 border-end pe-4" id="posts_wrapper">
+                <div class="col-lg-8 border-end" id="posts_wrapper">
                             <div class="post-section" title="{{$article->titre}}" tag="{{$article->tag}}">
                                 <!-- Post Headline -->
                                                     <h1 class="fw-bold mt-3 titlenews titleactu title" tag="{{$article->tag}}">{{$article->titre}}</h1>
@@ -174,7 +174,7 @@
                                 <span>Par</span>
                                 <a href="{{Route('editors.show',$article->Creator->slug)}}" class="text-dark">{{$article->Creator->Full_Name}}</a>
                                 <span> - {{$article->DateActu}}</span>
-                                <span class="r2f-post-meta p-0"><a href="{{Route('categories.show',$article->Category->slug)}}" class="r2f-post-meta-design">{{$article->Category->nom}}</a></span>
+                                <span class="r2f-post-meta p-0"><a href="{{Route('categories.show',$article->Category->slug)}}" class="r2f-post-meta-design ms-2">{{$article->Category->nom}}</a></span>
                                                         </p>
                                                     </div>
                                                     <div class="r2f-post-content-wrap">
@@ -200,7 +200,7 @@
                 <div class="loader"></div>
                 <div class="loading text-center"><img class="inline-block mx-auto " style="animation: rotation 2s infinite linear" src="https://cd1.rap2france.com/public/templates/template/images/loading_hover.png"/></div>
                 
-                <div class="col-md-4 ps-lg-4">
+                <div class="col-md-4 ps-lg-4 d-none d-lg-block d-xl-block">
                     <div class="r2r-news-right">
                         <!--<div class="pb-5 justify-content-center">
                         <div class="adactive">
@@ -337,7 +337,7 @@
         <span>Par</span>
         <a href="/editors/${article.CreatorSlug}" class="text-dark">${article.CreatorFullName}</a>
         <span> - ${article.created_at}</span>
-        <span class="r2f-post-meta p-0"><a href="/categories/${article.CategorySlug}" class="r2f-post-meta-design">${article.Category}</a></span>
+        <span class="r2f-post-meta p-0"><a href="/categories/${article.CategorySlug}" class="r2f-post-meta-design ms-2">${article.Category}</a></span>
     </p>
 </div>
 <div>

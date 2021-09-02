@@ -100,6 +100,14 @@ a:hover, .breadcrumb a:hover{
 .metainfos {
     width: 80%;
 }
+
+/* @media only screen and (max-width: 991px) {
+	#posts_wrapper {
+		padding-left: 0;
+		padding-right: 0;
+	}
+} */
+
 @media (max-width:660px){
 	.r2f-post-wrap{display:none}
 }
