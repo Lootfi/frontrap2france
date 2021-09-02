@@ -4,7 +4,7 @@
         <i class="fas fa-arrow-left"></i>
     </div>
     <div class="sidebar-header">
-        <a href="#"></a>
+        <a href="/"></a>
     </div>
     <ul class="r2f-side-nav list-unstyled components p-3">
         <li class="r2f-border-bottom">
@@ -202,7 +202,7 @@
                 <button type="button" id="sidebarCollapse2" class="r2f-toggle btn"></button>
             </div>
             <div class="r2f-logo col py-2">
-                <a class="mx-auto" href="#"></a>
+                <a class="mx-auto" href="/"></a>
             </div>
             <div class="col-auto d-flex align-items-center justify-content-end">
                 <button class="r2f-btn-search btn"></button>

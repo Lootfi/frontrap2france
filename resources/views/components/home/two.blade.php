@@ -34,7 +34,7 @@
                                     <div class="col-4">
                                         <div class="position-relative">
                                             <a href="/news/{{$article->article->tag}}"><img src="{{$article->article->getAvatar(155,90)}}" class="img-fluid"></a>
-                                            <p class="r2f-post-meta position-absolute m-0 ps-4"><a href="/categories/{{$article->article->Category->slug}}" class="r2f-post-meta-tech">{{$article->article->Category->nom}}</a></p>
+                                            <p class="r2f-post-meta position-absolute m-0 ps-4"><a href="/categories/{{$article->article->Category->slug}}" class="r2f-post-meta-tech text-nowrap">{{$article->article->Category->nom}}</a></p>
                                         </div>
                                     </div>
                                     <div class="col">
@@ -64,7 +64,7 @@
                                     <div class="col-4">
                                         <div class="position-relative">
                                             <a href="/news/{{$article->article->tag}}"><img src="{{$article->article->getAvatar(155,90)}}" class="img-fluid"></a>
-                                            <p class="r2f-post-meta position-absolute m-0 ps-4"><a href="/categories/{{$article->article->Category->slug}}" class="r2f-post-meta-tech">{{$article->article->Category->nom}}</a></p>
+                                            <p class="r2f-post-meta position-absolute m-0 ps-4"><a href="/categories/{{$article->article->Category->slug}}" class="r2f-post-meta-tech text-nowrap">{{$article->article->Category->nom}}</a></p>
                                         </div>
                                     </div>
                                     <div class="col">
@@ -94,7 +94,7 @@
                                     <div class="col-4">
                                         <div class="position-relative">
                                             <a href="/news/{{$article->article->tag}}"><img src="{{$article->article->getAvatar(155,90)}}" class="img-fluid"></a>
-                                            <p class="r2f-post-meta position-absolute m-0 ps-4"><a href="/categories/{{$article->article->Category->slug}}" class="r2f-post-meta-tech">{{$article->article->Category->nom}}</a></p>
+                                            <p class="r2f-post-meta position-absolute m-0 ps-4"><a href="/categories/{{$article->article->Category->slug}}" class="r2f-post-meta-tech text-nowrap">{{$article->article->Category->nom}}</a></p>
                                         </div>
                                     </div>
                                     <div class="col">
@@ -123,7 +123,7 @@
                                     <div class="col-4">
                                         <div class="position-relative">
                                             <a href="#"><img src="{{asset('assets/images/news/4.jpg')}}" class="img-fluid"></a>
-                                            <p class="r2f-post-meta position-absolute m-0 ps-4"><a href="#" class="r2f-post-meta-tech">Tech</a></p>
+                                            <p class="r2f-post-meta position-absolute m-0 ps-4"><a href="#" class="r2f-post-meta-tech text-nowrap">Tech</a></p>
                                         </div>
                                     </div>
                                     <div class="col">

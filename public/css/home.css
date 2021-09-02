@@ -259,3 +259,15 @@
 		top: -30px;
 	}
 }
+
+@media only screen and (max-width: 410px){
+	.r2f-section-one-posts .r2f-post-wrap-lg .r2f-post-excerpts {
+		padding: 15px;
+	}
+	.r2f-section-one-posts .r2f-post-wrap-lg .r2f-post-excerpts h2 {
+		line-height: 1;
+	}
+	.r2f-section-one-posts .r2f-post-wrap-lg .r2f-post-excerpts h2 a{
+		font-size: 18px;
+	}
+}

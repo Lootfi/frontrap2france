@@ -159,43 +159,47 @@
 <div class="loading text-center"><img class="inline-block mx-auto " style="animation: rotation 2s infinite linear" src="https://cd1.rap2france.com/public/templates/template/images/loading_hover.png"/></div>
 </div> --}}
 
-<main class="pb-5 content">
-    <div class="container">
-        <div class="r2f-post-content">
-            <!-- Post Headline -->
-            <h1 class="fw-bold mt-3 titlenews titleactu">{{$article->titre}}
-            </h1>
-            {{-- <p class="fs-5 text-muted titlenews">Having not yet visited Sector 10, follow these steps for a free
-                upgrade.</p> --}}
-            <!-- Post Author -->
-            <div class="r2f-author align-items-center pb-2">
-                <img src="{{$article->Creator->Avatar}}" class="img-fluid rounded-circle mr-3">
-                <p class="text-muted m-0 metainfos">
-                    <span>Par</span>
-                    <a href="{{Route('editors.show',$article->Creator->slug)}}" class="text-dark">{{$article->Creator->Full_Name}}</a>
-                    <span> - {{$article->DateActu}}</span>
-                    <span class="r2f-post-meta p-0"><a href="{{Route('categories.show',$article->Category->slug)}}" class="r2f-post-meta-design">{{$article->Category->nom}}</a></span>
-                </p>
-            </div>
-            <div class="row">
-                <div class="col-lg-8 border-end pe-4">
-                    <div class="r2f-post-content-wrap">
-                        <!-- Post Content Start -->
-                        <div class="img-principal pb-4">
-                            <img src="{{$article->Avatar}}" class="img-fluid w-100">
-                        </div>
-                       
-                        <div class="single_blog">
-                            @if($article->type == 1)
-                            {!! html_entity_decode($article->ContenuFormat['contenu'], ENT_QUOTES, 'UTF-8') !!}
-                            @else
-                             {!! html_entity_decode($article->contenu, ENT_QUOTES, 'UTF-8') !!}
-                            @endif
-                        </div>
-                        <!-- END Post Content -->
-                        <div class="border-top border-bottom py-3 mb-2"></div>
-                    </div>
+<main class="pb-5 content" >
+    <div class="container" >
+        <div class="r2f-post-content"> 
+            <div class="row" id="wrapper">
+                <div class="col-lg-8 border-end pe-4" id="posts_wrapper">
+                            <div class="post-section" title="{{$article->titre}}" tag="{{$article->tag}}">
+                                <!-- Post Headline -->
+                                                    <h1 class="fw-bold mt-3 titlenews titleactu title" tag="{{$article->tag}}">{{$article->titre}}</h1>
+                                                    <!-- Post Author -->
+                                                    <div class="r2f-author align-items-center pb-2">
+                                                        <img src="{{$article->Creator->Avatar}}" class="img-fluid rounded-circle me-3">
+                                                        <p class="text-muted m-0 metainfos">
+                                <span>Par</span>
+                                <a href="{{Route('editors.show',$article->Creator->slug)}}" class="text-dark">{{$article->Creator->Full_Name}}</a>
+                                <span> - {{$article->DateActu}}</span>
+                                <span class="r2f-post-meta p-0"><a href="{{Route('categories.show',$article->Category->slug)}}" class="r2f-post-meta-design">{{$article->Category->nom}}</a></span>
+                                                        </p>
+                                                    </div>
+                                                    <div class="r2f-post-content-wrap">
+                                                        <!-- Post Content Start -->
+                                                        <div class="img-principal pb-4">
+                                <img src="{{$article->Avatar}}" class="img-fluid w-100">
+                                                        </div>
+                                                       
+                                                        <div class="single_blog">
+                                @if($article->type == 1)
+                                {!! html_entity_decode($article->ContenuFormat['contenu'], ENT_QUOTES, 'UTF-8') !!}
+                                @else
+                                 {!! html_entity_decode($article->contenu, ENT_QUOTES, 'UTF-8') !!}
+                                @endif
+                                                        </div>
+                                                        <!-- END Post Content -->
+                                                        <div class="border-top border-bottom py-3 mb-2"></div>
+                                                    </div>
+                            </div>
+
+ 
                 </div>
+                <div class="loader"></div>
+                <div class="loading text-center"><img class="inline-block mx-auto " style="animation: rotation 2s infinite linear" src="https://cd1.rap2france.com/public/templates/template/images/loading_hover.png"/></div>
+                
                 <div class="col-md-4 ps-lg-4">
                     <div class="r2r-news-right">
                         <!--<div class="pb-5 justify-content-center">
@@ -254,6 +258,7 @@
             </div>
         </div>
     </div>
+    
 </main>
 
 @endsection
@@ -261,7 +266,7 @@
 @section('page-script')
 
 
-    {{-- <script>    
+    <script>    
         const wrapper = document.querySelector('#wrapper');
         const posts_wrapper = document.querySelector('#posts_wrapper');
         const primaryTag = document.querySelector('.title').getAttribute('tag');
@@ -284,46 +289,74 @@
             .then(response => response.json())
             .then(data => {
             const article = data[0]
-            const template = `
-            <section class="banner_01" style="position:relative; background:url('${article.Avatar}') no-repeat fixed center center / cover;">
-            <div style="position: absolute; width: 100%; height: 100%; top: 0;left: 0;right: 0;bottom: 0;background-color: rgba(0,0,0,0.5);"></div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12 text-center">
-                        <div class="banner_1_content">
-                            <a href="/categories/${article.CategorySlug}" class="cats blues2">${article.Category}</a>
-                            <h1 class="title" style="color:white;" tag="${article.tag}">${article.titre}</h1>
-                            <div class="post_banner_meta clearfix">
-                                <span class="fi1cm_author">By <a href="/editors/${article.CreatorSlug}">${article.CreatorFullName}</a></span>
-                                <span class="fi1cm_date">-<a href="#"><i class="feather icon-clock"></i>${article.created_at}</a></span>
+//             const template = `
+//             <section class="banner_01" style="position:relative; background:url('${article.Avatar}') no-repeat fixed center center / cover;">
+//             <div style="position: absolute; width: 100%; height: 100%; top: 0;left: 0;right: 0;bottom: 0;background-color: rgba(0,0,0,0.5);"></div>
+//             <div class="container">
+//                 <div class="row">
+//                     <div class="col-lg-12 text-center">
+//                         <div class="banner_1_content">
+//                             <a href="/categories/${article.CategorySlug}" class="cats blues2">${article.Category}</a>
+//                             <h1 class="title" style="color:white;" tag="${article.tag}">${article.titre}</h1>
+//                             <div class="post_banner_meta clearfix">
+//                                 <span class="fi1cm_author">By <a href="/editors/${article.CreatorSlug}">${article.CreatorFullName}</a></span>
+//                                 <span class="fi1cm_date">-<a href="#"><i class="feather icon-clock"></i>${article.created_at}</a></span>
                             
                             
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <div class="content-container">
-        <section class="sp_1_section " >
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="sb_bg py-0">
-                            <div class="row pt-5">
-                                <div class="col-lg-12 col-md-12">
-                                    <div class="single_blog">
-                                        ${article.contenu}
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+//                             </div>
+//                         </div>
+//                     </div>
+//                 </div>
+//             </div>
+//         </section>
+//         <div class="content-container">
+//         <section class="sp_1_section " >
+//             <div class="container">
+//                 <div class="row">
+//                     <div class="col-lg-12">
+//                         <div class="sb_bg py-0">
+//                             <div class="row pt-5">
+//                                 <div class="col-lg-12 col-md-12">
+//                                     <div class="single_blog">
+//                                         ${article.contenu}
+//                                     </div>
+//                                 </div>
+//                             </div>
+//                         </div>
+//                     </div>
+//                 </div>
+//             </div>
+//         </section>
+// </div>
+// `
+        const template = `
+        <h1 class="fw-bold mt-3 titlenews titleactu title" tag="${article.tag}">${article.titre}</h1>
+        <div class="r2f-author align-items-center pb-2">
+    <img src="${article.CreatorAvatar}" class="img-fluid rounded-circle me-3">
+    <p class="text-muted m-0 metainfos">
+        <span>Par</span>
+        <a href="/editors/${article.CreatorSlug}" class="text-dark">${article.CreatorFullName}</a>
+        <span> - ${article.created_at}</span>
+        <span class="r2f-post-meta p-0"><a href="/categories/${article.CategorySlug}" class="r2f-post-meta-design">${article.Category}</a></span>
+    </p>
 </div>
-`       
+<div>
+    <div class="border-end pe-4">
+        <div class="r2f-post-content-wrap">
+            <!-- Post Content Start -->
+            <div class="img-principal pb-4">
+                <img src="${article.Avatar}" class="img-fluid w-100">
+            </div>
+    
+            <div class="single_blog">
+                ${article.contenu}
+            </div>
+            <!-- END Post Content -->
+            <div class="border-top border-bottom py-3 mb-2"></div>
+        </div>
+    </div>
+</div>
+        `
 
         var container = document.createElement('div');
         container.classList.add('post-section')
@@ -361,7 +394,7 @@
         
         
         
-    </script> --}}
+    </script>
     <script type="text/javascript">
 		var sidebar = new StickySidebar('.bloc-sticky', {
 			topSpacing: 20
