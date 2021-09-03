@@ -1,11 +1,22 @@
 @extends('layouts.site')
 <title>{{$editor->Full_Name}}</title>
+<style>
+    .profile-head {
+    transform: translateY(5rem)
+}
+
+.cover {
+    background-image: url(https://images.unsplash.com/photo-1530305408560-82d13781b33a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80);
+    background-size: cover;
+    background-repeat: no-repeat
+}
+</style>
 @section('main-section')
  
-<div class="bg-white py-4 px-2 m-4">
+<div class="bg-white">
 	
 
-	<div class="row " style="align-items:center"> 
+	{{-- <div class="row " style="align-items:center"> 
 
 		<div class="col-lg-5" style="text-align:center">
 			<img class="inline-block rounded-full object-cover " style="width:500px; height:auto;" src="{{$editor->Avatar}}" loading="lazy" ></div>
@@ -13,16 +24,56 @@
 		<p><span class="font-bold" style="color:#F5A815">Nom :</span> 	{{$editor->Full_Name}}</p>
 		<p><span class="font-bold" style="color:#F5A815">E-mail professionnel :</span> {{$editor->email}} </p>
 		<p><span class="font-bold" style="color:#F5A815">Description :</span> This is a description</p>
-</div>
+    </div>
 		
-	</div>
+	</div> --}}
+
+    <div class="row">
+        <div class="">
+            <!-- Profile widget -->
+            <div class="bg-white shadow rounded overflow-hidden">
+                <div class="px-4 pt-0 pb-4 cover">
+                    <div class="d-flex align-items-end profile-head">
+                        <div class="flex-shrink-0 profile me-3">
+                            <img src="{{$editor->Avatar}}" alt="{{$editor->Full_Name}}" width="130" class="rounded mb-2 img-thumbnail">
+                        </div>
+                        <div class="flex-grow-1 ms-3 mb-5 text-white">
+                            <h4 class="mt-0 mb-0">{{$editor->Full_Name}}</h4>
+                            <p class="small mb-4"><i class="fas fa-user me-2"></i>{{$editor->role}}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-light p-4 d-flex justify-content-end text-center">
+                    <ul class="m-0 p-0 d-flex list-unstyled">
+                        <li class="me-3">
+                            <a class="d-flex align-items-center justify-content-center" href="{{$editor->Details->facebook}}"><i class="fab fa-facebook-f" style="color:#f5a815;"></i></a>
+                        </li>
+                        <li class="me-3">
+                            <a class="d-flex align-items-center justify-content-center" href="{{$editor->Details->twitter}}"><i class="fab fa-twitter" style="color:#f5a815;"></i></a>
+                        </li>
+                        <li class="me-3">
+                            <a class="d-flex align-items-center justify-content-center" href="{{$editor->Details->instagram}}"><i class="fab fa-instagram" style="color:#f5a815;"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="px-4 py-3">
+                    <h5 class="mb-0">About</h5>
+                    <div class="p-4 rounded shadow-sm bg-light">
+                        <p class="font-italic mb-0">{{$editor->Details->biography}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
 	<div class="m-4">
 
-		<hr class="w-3/4 mx-auto  bg-black text-black" />
-
 		<h2 class="text-2xl my-5" id="articles">Les Articles</h2>
-		<div id="wrapper">
-		<div class="row my-2">
+		<div id="container wrapper">
+		<div id="data-wrapper" class="row my-2">
             {{-- {{dd($articles)}} --}}
 			{{-- @foreach($articles as $article)
             @if ($article->tag)
@@ -42,9 +93,9 @@
             @endif
 
                     @endforeach --}}
-                    <div id="data-wrapper">
+                    {{-- <div id="data-wrapper">
                         <!-- Results -->
-                    </div>
+                    </div> --}}
                     
 		</div>
 	</div>
