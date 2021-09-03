@@ -106,7 +106,7 @@
             <div class="col-lg-3">
                 <div class="header_01_settings">
                     <div class="search_btn relative">
-                         <a href="javascript:void(0);"><i class="feather icon-search"></i></a>
+                         <a href="javascript:void(0);"><i class="fas fa-search fa-lg"></i></a>
                         <form id="cse-search-box" class="searchForms" action="/search" role="search">
                         <label style="display:none;" for="search-input"></label>
                         <input type="search" value="{{request()->get('q')}}" id="search-input" class="search-field" name="q" placeholder="Recherche" autocomplete="off" data-bind="textInput:keyword"> <input type="hidden" name="cx" value="partner-pub-2176698891774775:9098524048" />
@@ -197,7 +197,7 @@
                 <button class="r2f-btn-search btn"></button>
             </div> --}}
             <div class="search_btn col-auto d-flex align-items-center justify-content-end relative">
-                <a href="javascript:void(0);"><i class="feather icon-search"></i></a>
+                <a href="javascript:void(0);"><i class="fas fa-search fa-lg"></i></a>
                <form id="cse-search-box" class="searchForms" action="/search" role="search">
                <label style="display:none;" for="search-input"></label>
                <input type="search" value="{{request()->get('q')}}" id="search-input" class="search-field" name="q" placeholder="Recherche" autocomplete="off" data-bind="textInput:keyword"> <input type="hidden" name="cx" value="partner-pub-2176698891774775:9098524048" />
