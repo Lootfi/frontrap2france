@@ -38,6 +38,12 @@
 @endsection
 
 @section('page-script-include')
+<script>
+	            $(".search_btn a").on("click", function(e) {
+        e.preventDefault();
+        $(".search_btn").toggleClass("active");
+    });
+</script>
 
         {{-- <script src="https://cd1.rap2france.com/public/templates/template/js/lightcase.js"></script>
 <script src="https://cd1.rap2france.com/public/templates/template/js/stickyfill.min.js"></script>

@@ -7,6 +7,7 @@
 <meta property="og:url" content="{{Route('news.show',$article->tag)}}" />
 <meta property="og:image" content="{{$article->Avatar}}" />
 <link rel="stylesheet" href="{{asset('css/news.css')}}">
+
 @endsection
 @section('main-section') 
 {{-- <div id="wrapper" style="background: black;">

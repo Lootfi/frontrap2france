@@ -19,7 +19,7 @@
         
         {{-- <link rel="stylesheet" type="text/css" href="https://cd1.rap2france.com/public/templates/template/css/preset.css"/> --}}
         
-        <link rel="stylesheet" type="text/css" href="https://cd1.rap2france.com/public/templates/template/css/theme.css"/>
+        <link rel="stylesheet" type="text/css" href="{{asset('assets/template/css/theme.css')}}"/>
         {{-- <link rel="stylesheet" type="text/css" href="{{asset('assets/template/css/responsive.css')}}"/> --}}
         {{-- <link rel="stylesheet" type="text/css" href="https://cd1.rap2france.com/public/templates/template/css/skeleton.css"/> --}}
         <meta property="fb:pages" content="42863617656" />
@@ -77,10 +77,6 @@
 
 
         <script>
-            $(".search_btn a").on("click", function(e) {
-        e.preventDefault();
-        $(".search_btn").toggleClass("active");
-    });
           const loadTabs = (slug) => {
 
            return fetch(`/api/categories/${slug}/get`,{

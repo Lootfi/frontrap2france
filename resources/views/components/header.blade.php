@@ -114,9 +114,7 @@
                         <input type="hidden" name="ie" value="UTF-8" />
                         <input type="submit" style="display:none;" class="hidden" />
                         </form>
-                </div>
-                    
-                   
+                    </div>
                 </div>
         </div>
     </div>
@@ -195,9 +193,19 @@
             <div class="r2f-logo col py-2">
                 <a class="mx-auto" href="/"></a>
             </div>
-            <div class="col-auto d-flex align-items-center justify-content-end">
+            {{-- <div class="col-auto d-flex align-items-center justify-content-end">
                 <button class="r2f-btn-search btn"></button>
-            </div>
+            </div> --}}
+            <div class="search_btn col-auto d-flex align-items-center justify-content-end relative">
+                <a href="javascript:void(0);"><i class="feather icon-search"></i></a>
+               <form id="cse-search-box" class="searchForms" action="/search" role="search">
+               <label style="display:none;" for="search-input"></label>
+               <input type="search" value="{{request()->get('q')}}" id="search-input" class="search-field" name="q" placeholder="Recherche" autocomplete="off" data-bind="textInput:keyword"> <input type="hidden" name="cx" value="partner-pub-2176698891774775:9098524048" />
+               <input type="hidden" name="cof" value="FORID:10" />
+               <input type="hidden" name="ie" value="UTF-8" />
+               <input type="submit" style="display:none;" class="hidden" />
+               </form>
+           </div>
         </div>
     </div>
 </nav>
