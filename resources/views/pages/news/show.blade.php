@@ -197,8 +197,6 @@
 
  
                 </div>
-                <div class="loader"></div>
-                <div class="loading text-center"><img class="inline-block mx-auto " style="animation: rotation 2s infinite linear" src="https://cd1.rap2france.com/public/templates/template/images/loading_hover.png"/></div>
                 
                 <div class="col-md-4 ps-lg-4 d-none d-lg-block d-xl-block">
                     <div class="r2r-news-right">
@@ -255,6 +253,10 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="loader"></div>
+                <div class="loading text-center"><img class="inline-block mx-auto " style="animation: rotation 2s infinite linear" src="https://cd1.rap2france.com/public/templates/template/images/loading_hover.png"/></div>
+                
             </div>
         </div>
     </div>
