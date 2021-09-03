@@ -26,9 +26,9 @@ class ShowController extends Controller
 					// $artilces .= '<div class="card mb-2"> <div class="card-body">' . $result->id . ' <h5 class="card-title">' . $result->post_name . '</h5> ' . $result->post_description . '</div></div>';
 					$articles .= "<div class=\"col-lg-4 col-md-6\">
 					<div class=\"tw3_list clearfix\">
-						<div class=\"tw3_thumb\">
+						<a href=\"/news/$result->tag\" class=\"tw3_thumb\">
 							<img src=\"$result->Avatar\" loading=\"lazy\" >
-						</div>
+						</a>
 						<div class=\"tw_3_content\">
 							<a href=\"/categories/$category->slug\" class=\"cats reds\">{$category->nom}</a>
 							<h3><a href=\"/news/$result->tag\">{$result->titre}</a></h3>

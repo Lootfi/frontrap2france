@@ -1966,6 +1966,10 @@ a.cats.pinks2 {
 .tw_3_content h3 a:hover{
     color: #F5A815;
 }
+.tw3_thumb:hover ~ .tw_3_content h3 a {
+    color: #F5A815;
+}
+
 .editor_choice_area{
     position: relative;
     background: url(../images/bg/4.jpg) no-repeat center center / cover;

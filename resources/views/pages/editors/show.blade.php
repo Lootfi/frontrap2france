@@ -46,13 +46,13 @@
                 <div class="bg-light p-4 d-flex justify-content-end text-center">
                     <ul class="m-0 p-0 d-flex list-unstyled">
                         <li class="me-3">
-                            <a class="d-flex align-items-center justify-content-center" href="{{$editor->Details->facebook}}"><i class="fab fa-facebook-f" style="color:#f5a815;"></i></a>
+                            <a class="d-flex align-items-center justify-content-center" href="{{$editor->Details->facebook}}"><i class="fab fa-facebook-f fa-lg" style="color:#1c1c1c;"></i></a>
                         </li>
                         <li class="me-3">
-                            <a class="d-flex align-items-center justify-content-center" href="{{$editor->Details->twitter}}"><i class="fab fa-twitter" style="color:#f5a815;"></i></a>
+                            <a class="d-flex align-items-center justify-content-center" href="{{$editor->Details->twitter}}"><i class="fab fa-twitter fa-lg" style="color:#1c1c1c;"></i></a>
                         </li>
                         <li class="me-3">
-                            <a class="d-flex align-items-center justify-content-center" href="{{$editor->Details->instagram}}"><i class="fab fa-instagram" style="color:#f5a815;"></i></a>
+                            <a class="d-flex align-items-center justify-content-center" href="{{$editor->Details->instagram}}"><i class="fab fa-instagram fa-lg" style="color:#1c1c1c;"></i></a>
                         </li>
                     </ul>
                 </div>
