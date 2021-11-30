@@ -165,6 +165,11 @@ button.btn:focus, button.btn:not(:disabled):not(.disabled).active:focus{
 	height: 112px;
 	background-size: 480px 112px
 }
+.r2f-search-form {
+	display: flex;
+	justify-content: end;
+	align-items: center;
+}
 .r2f-btn-search{
 	width: 20px;
 	height: 20px;

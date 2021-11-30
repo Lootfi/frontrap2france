@@ -103,7 +103,7 @@
             <div class="r2f-logo r2f-logo-main col">
                 <a class="mx-auto" href="{{url('/')}}"></a>
             </div>
-            <div class="col-lg-3">
+            <div class="col-lg-3 r2f-search-form">
                 <div class="header_01_settings">
                     <div class="search_btn relative">
                          <a href="javascript:void(0);"><i class="fas fa-search fa-lg"></i></a>
