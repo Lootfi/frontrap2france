@@ -71,12 +71,7 @@
 	
         @yield('page-script-include')
 
-
-
-       
-
-
-        <script>
+        {{-- <script>
           const loadTabs = (slug) => {
 
            return fetch(`/api/categories/${slug}/get`,{
@@ -156,7 +151,7 @@
             })
         })
 
-         </script>
+         </script> --}}
         <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}

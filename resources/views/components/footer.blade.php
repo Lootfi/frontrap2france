@@ -29,6 +29,7 @@
 					<li class="pe-3"><a href="/categories/street">La Street</a></li>
 					<li class="pe-3"><a href="/categories/lifestyle">Lifestyle</a></li>
 					<li class="pe-3"><a href="/a-propos">A propos</a></li>
+					<li class="pe-3"><a href="/mentions-légales">Mentions Légales</a></li>
 					<li><a href="/contact">Nous contacter</a></li>
 				</ul>
 			</div>
