@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Editors;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Administrator;
+use App\Models\ArticleTodayAnalytic;
 use App\Models\Category;
 
 
@@ -55,7 +56,8 @@ class ShowController extends Controller
 	{
 		$auteurs = Administrator::all();
 		return view('pages.editors.index', [
-			'authors' => $auteurs
+			'authors' => $auteurs,
+			'chaud' => ArticleTodayAnalytic::OrderBy('views', 'DESC')->take(4)->get(),
 		]);
 	}
 }
