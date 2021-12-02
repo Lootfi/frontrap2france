@@ -103,10 +103,15 @@
             <div class="r2f-logo r2f-logo-main col">
                 <a class="mx-auto" href="{{url('/')}}"></a>
             </div>
-            <div class="col-lg-3 r2f-search-form">
+            {{-- <div class="col-lg-3 r2f-search-form"> --}}
+                <div class="col pt-2 col d-flex align-items-center justify-content-end">
                 <div class="header_01_settings">
                     <div class="search_btn relative">
-                         <a href="javascript:void(0);"><i class="fas fa-search fa-lg"></i></a>
+                         <a href="javascript:void(0);">
+						<button class="r2f-btn-search btn"></button>
+
+                             {{-- <i class="fas fa-search fa-lg"></i> --}}
+                            </a>
                         <form id="cse-search-box" class="searchForms" action="/search" role="search">
                         <label style="display:none;" for="search-input"></label>
                         <input type="search" value="{{request()->get('q')}}" id="search-input" class="search-field" name="q" placeholder="Recherche" autocomplete="off" data-bind="textInput:keyword"> <input type="hidden" name="cx" value="partner-pub-2176698891774775:9098524048" />
@@ -196,8 +201,12 @@
             {{-- <div class="col-auto d-flex align-items-center justify-content-end">
                 <button class="r2f-btn-search btn"></button>
             </div> --}}
-            <div class="search_btn col-auto d-flex align-items-center justify-content-end relative">
-                <a href="javascript:void(0);"><i class="fas fa-search fa-lg"></i></a>
+            {{-- <div class="search_btn col-auto d-flex align-items-center justify-content-end relative"> --}}
+            <div class="search_btn col-auto d-flex align-items-center justify-content-end"> 
+                <a href="javascript:void(0);">
+                    <button class="r2f-btn-search btn"></button>
+                    {{-- <i class="fas fa-search fa-lg"></i> --}}
+                </a>
                <form id="cse-search-box" class="searchForms" action="/search" role="search">
                <label style="display:none;" for="search-input"></label>
                <input type="search" value="{{request()->get('q')}}" id="search-input" class="search-field" name="q" placeholder="Recherche" autocomplete="off" data-bind="textInput:keyword"> <input type="hidden" name="cx" value="partner-pub-2176698891774775:9098524048" />
