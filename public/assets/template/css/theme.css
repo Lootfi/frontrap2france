@@ -470,6 +470,7 @@ License URI:
     font-size: 14px;
     text-align: center;
     display: inline-block;
+    background-color: transparent;
     padding: 8px 9px;
     cursor: pointer;
     position: relative;
@@ -482,10 +483,9 @@ License URI:
 .search_btn.active a,
 .search_btn a:hover{
     background: #333333;
-
-    color: #FFF;
+    /* color: #FFF; */
 }
-.search_btn a:focus{
+.search_btn a:focus button{
     color: #fff;
 }
 .cart_btn{
