@@ -22,7 +22,7 @@
 					</li>
 				</ul>
 			</div>
-			<div class="r2f-footer-menu pb-4">
+			<div class="r2f-footer-menu pb-4 d-flex flex-column">
 				<ul class="m-0 p-0 d-flex list-unstyled justify-content-center">
 					<li class="pe-3"><a href="/">Accueil</a></li>
 					<li class="pe-3"><a href="/categories/sortie-rap">RAP FR</a></li>
@@ -32,6 +32,7 @@
 					<li class="pe-3"><a href="/mentions-légales">Mentions Légales</a></li>
 					<li><a href="/contact">Nous contacter</a></li>
 				</ul>
+				<button class="btn btn-warning align-self-center mt-3" onclick='__tcfapi("openunic");return false;'>Paramètres de Confidentialité</button>
 			</div>
 			<div>
 				<p class="text-white text-center"><span class="text-muted">©2021 Rap2France.com. La street, la vraie !</span> Ta une info ?</p>

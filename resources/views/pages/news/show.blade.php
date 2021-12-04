@@ -6,7 +6,103 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="{{Route('news.show',$article->tag)}}" />
 <meta property="og:image" content="{{$article->Avatar}}" />
+
+
+<link rel="canonical" href="{{Route('news.show',$article->tag)}}" />
+<meta property="og:locale" content="fr_FR" />
+<meta property="og:type" content="article" />
+{{-- <meta property="og:description" content="Vous l’attendiez ! Gambi brise enfin le mystère et revient avec le tubesque Khedma. Il revient en force avec un véritable hit dont il détient le secret : du rap assaisonné de son grain de folie à découvrir dès maintenant. Après une longue période de silence et d&rsquo;absence sur les réseaux sociaux, Gambi a totalement [&hellip;]" /> --}}
+<meta property="og:site_name" content="RAP2FRANCE" />
+{{-- <meta property="article:publisher" content="" /> --}}
+<meta property="article:author" content="{{route('editors.show',$article->Creator->slug)}}" />
+<meta property="article:published_time" content="{{$article->created_at}}" />
+<meta property="article:modified_time" content="{{$article->updated_at}}" />
+<meta property="og:image" content="{{$article->Avatar}}" />
+{{-- <meta property="og:image:width" content="1280" />
+<meta property="og:image:height" content="720" /> --}}
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:creator" content="{{$article->Creator->Details->twitter}}" />
+<meta name="twitter:site" content="{{$article->Creator->Details->twitter}}" />
+<meta name="twitter:label1" content="Écrit par" />
+<meta name="twitter:data1" content="{{$article->Creator->Full_Name}}" />
+<meta name="twitter:label2" content="Durée de lecture est." />
+<meta name="twitter:data2" content="2 minutes" />
+
+
 <link rel="stylesheet" href="{{asset('css/news.css')}}">
+
+<script type="application/ld+json">{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.13or-du-hiphop.fr/2021/11/13/gambi-ramene-un-tank-dans-la-ville-avec-khedma/"
+    },
+    "headline": "Gambi ramène un tank dans la ville avec Khedma",
+    "datePublished": "2021-11-13T00:41:15+0100",
+    "dateModified": "2021-11-13T00:41:42+0100",
+    "author": {
+    "@type": "Person",
+    "name": "Squat"
+    },
+    "description": "Vous l’attendiez ! Gambi brise enfin le mystère et revient avec le tubesque Khedma. Il revient en force avec u",
+    "image": {
+    "@type": "ImageObject",
+    "url": "https://www.13or-du-hiphop.fr/wp-content/uploads/2021/11/maxresdefault-43.jpg",
+    "width": 1280,
+    "height": 720
+    },
+    "publisher": {
+    "@type": "Organization",
+    "name": "13OR-du-HipHop",
+    "logo": {
+    "@type": "ImageObject",
+    "url": "https://www.13or-du-hiphop.fr/wp-content/uploads/2020/01/708189logo13or26-1.png",
+    "width": 0,
+    "height": 0
+    }
+    }
+    }</script> 
+
+<script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@type": "WebSite",
+          "@id": "{{ env('APP_URL') }}",
+          "name": "Accueil"
+        }
+      }, {
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "@type": "WebPage",
+          "@id": "https://www.13or-du-hiphop.fr/rap_francais/",
+          "name": "Rap Fr"
+        }
+      }, {
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@type": "WebPage",
+          "@id": "https://www.13or-du-hiphop.fr/rap_francais/news/",
+          "name": "News Rap Francais"
+        }
+      }, {
+        "@type": "ListItem",
+        "position": 4,
+        "item": {
+          "@type": "WebPage",
+          "@id": "https://www.13or-du-hiphop.fr/2021/11/13/gambi-ramene-un-tank-dans-la-ville-avec-khedma/",
+          "name": "Gambi ramène un tank dans la ville avec Khedma"
+        }
+      }]
+    }
+  </script>
 
 @endsection
 @section('main-section')
