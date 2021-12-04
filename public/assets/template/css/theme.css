@@ -480,14 +480,16 @@ License URI:
     -ms-transition: all ease 400ms;
     -o-transition: all ease 400ms;
 }
-.search_btn.active a,
-.search_btn a:hover{
+.search_btn.active a {
     background: #333333;
-    /* color: #FFF; */
 }
-.search_btn a:focus button{
+
+.search_btn a:focus button,
+.search_btn a:hover button,
+.search_btn.active a button {
     color: #fff;
 }
+
 .cart_btn{
     width: 38px;
     height: 38px;
