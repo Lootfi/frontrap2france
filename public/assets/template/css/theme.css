@@ -466,7 +466,6 @@ License URI:
 .search_btn a{
     width: 38px;
     height: 38px;
-    /* background: #333333; */
     color: #FFF;
     font-size: 14px;
     text-align: center;
@@ -482,7 +481,6 @@ License URI:
 }
 .search_btn.active a,
 .search_btn a:hover{
-    /* background: #F5A815; */
     background: #333333;
 
     color: #FFF;
